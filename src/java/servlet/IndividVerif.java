@@ -13,7 +13,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.new1;
+import model.*;
 
 /**
  *
@@ -32,7 +32,7 @@ public class IndividVerif extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/html;charset=ISO-8859-1");
 
         String inscritPar = (String) request.getParameter("inscritPar");
         String prenom = (String) request.getParameter("prenom");
@@ -53,11 +53,15 @@ public class IndividVerif extends HttpServlet {
         String niveau = (String) request.getParameter("niveau");
         String login = (String) request.getParameter("login");
         String pass = (String) request.getParameter("pass");
+        String role = "1";
 
-        new1 n = new new1(inscritPar, prenom, nom, dateNaissance, lieuNaissance, cni, civilite, tAge, 
+        ModInd n = new ModInd(inscritPar, prenom, nom, dateNaissance, lieuNaissance, cni, civilite, tAge, 
                 adresse, situationMatrim, tel1, tel2, prenomPere, prenomMere, nomMere, etudes, niveau, login, pass);
         dataAccess da = new dataAccess();
+        
+        ModLogin n1 = new ModLogin(prenom, nom, civilite, login, pass, role);
         da.addNew(n);
+        da.addLogin(n1);
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             //RequestDispatcher rd = request.getRequestDispatcher("index.html");
