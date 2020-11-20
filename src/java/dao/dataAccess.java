@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.new1;
+import model.Newdc;
 
 
 /**
@@ -49,6 +50,29 @@ public class dataAccess {
             
             ps.executeUpdate();
             System.out.println("Tout est ok"+n.getNom());
+        } catch (SQLException | ClassNotFoundException ex) {
+            Logger.getLogger(dataAccess.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+         public void addNew(Newdc ndc){
+        try {
+            
+            System.out.println(ndc.getPrenom()+" "+ndc.getCommune());
+            PreparedStatement ps = JavaConnect.getPreparedStatement("insert into demandeurcollectif (Id, Statut, Prenom, Nom, Denomination, Sigle, Tel1, Tel2, LieuResidence, Region, Departement, Commune) values (NULL,?,?,?,?,?,?,?,?,?,?,?)");
+            ps.setString(1, ndc.getStatut());
+            ps.setString(2, ndc.getPrenom());
+            ps.setString(3, ndc.getNom());
+            ps.setString(4, ndc.getDenomination());
+            ps.setString(5, ndc.getSigle());
+            ps.setString(6, ndc.getTel1());
+            ps.setString(7, ndc.getTel2());
+            ps.setString(8, ndc.getLieuResidence());
+            ps.setString(9, ndc.getRegion());
+            ps.setString(10, ndc.getDepartement());
+            ps.setString(11, ndc.getCommune());
+            
+            ps.executeUpdate();
+            System.out.println("Tout est ok"+ndc.getNom());
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(dataAccess.class.getName()).log(Level.SEVERE, null, ex);
         }
