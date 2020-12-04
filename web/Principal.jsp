@@ -67,63 +67,64 @@ Wrapper Start
             <!--************************************
 Header Start
 *************************************-->
-            <header id="at-header" class="at-header at-headervthree">
-                <div class="container-fluid">
-                    <div class="row">
-                        <strong class="at-logo"><a href="index.html"><img src="images/logo2.png" alt="company logo here"></a></strong>
-                        <div class="at-navigationarea">
-                            <nav id="at-nav" class="at-nav">
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#at-navigation" aria-expanded="false">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                </div>
-                                <div id="at-navigation" class="collapse navbar-collapse at-navigation">
-                                    <ul>
-                                        <li class="menu-item-has-children">
-                                            <a href="index.html">Accueil</a>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="https://taataan.sn/qui-sommes-nous/">A Propos</a>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="javascript:void(0);">S'inscrire</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="inscriptionIndividuelle.html" target="blank">Individuellement</a></li>
-                                                <li><a href="inscriptionCollective.html" target="blank">Collectivement</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children current-menu-item">
-                                            <a href="connection.html">Se connecter</a>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="javascript:void(0);">Partenaire</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="https://www.taataan.sn/" target="blank">Tataan</a></li>
-                                                <li><a href="https://www.adel-invest.com/" target="blank">Adel-invest</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
-                            <div class="at-contactsocial">
-                                <span class="at-contactnumber">
-                                    <i class="icon-telephone114"></i>
-                                    <em>+00221 33 837 80 09</em>
-                                </span>
-                                <ul class="at-socialicons">
-                                    <li class="at-facebook"><a href="https://www.facebook.com/badel"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="at-twitter"><a href="https://www.twitter.com/badel"><i class="fa fa-twitter"></i></a></li>
-                                    <li class="at-instagram"><a href="https://www.instagram.com/badel"><i class="fa fa-instagram"></i></a></li>
+        <header id="at-header" class="at-header at-headervthree">
+            <div class="container-fluid">
+                <div class="row">
+                    <strong class="at-logo"><a href="index.html"><img src="images/logo2.png" alt="company logo here"></a></strong>
+                    <div class="at-navigationarea">
+                        <nav id="at-nav" class="at-nav">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#at-navigation" aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+                            </div>
+                            <div id="at-navigation" class="collapse navbar-collapse at-navigation">
+                                <ul>
+                                    <li class="menu-item-has-children">
+                                        <a href="index.html">Accueil</a>
+                                    </li>
+                     <!--            <li class="menu-item-has-children">
+                                        <a href="https://taataan.sn/qui-sommes-nous/">A Propos</a>
+                                    </li> 
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0);">S'inscrire</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="connection.html" target="blank">Individuellement</a></li>
+                                            <li><a href="connection.html" target="blank">Collectivement</a></li>
+                                        </ul>
+                                    </li>
+                     -->
+                                    <li class="menu-item-has-children">
+                                        <a href="connection.html">Se connecter</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0);">Partenaires</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="https://www.taataan.sn/" target="blank">TAATAAN</a></li>
+                                            <li><a href="https://www.adel-invest.com/" target="blank">ADEL-INVEST</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
+                        </nav>
+                        <div class="at-contactsocial">
+                            <span class="at-contactnumber">
+								<i class="icon-telephone114"></i>
+								<em>+00221 33 837 80 09</em>
+							</span>
+                            <ul class="at-socialicons">
+                                <li class="at-facebook"><a href="https://www.facebook.com/badel"><i class="fa fa-facebook"></i></a></li>
+                                <li class="at-twitter"><a href="https://www.twitter.com/badel"><i class="fa fa-twitter"></i></a></li>
+                                <li class="at-instagram"><a href="https://www.youtube.com/badel"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </header>
+            </div>
+        </header>
             <!--************************************
 Header End
 *************************************-->
@@ -143,7 +144,7 @@ Main Start
                 String idx = (String) request.getAttribute("id");
                 String tpe = (String) request.getAttribute("tpe");
 
-                String sql = "SELECT * FROM login where Id=?";
+                String sql = "SELECT * FROM loginadmin where Id=?";
                 try {
                     Connection con = new JavaConnect().createConnection();
                     PreparedStatement pst;
@@ -170,8 +171,17 @@ Main Start
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="at-content">
                                     <div class="at-contactusvone">
-                                        Vous etes bien connecté !
+                                        <div class="row">
+                                            <br>  
+                                            <br>
+                                            
+                                            <center><button style="width: 300px; height: 70px" type="submit" class="at-btn" onclick="window.location.href = 'inscriptionIndividuelle1.html'">Inscription Individuelle</button></center>
+                                            <br>
+                                            <center><button style="width: 300px; height: 70px" type="submit" class="at-btn" onclick="window.location.href = 'inscriptionCollective1.html'">Inscription Collective</button></center>
+                                            <br>
+                                            <center><button style="width: 300px; height: 70px" type="submit" class="at-btn" onclick="window.location.href = 'connection.html'">Se Déconnecter</button></center>
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>

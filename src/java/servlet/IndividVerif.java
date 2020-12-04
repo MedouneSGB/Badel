@@ -60,21 +60,12 @@ public class IndividVerif extends HttpServlet {
         dataAccess da = new dataAccess();
         
         ModLogin n1 = new ModLogin(prenom, nom, civilite, login, pass, role);
-        da.addNew(n);
+        da.addNewInd(n);
         da.addLogin(n1);
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            //RequestDispatcher rd = request.getRequestDispatcher("index.html");
-      // rd.forward(request, response); 
-                  out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet IndividVerif</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>prenom p = " + prenomPere + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            RequestDispatcher rd = request.getRequestDispatcher("connection.html");
+            rd.forward(request, response); 
         }
     }
 

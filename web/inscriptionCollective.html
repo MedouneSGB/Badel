@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Inscription Collective</title>
+    <title>inscription Collective</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico">
@@ -75,7 +75,7 @@
                                         <a href="javascript:void(0);">S'inscrire</a>
                                         <ul class="sub-menu">
                                             <li><a href="inscriptionIndividuelle.html" target="blank">Individuellement</a></li>
-                                            <li><a href="inscriptionCollective.html" target="blank">Collectivement</a></li>
+                                           <!-- <li><a href="inscriptionCollective.html" target="blank">Collectivement</a></li> -->
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
@@ -129,7 +129,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="at-content">
                                 <div class="at-contactusvone">
-                                    <form class="at-formtheme at-formcontacus" method="post" action="IndividVerif">
+                                    <form class="at-formtheme at-formcontacus" method="post" action="CollectVerif">
                                         <div class="at-sectiontitleborder">
                                             <br>
                                             <h2>Veuillez remplir ce formulaire</h2>
@@ -139,116 +139,72 @@
 
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <select class="form-control" name="inscritPar" id="demo-category" onchange="changementType( this.value);">
+                                                        <select required class="form-control" name="Statut" id="demo-category" onchange="changementType( this.value);">
                                                         <option value="">- Qui êtes vous ? -</option>
-                                                        <option value="Animateur">Animateur BEL - MDL - CIEL</option>
-                                                        <option value="Parent/Connaissance">Parent ou connaissance du demandeur</option>
-                                                        <option value="Demandeur">Je suis moi même le demandeur</option>
-                                                        <option value="Organisme">Un organisme d'appui au demandeur</option>
-                                                        <option value="autre">Autre</option>
+                                                        <option value="GFP">GFP</option>
+                                                        <option value="Association">Association</option>
+                                                        <option value="Organisation Professionnelle">Organisation Professionnelle</option>
+                                                        <option value="GIE">GIE</option>
+                                                        <option value="Autre">Autre</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="prenom" class="form-control" placeholder="Prénom">
+                                                        <input type="text" name="Prenom" class="form-control" placeholder="Prénom">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="email" name="nom" class="form-control" placeholder="Nom">
+                                                        <input type="text" name="Nom" class="form-control" placeholder="Nom">
                                                     </div>
                                                 </div>
                                                 
                                                 <br />
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="datenaissance" class="form-control" placeholder="Date de Naissance">
+                                                        <input type="text" name="Denomination" class="form-control" placeholder="Dénomination">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="lieunaissance" class="form-control" placeholder="Lieu de Naissance">
+                                                        <input type="text" name="Sigle" class="form-control" placeholder="Sigle">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="cni" class="form-control" placeholder="Numéro CNI">
-                                                    </div>
-                                                </div>
-                                                <br />
-                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
-                                                        <div class="form-group">
-                                                            <select class="form-control" name="civilite" id="demo-category">
-                                                                <option value="">- Civilité: -</option>
-                                                                <option value="Mr">Mr</option>
-                                                                <option value="Mme">Mme</option>
-                                                                <option value="Mlle">Mlle</option>
-                                                            </select>
-                                                        </div>
-                                                </div>
-                                                
-                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
-                                                    <div class="form-group">
-                                                        <input type="text" name="age" class="form-control" placeholder="Age">
+                                                        <input type="text" name="Tel1" class="form-control" placeholder="Téléphone 1">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="adresse" class="form-control" placeholder="Adresse">
-                                                    </div>
-                                                </div>
-                                                <br>
-                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
-                                                    <div class="form-group">
-                                                        <input type="text" name="sitMatrimoniale" class="form-control" placeholder="Situation Matrimoniale">
+                                                        <input type="text" name="Tel2" class="form-control" placeholder="Téléphone 2">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="tel1" class="form-control" placeholder="Téléphone 1">
+                                                        <input type="text" name="LieuResidence" class="form-control" placeholder="Lieu de Résidence">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="tel2" class="form-control" placeholder="Téléphone 2">
-                                                    </div>
-                                                </div>
-                                                <br>
-                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
-                                                    <div class="form-group">
-                                                        <input type="text" name="prenomP" class="form-control" placeholder="Prenom du Père">
+                                                        <input type="text" name="Region" class="form-control" placeholder="Région ">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="prenomM" class="form-control" placeholder="Prénom de la Mère">
+                                                        <input type="text" name="Departement" class="form-control" placeholder="Département">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="nomM" class="form-control" placeholder="Nom de la Mère">
-                                                    </div>
-                                                </div>
-                                                <br>
-                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
-                                                    <div class="form-group">
-                                                        <input type="text" name="scolarisation" class="form-control" placeholder="Avez vous fait des études">
-                                                    </div>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
-                                                    <div class="form-group">
-                                                        <input type="text" name="niveauetude" class="form-control" placeholder="Niveau d'études">
-                                                    </div>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
-                                                    <div class="form-group">
-                                                        <input type="text" name="cni" class="form-control" placeholder="Numéro CNI">
+                                                        <input type="text" name="Commune" class="form-control" placeholder="Commune">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
                                                     <center><button type="submit" class="at-btn">ENREGISTRER</button></center>
                                                 </div>
+                                                
                                             </div>
                                         </fieldset>
                                     </form>
@@ -301,7 +257,7 @@
                                         <ul>
                                             <li><a href="index.html">Accueil</a></li>
                                             <li><a href="javascript:void(0);">S'INSCRIRE</a></li>
-                                            <li><a href="https://www.adel-invest.com">Adel-invest</a></li>
+                                            <li><a href="adel-invest.com">Adel-invest</a></li>
                                             <li><a href="https://www.taataan.sn">Taataan</a></li>
                                             <li><p>Email: contact@taataan.sn</p></li>
                                         </ul>
