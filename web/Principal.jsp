@@ -98,7 +98,7 @@ Header Start
                                     </li>
                      -->
                                     <li class="menu-item-has-children">
-                                        <a href="connection.html">Se connecter</a>
+                                        <a href="connection.html">Se déconnecter</a>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="javascript:void(0);">Partenaires</a>

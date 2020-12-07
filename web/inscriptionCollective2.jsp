@@ -79,21 +79,20 @@
                                     <li class="menu-item-has-children">
                                         <a href="index.html">Accueil</a>
                                     </li>
-                                   <!-- <li class="menu-item-has-children">
-                                        <a href="https://taataan.sn/qui-sommes-nous/">A Propos</a> 
-                                    </li>
-                                
-                                    <li class="menu-item-has-children current-menu-item">
+                     <!--            <li class="menu-item-has-children">
+                                        <a href="https://taataan.sn/qui-sommes-nous/">A Propos</a>
+                                    </li> 
+                                    <li class="menu-item-has-children">
                                         <a href="javascript:void(0);">S'inscrire</a>
                                         <ul class="sub-menu">
-                                            <li><a href="inscriptionIndividuelle.html" target="blank">Individuellement</a></li> 
-                                            <li><a href="inscriptionCollective.html" target="blank">Collectivement</a></li>
+                                            <li><a href="connection.html" target="blank">Individuellement</a></li>
+                                            <li><a href="connection.html" target="blank">Collectivement</a></li>
                                         </ul>
                                     </li>
-                                        <li class="menu-item-has-children">
-                                        <a href="connection.html">Se connecter</a>
+                     -->
+                                    <li class="menu-item-has-children">
+                                        <a href="connection.html">Se déconnecter</a>
                                     </li>
-                                  -->
                                     <li class="menu-item-has-children">
                                         <a href="javascript:void(0);">Partenaires</a>
                                         <ul class="sub-menu">
@@ -112,7 +111,7 @@
                             <ul class="at-socialicons">
                                 <li class="at-facebook"><a href="https://www.facebook.com/badel"><i class="fa fa-facebook"></i></a></li>
                                 <li class="at-twitter"><a href="https://www.twitter.com/badel"><i class="fa fa-twitter"></i></a></li>
-                                <li class="at-instagram"><a href="https://www.instagram.com/badel"><i class="fa fa-instagram"></i></a></li>
+                                <li class="at-instagram"><a href="https://www.youtube.com/badel"><i class="fa fa-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>
