@@ -12,7 +12,7 @@ package model;
 public class ModCol1 {
 
     //Déclaration des Variables
-    private int IdDC;
+    private String formulaire_id;
     private String titre;
     private String nat_juridique;
     private String denomination;
@@ -28,13 +28,13 @@ public class ModCol1 {
     private String total_femme;
     // Importation Constructeur avec Paramètres  
 
-    public ModCol1(int IdDC, String titre, String nat_juridique, String denomination,
+    public ModCol1(String formulaire_id, String titre, String nat_juridique, String denomination,
             String reconnaisance_juridique, String pays, String region,
             String departement, String commune, String hors_senegal,
             String date_creation, String total_membre, String total_homme,
             String total_femme) {
         
-        this.IdDC = IdDC;
+        this.formulaire_id = formulaire_id;
         this.titre = titre;
         this.nat_juridique = nat_juridique;
         this.denomination = denomination;
@@ -51,12 +51,12 @@ public class ModCol1 {
     }       
 
     // Importation des Getteurs et Setteurs
-    public int getIdDC() {
-        return IdDC;
+    public String getFormulaire_id() {
+        return formulaire_id;
     }
 
-    public void setIdDC(int IdDC) {
-        this.IdDC = IdDC;
+    public void setFormulaire_id(String formulaire_id) {
+        this.formulaire_id = formulaire_id;
     }
 
     public String getTitre() {

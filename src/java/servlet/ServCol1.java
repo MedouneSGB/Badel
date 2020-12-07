@@ -5,12 +5,18 @@
  */
 package servlet;
 
+import dao.dataAccess;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Timestamp;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.ModCol1;
+
+
 
 /**
  *
@@ -29,19 +35,39 @@ public class ServCol1 extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ServCol1</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ServCol1 at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+        response.setContentType("text/html;charset=ISO-8859-1");
+        
+        
+        String titre=(String) request.getParameter("titre");
+        String nat_juridique=(String) request.getParameter("nat_juridique");
+        String denomination=(String) request.getParameter("denomination");
+        String reconnaisance_juridique=(String) request.getParameter("reconnaisance_juridique");
+        String pays=(String) request.getParameter("pays");
+        String region=(String) request.getParameter("region");
+        String departement=(String) request.getParameter("departement");
+        String commune=(String) request.getParameter("commune");
+        String hors_senegal=(String) request.getParameter("hors_senegal");
+        String date_creation=(String) request.getParameter("date_creation");
+        String total_membre=(String) request.getParameter("total_membre");
+        String total_homme=(String) request.getParameter("total_homme");
+        String total_femme=(String) request.getParameter("total_femme");
+        
+        
+        
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        
+        String formulaire_id = "Form"+timestamp.getTime();
+        
+        ModCol1 mc1 = new ModCol1(formulaire_id, titre, nat_juridique, denomination, reconnaisance_juridique, pays, region, departement, commune, hors_senegal, date_creation, total_membre, total_homme, total_femme);
+        dataAccess da = new dataAccess();
+        da.InsCol1(mc1);
+        
+        
+        
+            request.setAttribute("id", formulaire_id); 
+            RequestDispatcher rd = request.getRequestDispatcher("inscriptionCollective2.jsp");
+        rd.forward(request, response); 
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

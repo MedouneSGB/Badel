@@ -56,25 +56,28 @@ public class dataAccess {
         }
     }
 
-    public void addNewCol(ModCol ndc) {
+    public void InsCol1(ModCol1 ndc) {
         try {
 
-            System.out.println(ndc.getPrenom() + " " + ndc.getCommune());
-            PreparedStatement ps = JavaConnect.getPreparedStatement("insert into demandeurcollectif (Id, Statut, Prenom, Nom, Denomination, Sigle, Tel1, Tel2, LieuResidence, Region, Departement, Commune) values (NULL,?,?,?,?,?,?,?,?,?,?,?)");
-            ps.setString(1, ndc.getStatut());
-            ps.setString(2, ndc.getPrenom());
-            ps.setString(3, ndc.getNom());
+            System.out.println(ndc.getTitre()+ " " + ndc.getCommune());
+            PreparedStatement ps = JavaConnect.getPreparedStatement("insert into p1demandeurcollectif (idDC, formulaire_id, titre, nat_juridique, denomination, reconnaisance_juridique, pays, region, departement, commune, hors_senegal, date_creation, total_membre, total_homme, total_femme) values (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            ps.setString(1, ndc.getFormulaire_id());
+            ps.setString(2, ndc.getTitre());
+            ps.setString(3, ndc.getNat_juridique());
             ps.setString(4, ndc.getDenomination());
-            ps.setString(5, ndc.getSigle());
-            ps.setString(6, ndc.getTel1());
-            ps.setString(7, ndc.getTel2());
-            ps.setString(8, ndc.getLieuResidence());
-            ps.setString(9, ndc.getRegion());
-            ps.setString(10, ndc.getDepartement());
-            ps.setString(11, ndc.getCommune());
+            ps.setString(5, ndc.getReconnaisance_juridique());
+            ps.setString(6, ndc.getPays());
+            ps.setString(7, ndc.getRegion());
+            ps.setString(8, ndc.getDepartement());
+            ps.setString(9, ndc.getCommune());
+            ps.setString(10, ndc.getHors_senegal());
+            ps.setString(11, ndc.getDate_creation());
+            ps.setString(12, ndc.getTotal_membre());
+            ps.setString(13, ndc.getTotal_homme());
+            ps.setString(14, ndc.getTotal_femme());
 
             ps.executeUpdate();
-            System.out.println("Tout est ok" + ndc.getNom());
+            System.out.println("Tout est ok" + ndc.getTitre());
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(dataAccess.class.getName()).log(Level.SEVERE, null, ex);
         }
