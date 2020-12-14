@@ -39,15 +39,30 @@ public class ServInd2 extends HttpServlet {
         String sous_categories = (String) request.getParameter("sous_categories");
         String parcours = (String) request.getParameter("parcours");
         String marqueurs = (String) request.getParameter("marqueurs");
+        String formulaire_id = (String) request.getParameter("formulaire_id");
         
-            ModInd2 mi2 = new ModInd2(categories, sous_categories, parcours, marqueurs);
+            ModInd2 mi2 = new ModInd2(categories, sous_categories, parcours, marqueurs, formulaire_id);
             dataAccess da = new dataAccess();
             da.addModInd2(mi2);
             
+            /*
+               try (PrintWriter out = response.getWriter()) {
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet ServCol2</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet ServCol2 at " +categories + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
+        }
+            */
+            
+            
         
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            RequestDispatcher rd = request.getRequestDispatcher("index.html");
+            RequestDispatcher rd = request.getRequestDispatcher("inscriptionIndividuelle3.jsp");
        rd.forward(request, response); 
         }
     }

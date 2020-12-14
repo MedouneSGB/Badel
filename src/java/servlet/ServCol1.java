@@ -50,7 +50,6 @@ public class ServCol1 extends HttpServlet {
         String total_femme = (String) request.getParameter("total_femme");
 
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-
         String formulaire_id = "Form" + timestamp.getTime();
 
         ModCol1 mc1 = new ModCol1(formulaire_id, titre, nat_juridique, denomination, reconnaisance_juridique, pays, region, departement, commune, hors_senegal, date_creation, total_membre, total_homme, total_femme);

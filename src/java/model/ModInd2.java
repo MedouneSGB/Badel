@@ -43,17 +43,27 @@ public class ModInd2 {
         this.marqueurs = marqueurs;
     }
     
+    public String getFormulaire_id() {
+        return formulaire_id;
+    }
+
+    public void setFx(String formulaire_id) {
+        this.formulaire_id = formulaire_id;
+    }
+
     
     private String categories;
     private String sous_categories;
     private String parcours;
     private String marqueurs;
+    private String formulaire_id;
 
-    public ModInd2(String categories, String sous_categories, String parcours, String marqueurs) {
+    public ModInd2(String categories, String sous_categories, String parcours, String marqueurs, String formulaire_id) {
         this.categories = categories;
         this.sous_categories = sous_categories;
         this.parcours = parcours;
         this.marqueurs = marqueurs;
+        this.formulaire_id = formulaire_id;
     }
 
           

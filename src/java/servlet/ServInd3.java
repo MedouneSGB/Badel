@@ -47,8 +47,9 @@ public class ServInd3 extends HttpServlet {
                  String soutien_parent = (String) request.getParameter("soutien_parent");
                  String ville_parent = (String) request.getParameter("ville_parent");
                  String pays_parent = (String) request.getParameter("pays_parent"); 
+                 String formulaire_id = (String) request.getParameter("formulaire_id"); 
         
-        ModInd3 mi3 = new ModInd3(soutien_immediat,regi_commerce,numero_regi_comm,ninea,numero_ninea,reference_prof,numero_reference_prof,compte_bancaire_sfd,nom_banque_sfd,numero_compte_banque_sfd,soutien_parent,ville_parent,pays_parent);
+        ModInd3 mi3 = new ModInd3(formulaire_id, soutien_immediat,regi_commerce,numero_regi_comm,ninea,numero_ninea,reference_prof,numero_reference_prof,compte_bancaire_sfd,nom_banque_sfd,numero_compte_banque_sfd,soutien_parent,ville_parent,pays_parent);
         dataAccess da = new dataAccess();
         da.addModInd3(mi3);
         

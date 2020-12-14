@@ -178,18 +178,21 @@ public class dataAccess {
         
           try{
             System.out.println(mi2.getCategories()+" "+mi2.getMarqueurs());
-            PreparedStatement ps = JavaConnect.getPreparedStatement("insert into p2demandeurindividuel (idDI, categories, sous_categories, parcours, marqueurs) values (null,?,?,?,?)");
+            PreparedStatement ps = JavaConnect.getPreparedStatement("insert into p2demandeurindividuel (idDI, formulaire_id, categories, sous_categories, parcours, marqueurs) values (null,?,?,?,?,?)");
             
-                ps.setString(1, mi2.getCategories());
-                ps.setString(2, mi2.getSous_categories());
-                ps.setString(3, mi2.getParcours());
-                ps.setString(4, mi2.getMarqueurs());
+                ps.setString(1, mi2.getFormulaire_id());
+                ps.setString(2, mi2.getCategories());
+                ps.setString(3, mi2.getSous_categories());
+                ps.setString(4, mi2.getParcours());
+                ps.setString(5, mi2.getMarqueurs());
                 
                   ps.executeUpdate();
                   System.out.println("Tout est ok"+mi2.getCategories());
                   
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(dataAccess.class.getName()).log(Level.SEVERE, null, ex);
+            
+                  System.out.println("Erreur addModInd2"+ex);
         }
           }
           
@@ -198,21 +201,22 @@ public class dataAccess {
         
           try{
             System.out.println(mi3.getSoutien_immediat()+" "+mi3.getPays_parent());
-            PreparedStatement ps = JavaConnect.getPreparedStatement("insert into p3demandeurindividuel (idDI, soutien_immediat,regi_commerce,numero_regi_comm,ninea,numero_ninea,reference_prof,numero_reference_prof,compte_bancaire_sfd,nom_banque_sfd,numero_compte_banque_sfd,soutien_parent,ville_parent,pays_parent ) values (null,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            PreparedStatement ps = JavaConnect.getPreparedStatement("insert into p3demandeurindividuel (idDI, formulaire_id, soutien_immediat,regi_commerce,numero_regi_comm,ninea,numero_ninea,reference_prof,numero_reference_prof,compte_bancaire_sfd,nom_banque_sfd,numero_compte_banque_sfd,soutien_parent,ville_parent,pays_parent ) values (null,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
             
-                    ps.setString(1, mi3.getSoutien_immediat());
-                    ps.setString(2, mi3.getRegi_commerce());
-                    ps.setString(3, mi3.getNumero_regi_comm());
-                    ps.setString(4, mi3.getNinea());
-                    ps.setString(5, mi3.getNumero_ninea());
-                    ps.setString(6, mi3.getReference_prof());
-                    ps.setString(7, mi3.getNumero_reference_prof());
-                    ps.setString(8, mi3.getCompte_bancaire_sfd());
-                    ps.setString(9, mi3.getNom_banque_sfd());
-                    ps.setString(10, mi3.getNumero_compte_banque_sfd());                
-                    ps.setString(11, mi3.getSoutien_immediat());
-                    ps.setString(12, mi3.getVille_parent());
-                    ps.setString(13, mi3.getPays_parent());
+                    ps.setString(1, mi3.getFormulaire_id());
+                    ps.setString(2, mi3.getSoutien_immediat());
+                    ps.setString(3, mi3.getRegi_commerce());
+                    ps.setString(4, mi3.getNumero_regi_comm());
+                    ps.setString(5, mi3.getNinea());
+                    ps.setString(6, mi3.getNumero_ninea());
+                    ps.setString(7, mi3.getReference_prof());
+                    ps.setString(8, mi3.getNumero_reference_prof());
+                    ps.setString(9, mi3.getCompte_bancaire_sfd());
+                    ps.setString(10, mi3.getNom_banque_sfd());
+                    ps.setString(11, mi3.getNumero_compte_banque_sfd());                
+                    ps.setString(12, mi3.getSoutien_immediat());
+                    ps.setString(13, mi3.getVille_parent());
+                    ps.setString(14, mi3.getPays_parent());
                 
                 
                         ps.executeUpdate();

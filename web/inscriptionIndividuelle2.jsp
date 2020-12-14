@@ -1,5 +1,11 @@
-<!doctype html>
+<%-- 
+    Document   : inscriptionIndividuelle2
+    Created on : 14 déc. 2020, 01:28:09
+    Author     : user
+--%>
 
+<%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
 <html class="no-js" lang="">
 
 
@@ -25,7 +31,10 @@
 </head>
 
 <body>
-
+      <%
+                
+                String formulaire_id = (String) request.getAttribute("id");
+ %>
     <!--************************************
 			Loader Start
 	*************************************-->
@@ -124,7 +133,7 @@
             <div class="clearfix"></div>
             <section class="at-sectionspace at-haslayout">
                 <div class="container">
-                    <h1 style="text-align: center;">Inscription Individuelle 2</h1>
+                    <h1 style="text-align: center;">Inscription Individuelle 2 suite <%=formulaire_id%></h1>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="at-content">
@@ -135,8 +144,8 @@
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
                                                         <select class="form-control" name="inscritPar" id="demo-category" onchange="changementType( this.value);">
-                                                        <option value="">- Qui êtes vous ? -</option>
-                                                        <option value="Demandeur">Je suis moi même le demandeur</option>
+                                                        <option value="">- Qui ?tes vous ? -</option>
+                                                        <option value="Demandeur">Je suis moi m?me le demandeur</option>
                                                         <option value="Animateur">Animateur BEL - MDL - CIEL</option>
                                                         <option value="Parent/Connaissance">Parent ou connaissance du demandeur</option>
                                                         <option value="Organisme">Un organisme d'appui au demandeur</option>
@@ -148,7 +157,7 @@
                                         <div class="at-sectiontitleborder">
                                             <br/>
                                         <hr/>
-                                            <h2><center>Veuillez remplir ce formulaire : <strong>Étape 2</strong> </center></h2>
+                                            <h2><center>Veuillez remplir ce formulaire : <strong>?tape 2</strong> </center></h2>
                                          <hr/>
                                          <br/>
                                          <hr/>
@@ -226,7 +235,8 @@
                                                    </select>
                                             </div>
                                         </div> 
-                                        </fieldset>                                      
+                                        </fieldset>    
+                                     <input type="hidden" value="<%=formulaire_id%>" name="formulaire_id">
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
                                                 <center><button type="submit" class="at-btn">ENREGISTRER & RETOURNER</button>&nbsp;<button type="submit" class="at-btn">ENREGISTRER & POURSUIVRE...</button></center>
                                             </div>
@@ -250,7 +260,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="at-emailsubscribearea">
-                            <p>Recevez nos dernières informations</p>
+                            <p>Recevez nos derniéres informations</p>
                             <form class="at-formtheme at-formnewsletter">
                                 <fieldset>
                                     <input type="email" name="email" class="form-control" placeholder="Votre adresse e-mail">
@@ -309,7 +319,7 @@
                             </div>
                         </div>
                         <div class="at-copyright">
-                            <p>Adresse: ZAC MBAO villa N°3 4ième Etage Cité Socidak 1 en face Brioche Dorée, Rufisque Ouvert de 08H à 18H</p>
+                            <p>Adresse: ZAC MBAO villa N3 4ème Etage Cité Socidak 1 en face Brioche Dorée, Rufisque Ouvert de 08H à 18H</p>
                             <p>Copyright @ 2020. <a href="javascript:void(0);">Badel</a> All rights reserved.</p>
                         </div>
                     </div>

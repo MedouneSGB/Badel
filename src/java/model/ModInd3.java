@@ -28,7 +28,16 @@ public class ModInd3 {
                 private String ville_parent;
                 
                 private String pays_parent;
+                private String formulaire_id;
 
+    public String getFormulaire_id() {
+        return formulaire_id;
+    }
+
+    public void setFormulaire_id(String formulaire_id) {
+        this.formulaire_id = formulaire_id;
+    }
+                                
     public String getSoutien_immediat() {
         return soutien_immediat;
     }
@@ -133,7 +142,9 @@ public class ModInd3 {
         this.pays_parent = pays_parent;
     }
 
-    public ModInd3(String soutien_immediat, String regi_commerce, String numero_regi_comm, String ninea, String numero_ninea, String reference_prof, String numero_reference_prof, String compte_bancaire_sfd, String nom_banque_sfd, String numero_compte_banque_sfd, String soutien_parent, String ville_parent, String pays_parent) {
+    public ModInd3(String formulaire_id,String soutien_immediat, String regi_commerce, String numero_regi_comm, String ninea, String numero_ninea, String reference_prof, String numero_reference_prof, String compte_bancaire_sfd, String nom_banque_sfd, String numero_compte_banque_sfd, String soutien_parent, String ville_parent, String pays_parent) {
+       
+        this.formulaire_id = formulaire_id;
         this.soutien_immediat = soutien_immediat;
         this.regi_commerce = regi_commerce;
         this.numero_regi_comm = numero_regi_comm;

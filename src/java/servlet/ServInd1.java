@@ -8,6 +8,7 @@ package servlet;
 import dao.dataAccess;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Timestamp;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -33,46 +34,52 @@ public class ServInd1 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=ISO-8859-1");
-         
-         String prenom = (String) request.getParameter("prenom");
-         String nom = (String) request.getParameter("nom");
-         String tel1 = (String) request.getParameter("tel1");
-         String tel2 = (String) request.getParameter("tel2");
-         String commune_rattach = (String) request.getParameter("commune_rattach");
-         
-         String commune_actuelle = (String) request.getParameter("commune_actuelle"); 
-         String sexe = (String) request.getParameter("sexe");
-         String tranche_age = (String) request.getParameter("tranche_age");
-         String etude = (String) request.getParameter("etude");
-         String niveau_etude = (String) request.getParameter("niveau_etude");
-         
-         String formation_prof = (String) request.getParameter("formation_prof");
-         String sejour = (String) request.getParameter("sejour");
-         String pays_sejourne = (String) request.getParameter("pays_sejourne");
-         String motif_sejour = (String) request.getParameter("motif_sejour");
-         String experience_prof = (String) request.getParameter("experience_prof");
-         
-         String domaine_exp_prof = (String) request.getParameter("domaine_exp_prof");
-         String duree_exp_prof = (String) request.getParameter("duree_exp_prof"); 
-         String statut_exp_prof = (String) request.getParameter("statut_exp_prof");
-         String commune_exp_prof = (String) request.getParameter("commune_exp_prof");
-         String departement_exp_prof = (String) request.getParameter("departement_exp_prof");
-         
-         String region_exp_prof = (String) request.getParameter("region_exp_prof");
-         String autre_region_exp_prof = (String) request.getParameter("autre_region_exp_prof");
-         String hors_senegal = (String) request.getParameter("hors_senegal");
-         String situation_prof = (String) request.getParameter("situation_prof");
-         String titre_accompagnement = (String) request.getParameter("titre_accompagnement");
-                   
-        ModInd1 mi1 = new ModInd1( prenom,  nom,  tel1,  tel2,  commune_rattach,  commune_actuelle,  sexe,  tranche_age,  etude,  niveau_etude,  formation_prof,  sejour,  pays_sejourne,  motif_sejour,  experience_prof,  domaine_exp_prof,  duree_exp_prof,  statut_exp_prof,  commune_exp_prof,  departement_exp_prof, region_exp_prof, autre_region_exp_prof, hors_senegal, situation_prof, titre_accompagnement);
+
+        String prenom = (String) request.getParameter("prenom");
+        String nom = (String) request.getParameter("nom");
+        String tel1 = (String) request.getParameter("tel1");
+        String tel2 = (String) request.getParameter("tel2");
+        String commune_rattach = (String) request.getParameter("commune_rattach");
+
+        String commune_actuelle = (String) request.getParameter("commune_actuelle");
+        String sexe = (String) request.getParameter("sexe");
+        String tranche_age = (String) request.getParameter("tranche_age");
+        String etude = (String) request.getParameter("etude");
+        String niveau_etude = (String) request.getParameter("niveau_etude");
+
+        String formation_prof = (String) request.getParameter("formation_prof");
+        String sejour = (String) request.getParameter("sejour");
+        String pays_sejourne = (String) request.getParameter("pays_sejourne");
+        String motif_sejour = (String) request.getParameter("motif_sejour");
+        String experience_prof = (String) request.getParameter("experience_prof");
+
+        String domaine_exp_prof = (String) request.getParameter("domaine_exp_prof");
+        String duree_exp_prof = (String) request.getParameter("duree_exp_prof");
+        String statut_exp_prof = (String) request.getParameter("statut_exp_prof");
+        String commune_exp_prof = (String) request.getParameter("commune_exp_prof");
+        String departement_exp_prof = (String) request.getParameter("departement_exp_prof");
+
+        String region_exp_prof = (String) request.getParameter("region_exp_prof");
+        String autre_region_exp_prof = (String) request.getParameter("autre_region_exp_prof");
+        String hors_senegal = (String) request.getParameter("hors_senegal");
+        String situation_prof = (String) request.getParameter("situation_prof");
+        String titre_accompagnement = (String) request.getParameter("titre_accompagnement");
+
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        String formulaire_id = "Form" + timestamp.getTime();
+
+        ModInd1 mi1 = new ModInd1(prenom, nom, tel1, tel2, commune_rattach, commune_actuelle, sexe, tranche_age, etude, niveau_etude, formation_prof, sejour, pays_sejourne, motif_sejour, experience_prof, domaine_exp_prof, duree_exp_prof, statut_exp_prof, commune_exp_prof, departement_exp_prof, region_exp_prof, autre_region_exp_prof, hors_senegal, situation_prof, titre_accompagnement);
         dataAccess da = new dataAccess();
         da.addModInd1(mi1);
+
+        
         
         try (PrintWriter out = response.getWriter()) {
-            RequestDispatcher rd = request.getRequestDispatcher("index.html");
-       rd.forward(request, response); 
+        request.setAttribute("id", formulaire_id);
+            RequestDispatcher rd = request.getRequestDispatcher("inscriptionIndividuelle2.jsp");
+            rd.forward(request, response);
         }
-        
+
         /*
         try (PrintWriter out = response.getWriter()) {
             out.println("<!DOCTYPE html>");
