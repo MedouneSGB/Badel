@@ -3,14 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package servlets;
+package servlet;
 
+import dao.dataAccess;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.ModInd2;
 
 /**
  *
@@ -30,17 +33,22 @@ public class ServInd2 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        
+        String categories = (String) request.getParameter("categories");
+        String sous_categories = (String) request.getParameter("sous_categories");
+        String parcours = (String) request.getParameter("parcours");
+        String marqueurs = (String) request.getParameter("marqueurs");
+        
+            ModInd2 mi2 = new ModInd2(categories, sous_categories, parcours, marqueurs);
+            dataAccess da = new dataAccess();
+            da.addModInd2(mi2);
+            
+        
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ServInd2</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ServInd2 at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            RequestDispatcher rd = request.getRequestDispatcher("index.html");
+       rd.forward(request, response); 
         }
     }
 

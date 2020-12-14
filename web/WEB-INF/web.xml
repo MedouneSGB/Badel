@@ -12,6 +12,18 @@
         <servlet-name>ServCol1</servlet-name>
         <servlet-class>servlet.ServCol1</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServInd1</servlet-name>
+        <servlet-class>servlet.ServInd1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServInd2</servlet-name>
+        <servlet-class>servlet.ServInd2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServInd3</servlet-name>
+        <servlet-class>servlet.ServInd3</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>IndividVerif</servlet-name>
         <url-pattern>/IndividVerif</url-pattern>
@@ -23,6 +35,18 @@
     <servlet-mapping>
         <servlet-name>ServCol1</servlet-name>
         <url-pattern>/ServCol1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServInd1</servlet-name>
+        <url-pattern>/ServInd1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServInd2</servlet-name>
+        <url-pattern>/ServInd2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServInd3</servlet-name>
+        <url-pattern>/ServInd3</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

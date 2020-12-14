@@ -12,7 +12,7 @@
 
 
 <head>
-        <meta charset="utf-8">
+        <meta charset="ISO-8859-1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Inscription Collective 2</title>
     <meta name="description" content="">

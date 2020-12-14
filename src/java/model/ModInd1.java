@@ -10,25 +10,53 @@ package model;
  * @author HP
  */
 public class ModInd1 {
+     
+    
+    private String prenom;
+    private String nom;
+    private String tel1;
+    private String tel2;
+    private String commune_rattach;
+    
+    private String commune_actuelle;
+    private String sexe;
+    private String tranche_age;
+    private String etude;
+    private String niveau_etude;
+    
+    private String formation_prof;
+    private String sejour;
+    private String pays_sejourne;
+    private String motif_sejour;
+    private String experience_prof;
+    
+    private String domaine_exp_prof;
+    private String duree_exp_prof;     
+    private String statut_exp_prof;
+    private String commune_exp_prof;
+    private String departement_exp_prof;
+    
+    private String region_exp_prof;
+    private String autre_region_exp_prof;
+    private String hors_senegal;
+    private String situation_prof;
+    private String titre_accompagnement; 
 
-    // Importation Constructeur avec Paramètres
-    public ModInd1(int idDI, String prenom, String nom, String tel1, String tel2, String commune_rattach, String commune_actuelle, String titre_accompagnement, String sexe, String tranche_age, String etude, String niveau_etude,
-            String formation_prof, String experience_prof, String domaine_exp_prof, String duree_exp_prof, String statut_exp_prof, String commune_exp_prof, String departement_exp_prof, String region_exp_prof, String autre_region_exp_prof,
-            String hors_sengal_exp_prof, String situation_prof) {
-        
-        this.idDI = idDI;
+    public ModInd1(String prenom, String nom, String tel1, String tel2, String commune_rattach, String commune_actuelle, String sexe, String tranche_age, String etude, String niveau_etude, String formation_prof, String sejour, String pays_sejourne, String motif_sejour, String experience_prof, String domaine_exp_prof, String duree_exp_prof, String statut_exp_prof, String commune_exp_prof, String departement_exp_prof, String region_exp_prof, String autre_region_exp_prof, String hors_senegal, String situation_prof, String titre_accompagnement) {
         this.prenom = prenom;
         this.nom = nom;
         this.tel1 = tel1;
         this.tel2 = tel2;
         this.commune_rattach = commune_rattach;
         this.commune_actuelle = commune_actuelle;
-        this.titre_accompagnement = titre_accompagnement;
         this.sexe = sexe;
         this.tranche_age = tranche_age;
         this.etude = etude;
         this.niveau_etude = niveau_etude;
         this.formation_prof = formation_prof;
+        this.sejour = sejour;
+        this.pays_sejourne = pays_sejourne;
+        this.motif_sejour = motif_sejour;
         this.experience_prof = experience_prof;
         this.domaine_exp_prof = domaine_exp_prof;
         this.duree_exp_prof = duree_exp_prof;
@@ -37,42 +65,9 @@ public class ModInd1 {
         this.departement_exp_prof = departement_exp_prof;
         this.region_exp_prof = region_exp_prof;
         this.autre_region_exp_prof = autre_region_exp_prof;
-        this.hors_sengal_exp_prof = hors_sengal_exp_prof;
+        this.hors_senegal = hors_senegal;
         this.situation_prof = situation_prof;
-    }
-
-    //Déclaration des variables
-    private int idDI;
-    private String prenom;
-    private String nom;
-    private String tel1;
-    private String tel2;
-    private String commune_rattach;
-    private String commune_actuelle;
-    private String titre_accompagnement;
-    private String sexe;
-    private String tranche_age;
-    private String etude;
-    private String niveau_etude;
-    private String formation_prof;
-    private String experience_prof;
-    private String domaine_exp_prof;
-    private String duree_exp_prof;
-    private String statut_exp_prof;
-    private String commune_exp_prof;
-    private String departement_exp_prof;
-    private String region_exp_prof;
-    private String autre_region_exp_prof;
-    private String hors_sengal_exp_prof;
-    private String situation_prof;
-
-    // Importation Getteurs and Setteurs
-    public int getIdDI() {
-        return idDI;
-    }
-
-    public void setIdDI(int idDI) {
-        this.idDI = idDI;
+        this.titre_accompagnement = titre_accompagnement;
     }
 
     public String getPrenom() {
@@ -123,14 +118,6 @@ public class ModInd1 {
         this.commune_actuelle = commune_actuelle;
     }
 
-    public String getTitre_accompagnement() {
-        return titre_accompagnement;
-    }
-
-    public void setTitre_accompagnement(String titre_accompagnement) {
-        this.titre_accompagnement = titre_accompagnement;
-    }
-
     public String getSexe() {
         return sexe;
     }
@@ -169,6 +156,30 @@ public class ModInd1 {
 
     public void setFormation_prof(String formation_prof) {
         this.formation_prof = formation_prof;
+    }
+
+    public String getSejour() {
+        return sejour;
+    }
+
+    public void setSejour(String sejour) {
+        this.sejour = sejour;
+    }
+
+    public String getPays_sejourne() {
+        return pays_sejourne;
+    }
+
+    public void setPays_sejourne(String pays_sejourne) {
+        this.pays_sejourne = pays_sejourne;
+    }
+
+    public String getMotif_sejour() {
+        return motif_sejour;
+    }
+
+    public void setMotif_sejour(String motif_sejour) {
+        this.motif_sejour = motif_sejour;
     }
 
     public String getExperience_prof() {
@@ -235,12 +246,12 @@ public class ModInd1 {
         this.autre_region_exp_prof = autre_region_exp_prof;
     }
 
-    public String getHors_sengal_exp_prof() {
-        return hors_sengal_exp_prof;
+    public String getHors_senegal() {
+        return hors_senegal;
     }
 
-    public void setHors_sengal_exp_prof(String hors_sengal_exp_prof) {
-        this.hors_sengal_exp_prof = hors_sengal_exp_prof;
+    public void setHors_senegal(String hors_senegal) {
+        this.hors_senegal = hors_senegal;
     }
 
     public String getSituation_prof() {
@@ -251,4 +262,13 @@ public class ModInd1 {
         this.situation_prof = situation_prof;
     }
 
+    public String getTitre_accompagnement() {
+        return titre_accompagnement;
+    }
+
+    public void setTitre_accompagnement(String titre_accompagnement) {
+        this.titre_accompagnement = titre_accompagnement;
+    }
+  
+    
 }

@@ -19,7 +19,7 @@ import model.*;
  * @author user
  */
 public class dataAccess {
-    
+
     PreparedStatement pst;
     ResultSet rs;
     String val = null;
@@ -59,7 +59,7 @@ public class dataAccess {
     public void InsCol1(ModCol1 ndc) {
         try {
 
-            System.out.println(ndc.getTitre()+ " " + ndc.getCommune());
+            System.out.println(ndc.getTitre() + " " + ndc.getCommune());
             PreparedStatement ps = JavaConnect.getPreparedStatement("insert into p1demandeurcollectif (idDC, formulaire_id, titre, nat_juridique, denomination, reconnaisance_juridique, pays, region, departement, commune, hors_senegal, date_creation, total_membre, total_homme, total_femme) values (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
             ps.setString(1, ndc.getFormulaire_id());
             ps.setString(2, ndc.getTitre());
@@ -104,7 +104,7 @@ public class dataAccess {
     public String IdentAdmin(ModConClient modConClient) {
         Connection con = new dbutil.JavaConnect().createConnection();
 
-            System.out.println("La Methode de connexion 0 marche");
+        System.out.println("La Methode de connexion 0 marche");
         String sql = "SELECT * FROM loginadmin where Pseudo=? and Password=?";
         try {
             pst = con.prepareStatement(sql);
@@ -125,5 +125,101 @@ public class dataAccess {
         }
         return val;
 
+    } 
+        public void addModInd1(ModInd1 mi1){
+        
+          try{
+            System.out.println(mi1.getPrenom()+" "+mi1.getHors_senegal());
+            PreparedStatement ps = JavaConnect.getPreparedStatement("insert into p1demandeurindividuel (idDI, prenom, nom, tel1, tel2, commune_rattach, commune_actuelle, sexe, tranche_age, etude, niveau_etude, formation_prof, sejour, pays_sejourne, motif_sejour, experience_prof, domaine_exp_prof, duree_exp_prof, statut_exp_prof, commune_exp_prof, departement_exp_prof, region_exp_prof, autre_region_exp_prof, hors_senegal, situation_prof, titre_accompagnement) values (null,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            
+                ps.setString(1, mi1.getPrenom());
+                ps.setString(2, mi1.getNom());
+                ps.setString(3, mi1.getTel1());
+                ps.setString(4, mi1.getTel2());
+                ps.setString(5, mi1.getCommune_rattach());
+                
+                ps.setString(6, mi1.getCommune_actuelle());
+                ps.setString(7, mi1.getSexe());
+                ps.setString(8, mi1.getTranche_age());
+                ps.setString(9, mi1.getEtude());
+                ps.setString(10, mi1.getNiveau_etude());
+                
+                ps.setString(11, mi1.getFormation_prof());
+                ps.setString(12, mi1.getSejour());
+                ps.setString(13, mi1.getPays_sejourne());
+                ps.setString(14, mi1.getMotif_sejour());
+                ps.setString(15, mi1.getExperience_prof());
+                
+                ps.setString(16, mi1.getDomaine_exp_prof());
+                ps.setString(17, mi1.getDuree_exp_prof());
+                ps.setString(18, mi1.getStatut_exp_prof());
+                ps.setString(19, mi1.getCommune_exp_prof());
+                ps.setString(20, mi1.getDepartement_exp_prof());
+                
+                ps.setString(21, mi1.getRegion_exp_prof());
+                ps.setString(22, mi1.getAutre_region_exp_prof());
+                ps.setString(23, mi1.getHors_senegal());
+                ps.setString(24, mi1.getSituation_prof());
+                ps.setString(25, mi1.getTitre_accompagnement());
+                
+                ps.executeUpdate();
+                System.out.println("Tout est ok"+mi1.getPays_sejourne());
+                  
+        } catch (SQLException | ClassNotFoundException ex) {
+            Logger.getLogger(dataAccess.class.getName()).log(Level.SEVERE, null, ex);
+            
+                System.out.println("Erreur DAO insert ind-1 ! "+ex);
+        }
+    } 
+    
+    
+        
+    public void addModInd2(ModInd2 mi2){
+        
+          try{
+            System.out.println(mi2.getCategories()+" "+mi2.getMarqueurs());
+            PreparedStatement ps = JavaConnect.getPreparedStatement("insert into p2demandeurindividuel (idDI, categories, sous_categories, parcours, marqueurs) values (null,?,?,?,?)");
+            
+                ps.setString(1, mi2.getCategories());
+                ps.setString(2, mi2.getSous_categories());
+                ps.setString(3, mi2.getParcours());
+                ps.setString(4, mi2.getMarqueurs());
+                
+                  ps.executeUpdate();
+                  System.out.println("Tout est ok"+mi2.getCategories());
+                  
+        } catch (SQLException | ClassNotFoundException ex) {
+            Logger.getLogger(dataAccess.class.getName()).log(Level.SEVERE, null, ex);
+        }
+          }
+          
+          
+      public void addModInd3(ModInd3 mi3){
+        
+          try{
+            System.out.println(mi3.getSoutien_immediat()+" "+mi3.getPays_parent());
+            PreparedStatement ps = JavaConnect.getPreparedStatement("insert into p3demandeurindividuel (idDI, soutien_immediat,regi_commerce,numero_regi_comm,ninea,numero_ninea,reference_prof,numero_reference_prof,compte_bancaire_sfd,nom_banque_sfd,numero_compte_banque_sfd,soutien_parent,ville_parent,pays_parent ) values (null,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            
+                    ps.setString(1, mi3.getSoutien_immediat());
+                    ps.setString(2, mi3.getRegi_commerce());
+                    ps.setString(3, mi3.getNumero_regi_comm());
+                    ps.setString(4, mi3.getNinea());
+                    ps.setString(5, mi3.getNumero_ninea());
+                    ps.setString(6, mi3.getReference_prof());
+                    ps.setString(7, mi3.getNumero_reference_prof());
+                    ps.setString(8, mi3.getCompte_bancaire_sfd());
+                    ps.setString(9, mi3.getNom_banque_sfd());
+                    ps.setString(10, mi3.getNumero_compte_banque_sfd());                
+                    ps.setString(11, mi3.getSoutien_immediat());
+                    ps.setString(12, mi3.getVille_parent());
+                    ps.setString(13, mi3.getPays_parent());
+                
+                
+                        ps.executeUpdate();
+                        System.out.println("Tout est ok"+mi3.getSoutien_immediat());
+                  
+        } catch (SQLException | ClassNotFoundException ex) {
+            Logger.getLogger(dataAccess.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

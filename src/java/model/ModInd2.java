@@ -10,38 +10,8 @@ package model;
  * @author HP
  */
 public class ModInd2 {
-
-// Importation Constructeur avec Paramètre    
-    public ModInd2(int idDI, String categories, 
-                    String sous_categories, String parcours, 
-                    String marqueurs) {
-        this.idDI = idDI;
-        this.categories = categories;
-        this.sous_categories = sous_categories;
-        this.parcours = parcours;
-        this.marqueurs = marqueurs;
-    }
-
-
-
-//Déclaration des Variables
-          private int idDI;
-          private String categories;
-          private String sous_categories;
-          private String parcours;
-          private String marqueurs;
-          
-    // Importation des Getteurs et Setteurs
-
-    public int getIdDI() {
-        return idDI;
-    }
-
-    public void setIdDI(int idDI) {
-        this.idDI = idDI;
-    }
-
-    public String getCategories() {
+    
+     public String getCategories() {
         return categories;
     }
 
@@ -72,5 +42,24 @@ public class ModInd2 {
     public void setMarqueurs(String marqueurs) {
         this.marqueurs = marqueurs;
     }
+    
+    
+    private String categories;
+    private String sous_categories;
+    private String parcours;
+    private String marqueurs;
+
+    public ModInd2(String categories, String sous_categories, String parcours, String marqueurs) {
+        this.categories = categories;
+        this.sous_categories = sous_categories;
+        this.parcours = parcours;
+        this.marqueurs = marqueurs;
+    }
+
           
+       
+   
+    
+    
+    
 }

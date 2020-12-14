@@ -10,43 +10,24 @@ package model;
  * @author HP
  */
 public class ModInd3 {
-
-    // Importation Constructeur avec Paramètres  
-    public ModInd3(int IdDI, String soutien_immediat, String regi_commerce, String ninea, String ref_prof, String compte_bancaire_sfd, String nom_banque_sfd, String soutien_parent, String ville_parent, String pays_parent) {
-        this.IdDI = IdDI;
-        this.soutien_immediat = soutien_immediat;
-        this.regi_commerce = regi_commerce;
-        this.ninea = ninea;
-        this.ref_prof = ref_prof;
-        this.compte_bancaire_sfd = compte_bancaire_sfd;
-        this.nom_banque_sfd = nom_banque_sfd;
-        this.soutien_parent = soutien_parent;
-        this.ville_parent = ville_parent;
-        this.pays_parent = pays_parent;
-    }
-        
     
-    //Déclaration des Variables
-       private int IdDI;
-       private String soutien_immediat;
-       private String regi_commerce;
-       private String ninea;
-       private String ref_prof;
-       private String compte_bancaire_sfd;
-       private String nom_banque_sfd;
-       private String soutien_parent;
-       private String ville_parent;
-       private String pays_parent;
-                  
-    // Importation des Getteurs et Setteurs
-
-    public int getIdDI() {
-        return IdDI;
-    }
-
-    public void setIdDI(int IdDI) {
-        this.IdDI = IdDI;
-    }
+    
+                private String soutien_immediat;
+                private String regi_commerce;
+                private String numero_regi_comm;
+                private String ninea;
+                
+                private String numero_ninea;
+                private String reference_prof;
+                private String numero_reference_prof;
+                private String compte_bancaire_sfd;
+                
+                private String nom_banque_sfd;
+                private String numero_compte_banque_sfd;
+                private String soutien_parent;
+                private String ville_parent;
+                
+                private String pays_parent;
 
     public String getSoutien_immediat() {
         return soutien_immediat;
@@ -64,6 +45,14 @@ public class ModInd3 {
         this.regi_commerce = regi_commerce;
     }
 
+    public String getNumero_regi_comm() {
+        return numero_regi_comm;
+    }
+
+    public void setNumero_regi_comm(String numero_regi_comm) {
+        this.numero_regi_comm = numero_regi_comm;
+    }
+
     public String getNinea() {
         return ninea;
     }
@@ -72,12 +61,28 @@ public class ModInd3 {
         this.ninea = ninea;
     }
 
-    public String getRef_prof() {
-        return ref_prof;
+    public String getNumero_ninea() {
+        return numero_ninea;
     }
 
-    public void setRef_prof(String ref_prof) {
-        this.ref_prof = ref_prof;
+    public void setNumero_ninea(String numero_ninea) {
+        this.numero_ninea = numero_ninea;
+    }
+
+    public String getReference_prof() {
+        return reference_prof;
+    }
+
+    public void setReference_prof(String reference_prof) {
+        this.reference_prof = reference_prof;
+    }
+
+    public String getNumero_reference_prof() {
+        return numero_reference_prof;
+    }
+
+    public void setNumero_reference_prof(String numero_reference_prof) {
+        this.numero_reference_prof = numero_reference_prof;
     }
 
     public String getCompte_bancaire_sfd() {
@@ -94,6 +99,14 @@ public class ModInd3 {
 
     public void setNom_banque_sfd(String nom_banque_sfd) {
         this.nom_banque_sfd = nom_banque_sfd;
+    }
+
+    public String getNumero_compte_banque_sfd() {
+        return numero_compte_banque_sfd;
+    }
+
+    public void setNumero_compte_banque_sfd(String numero_compte_banque_sfd) {
+        this.numero_compte_banque_sfd = numero_compte_banque_sfd;
     }
 
     public String getSoutien_parent() {
@@ -119,6 +132,24 @@ public class ModInd3 {
     public void setPays_parent(String pays_parent) {
         this.pays_parent = pays_parent;
     }
-    
+
+    public ModInd3(String soutien_immediat, String regi_commerce, String numero_regi_comm, String ninea, String numero_ninea, String reference_prof, String numero_reference_prof, String compte_bancaire_sfd, String nom_banque_sfd, String numero_compte_banque_sfd, String soutien_parent, String ville_parent, String pays_parent) {
+        this.soutien_immediat = soutien_immediat;
+        this.regi_commerce = regi_commerce;
+        this.numero_regi_comm = numero_regi_comm;
+        this.ninea = ninea;
+        this.numero_ninea = numero_ninea;
+        this.reference_prof = reference_prof;
+        this.numero_reference_prof = numero_reference_prof;
+        this.compte_bancaire_sfd = compte_bancaire_sfd;
+        this.nom_banque_sfd = nom_banque_sfd;
+        this.numero_compte_banque_sfd = numero_compte_banque_sfd;
+        this.soutien_parent = soutien_parent;
+        this.ville_parent = ville_parent;
+        this.pays_parent = pays_parent;
+    }
+                
+                
+                
     
 }

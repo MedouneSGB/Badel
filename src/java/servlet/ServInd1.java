@@ -3,14 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package servlets;
+package servlet;
 
+import dao.dataAccess;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.ModInd1;
 
 /**
  *
@@ -29,19 +32,59 @@ public class ServInd1 extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/html;charset=ISO-8859-1");
+         
+         String prenom = (String) request.getParameter("prenom");
+         String nom = (String) request.getParameter("nom");
+         String tel1 = (String) request.getParameter("tel1");
+         String tel2 = (String) request.getParameter("tel2");
+         String commune_rattach = (String) request.getParameter("commune_rattach");
+         
+         String commune_actuelle = (String) request.getParameter("commune_actuelle"); 
+         String sexe = (String) request.getParameter("sexe");
+         String tranche_age = (String) request.getParameter("tranche_age");
+         String etude = (String) request.getParameter("etude");
+         String niveau_etude = (String) request.getParameter("niveau_etude");
+         
+         String formation_prof = (String) request.getParameter("formation_prof");
+         String sejour = (String) request.getParameter("sejour");
+         String pays_sejourne = (String) request.getParameter("pays_sejourne");
+         String motif_sejour = (String) request.getParameter("motif_sejour");
+         String experience_prof = (String) request.getParameter("experience_prof");
+         
+         String domaine_exp_prof = (String) request.getParameter("domaine_exp_prof");
+         String duree_exp_prof = (String) request.getParameter("duree_exp_prof"); 
+         String statut_exp_prof = (String) request.getParameter("statut_exp_prof");
+         String commune_exp_prof = (String) request.getParameter("commune_exp_prof");
+         String departement_exp_prof = (String) request.getParameter("departement_exp_prof");
+         
+         String region_exp_prof = (String) request.getParameter("region_exp_prof");
+         String autre_region_exp_prof = (String) request.getParameter("autre_region_exp_prof");
+         String hors_senegal = (String) request.getParameter("hors_senegal");
+         String situation_prof = (String) request.getParameter("situation_prof");
+         String titre_accompagnement = (String) request.getParameter("titre_accompagnement");
+                   
+        ModInd1 mi1 = new ModInd1( prenom,  nom,  tel1,  tel2,  commune_rattach,  commune_actuelle,  sexe,  tranche_age,  etude,  niveau_etude,  formation_prof,  sejour,  pays_sejourne,  motif_sejour,  experience_prof,  domaine_exp_prof,  duree_exp_prof,  statut_exp_prof,  commune_exp_prof,  departement_exp_prof, region_exp_prof, autre_region_exp_prof, hors_senegal, situation_prof, titre_accompagnement);
+        dataAccess da = new dataAccess();
+        da.addModInd1(mi1);
+        
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
+            RequestDispatcher rd = request.getRequestDispatcher("index.html");
+       rd.forward(request, response); 
+        }
+        
+        /*
+        try (PrintWriter out = response.getWriter()) {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ServInd1</title>");            
+            out.println("<title>Servlet ServCol2</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ServInd1 at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet ServCol2 at " + hors_senegal + "</h1>");
             out.println("</body>");
             out.println("</html>");
-        }
+        }*/
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

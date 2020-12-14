@@ -4,7 +4,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="ISO-8859-1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Inscription Individuelle 2</title>
     <meta name="description" content="">
@@ -124,19 +124,19 @@
             <div class="clearfix"></div>
             <section class="at-sectionspace at-haslayout">
                 <div class="container">
-                    <h1 style="text-align: center;">Inscription Individuelle</h1>
+                    <h1 style="text-align: center;">Inscription Individuelle 2</h1>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="at-content">
                                 <div class="at-contactusvone">
-                                    <form class="at-formtheme at-formcontacus" method="post" action="IndividVerif">
+                                    <form class="at-formtheme at-formcontacus" action="ServInd2" method="post" >
                                      <!--   <fieldset>
                                             <div class="row">
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
                                                         <select class="form-control" name="inscritPar" id="demo-category" onchange="changementType( this.value);">
-                                                        <option value="">- Qui Ãªtes vous ? -</option>
-                                                        <option value="Demandeur">Je suis moi mÃªme le demandeur</option>
+                                                        <option value="">- Qui êtes vous ? -</option>
+                                                        <option value="Demandeur">Je suis moi même le demandeur</option>
                                                         <option value="Animateur">Animateur BEL - MDL - CIEL</option>
                                                         <option value="Parent/Connaissance">Parent ou connaissance du demandeur</option>
                                                         <option value="Organisme">Un organisme d'appui au demandeur</option>
@@ -148,7 +148,7 @@
                                         <div class="at-sectiontitleborder">
                                             <br/>
                                         <hr/>
-                                            <h2><center>Veuillez remplir ce formulaire : <strong>Ã‰tape 2</strong> </center></h2>
+                                            <h2><center>Veuillez remplir ce formulaire : <strong>Étape 2</strong> </center></h2>
                                          <hr/>
                                          <br/>
                                          <hr/>
@@ -160,9 +160,9 @@
                                                 <div class="form-group">
                                                     <select class="form-control" name="categories" id="demo-category">
                                                         <option value="">- CATEGORIES : -</option>
-                                                        <option value="insertion_emploi">Insertion Ã  l'emploi</option>
-                                                        <option value="insertion_reconversion_auto_emploi">Insertion ou Reconversion par l'auto-emploi</option>
-                                                        <option value="renforc_extension_activ">Renforcement ou Extension ActivitÃ©</option>
+                                                        <option value="Insertion à l'emploi">Insertion à l'emploi</option>
+                                                        <option value="Insertion ou Reconversion par l'auto-emploi">Insertion ou Reconversion par l'auto-emploi</option>
+                                                        <option value="Renforcement ou Extension Activité">Renforcement ou Extension Activité</option>
                                                         <option value="Migrants">Migrants</option>
                                                     </select>
                                                 </div>
@@ -173,16 +173,16 @@
                                                 <div class="form-group">
                                                     <select class="form-control" name="sous_categories" id="demo-category">
                                                         <option value="">- SOUS-CATEGORIES : -</option>
-                                                        <option value="rech_qualif_prof">Recherche de Qualification Professionnelle</option>
-                                                        <option value="qualifie_rech_emploi">QualifiÃ© Ã  la recherche d'un emploi</option>
-                                                        <option value="primo_demandeur_auto_emploi">Primo demandeur auto emploi</option>
-                                                        <option value="deflate_licence">DÃ©flatÃ©-LicencÃ©</option>
-                                                        <option value="reconv_prof">Reconversion Professionnelle</option>
-                                                        <option value="informelle_formelle">Informelle/Formelle</option>
-                                                        <option value="resident_nonresident">RÃ©sident/Non-RÃ©sident</option>
-                                                        <option value="migrant_preparation_retour">Migrants en PrÃ©paration de son retour</option>
-                                                        <option value="migrant_enretour">Migrants de retour</option>
-                                                        <option value="migrant_retourne">Migrants RetournÃ©</option>
+                                                        <option value="Recherche de Qualification Professionnelle">Recherche de Qualification Professionnelle</option>
+                                                        <option value="Qualifié à la recherche d'un emploi">Qualifié à la recherche d'un emploi</option>
+                                                        <option value="Primo demandeur auto emploi">Primo demandeur auto emploi</option>
+                                                        <option value="Déflaté-Licencé">Déflaté-Licencé</option>
+                                                        <option value="Reconversion Professionnelle">Reconversion Professionnelle</option>
+                                                        <option value="Informelle/Formelle">Informelle/Formelle</option>
+                                                        <option value="Résident/Non-Résident">Résident/Non-Résident</option>
+                                                        <option value="Migrants en Préparation de son retour">Migrants en Préparation de son retour</option>
+                                                        <option value="Migrants de retour">Migrants de retour</option>
+                                                        <option value="Migrants Retourné">Migrants Retourné</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -217,12 +217,12 @@
                                             <div class="form-group">
                                                 <select class="form-control" name="marqueurs" id="demo-category">
                                                     <option value="">- MARQUEURS : -</option>
-                                                    <option value="definition_accomp">DÃ©finition et accompagnement du projet personnel</option>
-                                                    <option value="accomp_rech_emploi_stage">Accompagnement le recherche d'emploi/stage</option>
-                                                    <option value="accomp_groupe">Accompagnement de Groupe</option>
-                                                    <option value="accomp_indiv">Accompagnement IndividualisÃ©</option>
-                                                    <option value="def_accomp_projet_perso">DÃ©finition et Accompagnement du projet personnel</option>
-                                                    <option value="accomp_groupe_accomp_indiv">Accompagnements de Groupe et individualisÃ©</option>
+                                                    <option value="Définition et accompagnement du projet personnel">Définition et accompagnement du projet personnel</option>
+                                                    <option value="Accompagnement le recherche d'emploi/stage">Accompagnement le recherche d'emploi/stage</option>
+                                                    <option value="Accompagnement de Groupe">Accompagnement de Groupe</option>
+                                                    <option value="Accompagnement Individualisé">Accompagnement Individualisé</option>
+                                                    <option value="Définition et Accompagnement du projet personnel">Définition et Accompagnement du projet personnel</option>
+                                                    <option value="Accompagnements de Groupe et individualisé">Accompagnements de Groupe et individualisé</option>
                                                    </select>
                                             </div>
                                         </div> 
@@ -250,7 +250,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="at-emailsubscribearea">
-                            <p>Recevez nos derniÃ¨res informations</p>
+                            <p>Recevez nos dernières informations</p>
                             <form class="at-formtheme at-formnewsletter">
                                 <fieldset>
                                     <input type="email" name="email" class="form-control" placeholder="Votre adresse e-mail">
@@ -309,7 +309,7 @@
                             </div>
                         </div>
                         <div class="at-copyright">
-                            <p>Adresse: ZAC MBAO villa NÂ°3 4iÃ¨me Etage CitÃ© Socidak 1 en face Brioche DorÃ©e, Rufisque Ouvert de 08H Ã  18H</p>
+                            <p>Adresse: ZAC MBAO villa N°3 4ième Etage Cité Socidak 1 en face Brioche Dorée, Rufisque Ouvert de 08H à 18H</p>
                             <p>Copyright @ 2020. <a href="javascript:void(0);">Badel</a> All rights reserved.</p>
                         </div>
                     </div>
