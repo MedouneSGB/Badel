@@ -35,6 +35,8 @@ public class ServInd1 extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=ISO-8859-1");
          
+         String idx = (String) request.getParameter("id");
+         
          String prenom = (String) request.getParameter("prenom");
          String nom = (String) request.getParameter("nom");
          String tel1 = (String) request.getParameter("tel1");
@@ -74,6 +76,7 @@ public class ServInd1 extends HttpServlet {
         da.addModInd1(mi1);
         
         request.setAttribute("formulaire_id", formulaire_id);
+        request.setAttribute("idx", idx);
         RequestDispatcher rd = request.getRequestDispatcher("inscriptionIndividuelle2.jsp");
         rd.forward(request, response);
         

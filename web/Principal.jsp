@@ -67,64 +67,64 @@ Wrapper Start
             <!--************************************
 Header Start
 *************************************-->
-        <header id="at-header" class="at-header at-headervthree">
-            <div class="container-fluid">
-                <div class="row">
-                    <strong class="at-logo"><a href="index.html"><img src="images/logo2.png" alt="company logo here"></a></strong>
-                    <div class="at-navigationarea">
-                        <nav id="at-nav" class="at-nav">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#at-navigation" aria-expanded="false">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-                            </div>
-                            <div id="at-navigation" class="collapse navbar-collapse at-navigation">
-                                <ul>
-                                    <li class="menu-item-has-children">
-                                        <a href="index.html">Accueil</a>
-                                    </li>
-                     <!--            <li class="menu-item-has-children">
-                                        <a href="https://taataan.sn/qui-sommes-nous/">A Propos</a>
-                                    </li> 
-                                    <li class="menu-item-has-children">
-                                        <a href="javascript:void(0);">S'inscrire</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="connection.html" target="blank">Individuellement</a></li>
-                                            <li><a href="connection.html" target="blank">Collectivement</a></li>
-                                        </ul>
-                                    </li>
-                     -->
-                                    <li class="menu-item-has-children">
-                                        <a href="connection.html">Se déconnecter</a>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="javascript:void(0);">Partenaires</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="https://www.taataan.sn/" target="blank">TAATAAN</a></li>
-                                            <li><a href="https://www.adel-invest.com/" target="blank">ADEL-INVEST</a></li>
-                                        </ul>
-                                    </li>
+            <header id="at-header" class="at-header at-headervthree">
+                <div class="container-fluid">
+                    <div class="row">
+                        <strong class="at-logo"><a href="index.html"><img src="images/logo2.png" alt="company logo here"></a></strong>
+                        <div class="at-navigationarea">
+                            <nav id="at-nav" class="at-nav">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#at-navigation" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div id="at-navigation" class="collapse navbar-collapse at-navigation">
+                                    <ul>
+                                        <li class="menu-item-has-children">
+                                            <a href="index.html">Accueil</a>
+                                        </li>
+                                        <!--            <li class="menu-item-has-children">
+                                                           <a href="https://taataan.sn/qui-sommes-nous/">A Propos</a>
+                                                       </li> 
+                                                       <li class="menu-item-has-children">
+                                                           <a href="javascript:void(0);">S'inscrire</a>
+                                                           <ul class="sub-menu">
+                                                               <li><a href="connection.html" target="blank">Individuellement</a></li>
+                                                               <li><a href="connection.html" target="blank">Collectivement</a></li>
+                                                           </ul>
+                                                       </li>
+                                        -->
+                                        <li class="menu-item-has-children">
+                                            <a href="connection.html">Se déconnecter</a>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="javascript:void(0);">Partenaires</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="https://www.taataan.sn/" target="blank">TAATAAN</a></li>
+                                                <li><a href="https://www.adel-invest.com/" target="blank">ADEL-INVEST</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="at-contactsocial">
+                                <span class="at-contactnumber">
+                                    <i class="icon-telephone114"></i>
+                                    <em>+00221 33 837 80 09</em>
+                                </span>
+                                <ul class="at-socialicons">
+                                    <li class="at-facebook"><a href="https://www.facebook.com/badel"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="at-twitter"><a href="https://www.twitter.com/badel"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="at-instagram"><a href="https://www.youtube.com/badel"><i class="fa fa-youtube"></i></a></li>
                                 </ul>
                             </div>
-                        </nav>
-                        <div class="at-contactsocial">
-                            <span class="at-contactnumber">
-								<i class="icon-telephone114"></i>
-								<em>+00221 33 837 80 09</em>
-							</span>
-                            <ul class="at-socialicons">
-                                <li class="at-facebook"><a href="https://www.facebook.com/badel"><i class="fa fa-facebook"></i></a></li>
-                                <li class="at-twitter"><a href="https://www.twitter.com/badel"><i class="fa fa-twitter"></i></a></li>
-                                <li class="at-instagram"><a href="https://www.youtube.com/badel"><i class="fa fa-youtube"></i></a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
+            </header>
             <!--************************************
 Header End
 *************************************-->
@@ -143,7 +143,9 @@ Main Start
                 String ix = request.getParameter("id");
                 String idx = (String) request.getAttribute("id");
                 String tpe = (String) request.getAttribute("tpe");
-
+                if (idx == null) {
+                    idx = ix;
+                }
                 String sql = "SELECT * FROM loginadmin where Id=?";
                 try {
                     Connection con = new JavaConnect().createConnection();
@@ -174,13 +176,19 @@ Main Start
                                         <div class="row">
                                             <br>  
                                             <br>
-                                            
-                                            <center><button style="width: 300px; height: 70px" type="submit" class="at-btn" onclick="window.location.href = 'inscriptionIndividuelle1.jsp'">Inscription Individuelle</button></center>
+                                            <form  action="inscriptionIndividuelle1.jsp" method="post">
+                                                <input type="hidden" value="<%=idx%>" name="id">  
+                                                <center><button style="width: 300px; height: 70px" type="submit" class="at-btn" >Inscription Individuelle</button></center>
+                                            </form>
                                             <br>
-                                            <center><button style="width: 300px; height: 70px" type="submit" class="at-btn" onclick="window.location.href = 'inscriptionCollective1.jsp'">Inscription Collective</button></center>
+                                            <form action="inscriptionCollective1.jsp" method="post">
+                                                <input type="hidden" value="<%=idx%>" name="id">
+                                                <center><button style="width: 300px; height: 70px" type="submit" class="at-btn">Inscription Collective</button></center>
+                                            </form>
                                             <br>
-                                            <center><button style="width: 300px; height: 70px" type="submit" class="at-btn" onclick="window.location.href = 'connection.html'">Se Déconnecter</button></center>
-
+                                            <form action="connection.html" method="post">
+                                                <center><button style="width: 300px; height: 70px" type="submit" class="at-btn">Se Déconnecter</button></center>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -255,6 +263,8 @@ Footer Start
                                         </div>
                                         <div class="at-widgetcontent">
                                             <ul>
+                                                <li> ix = <%=ix%> </li>
+                                                <li> idx = <%=idx%> </li>
                                                 <li><a href="index.html">Accueil</a></li>
                                                 <li><a href="javascript:void(0);">S'INSCRIRE</a></li>
                                                 <li><a href="https://www.adel-invest.com">Adel-invest</a></li>
