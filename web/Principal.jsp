@@ -175,9 +175,9 @@ Main Start
                                             <br>  
                                             <br>
                                             
-                                            <center><button style="width: 300px; height: 70px" type="submit" class="at-btn" onclick="window.location.href = 'inscriptionIndividuelle1.html'">Inscription Individuelle</button></center>
+                                            <center><button style="width: 300px; height: 70px" type="submit" class="at-btn" onclick="window.location.href = 'inscriptionIndividuelle1.jsp'">Inscription Individuelle</button></center>
                                             <br>
-                                            <center><button style="width: 300px; height: 70px" type="submit" class="at-btn" onclick="window.location.href = 'inscriptionCollective1.html'">Inscription Collective</button></center>
+                                            <center><button style="width: 300px; height: 70px" type="submit" class="at-btn" onclick="window.location.href = 'inscriptionCollective1.jsp'">Inscription Collective</button></center>
                                             <br>
                                             <center><button style="width: 300px; height: 70px" type="submit" class="at-btn" onclick="window.location.href = 'connection.html'">Se Déconnecter</button></center>
 

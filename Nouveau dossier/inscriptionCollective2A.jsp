@@ -33,9 +33,10 @@
 </head>
 
 <body>
-    <%
-        String formulaire_id = (String) request.getAttribute("formulaire_id");
-    %>
+      <%
+                
+                String ix = (String) request.getAttribute("id");
+ %>
     <!--************************************
 			Loader Start
 	*************************************-->
@@ -145,7 +146,7 @@
                                         <div class="at-sectiontitleborder">
                                             <br/>
                                         <hr/>
-                                        Suite formulaire <%=formulaire_id%>
+                                        Suite formulaire <%=ix%>
                                             <h2><center>Veuillez remplir ce formulaire : <strong>Etape 2</strong> </center></h2>
                                          <hr/>
                                         </div>

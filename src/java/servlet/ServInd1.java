@@ -8,6 +8,7 @@ package servlet;
 import dao.dataAccess;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Timestamp;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -63,15 +64,18 @@ public class ServInd1 extends HttpServlet {
          String hors_senegal = (String) request.getParameter("hors_senegal");
          String situation_prof = (String) request.getParameter("situation_prof");
          String titre_accompagnement = (String) request.getParameter("titre_accompagnement");
-                   
-        ModInd1 mi1 = new ModInd1( prenom,  nom,  tel1,  tel2,  commune_rattach,  commune_actuelle,  sexe,  tranche_age,  etude,  niveau_etude,  formation_prof,  sejour,  pays_sejourne,  motif_sejour,  experience_prof,  domaine_exp_prof,  duree_exp_prof,  statut_exp_prof,  commune_exp_prof,  departement_exp_prof, region_exp_prof, autre_region_exp_prof, hors_senegal, situation_prof, titre_accompagnement);
+               
+         
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        String formulaire_id = "Form" + timestamp.getTime();
+        
+        ModInd1 mi1 = new ModInd1(formulaire_id, prenom,  nom,  tel1,  tel2,  commune_rattach,  commune_actuelle,  sexe,  tranche_age,  etude,  niveau_etude,  formation_prof,  sejour,  pays_sejourne,  motif_sejour,  experience_prof,  domaine_exp_prof,  duree_exp_prof,  statut_exp_prof,  commune_exp_prof,  departement_exp_prof, region_exp_prof, autre_region_exp_prof, hors_senegal, situation_prof, titre_accompagnement);
         dataAccess da = new dataAccess();
         da.addModInd1(mi1);
         
-        try (PrintWriter out = response.getWriter()) {
-            RequestDispatcher rd = request.getRequestDispatcher("index.html");
-       rd.forward(request, response); 
-        }
+        request.setAttribute("formulaire_id", formulaire_id);
+        RequestDispatcher rd = request.getRequestDispatcher("inscriptionIndividuelle2.jsp");
+        rd.forward(request, response);
         
         /*
         try (PrintWriter out = response.getWriter()) {

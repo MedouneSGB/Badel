@@ -175,38 +175,37 @@ public class dataAccess {
         
           try{
             System.out.println(mi1.getPrenom()+" "+mi1.getHors_senegal());
-            PreparedStatement ps = JavaConnect.getPreparedStatement("insert into p1demandeurindividuel (idDI, formulaire_id, prenom, nom, tel1, tel2, commune_rattach, commune_actuelle, sexe, tranche_age, etude, niveau_etude, formation_prof, sejour, pays_sejourne, motif_sejour, experience_prof, domaine_exp_prof, duree_exp_prof, statut_exp_prof, commune_exp_prof, departement_exp_prof, region_exp_prof, autre_region_exp_prof, hors_senegal, situation_prof, titre_accompagnement) values (null,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            PreparedStatement ps = JavaConnect.getPreparedStatement("insert into p1demandeurindividuel (idDI, prenom, nom, tel1, tel2, commune_rattach, commune_actuelle, sexe, tranche_age, etude, niveau_etude, formation_prof, sejour, pays_sejourne, motif_sejour, experience_prof, domaine_exp_prof, duree_exp_prof, statut_exp_prof, commune_exp_prof, departement_exp_prof, region_exp_prof, autre_region_exp_prof, hors_senegal, situation_prof, titre_accompagnement) values (null,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
             
-                ps.setString(1, mi1.getFormulaire_id());
-                ps.setString(2, mi1.getPrenom());
-                ps.setString(3, mi1.getNom());
-                ps.setString(4, mi1.getTel1());
-                ps.setString(5, mi1.getTel2());
-                ps.setString(6, mi1.getCommune_rattach());
+                ps.setString(1, mi1.getPrenom());
+                ps.setString(2, mi1.getNom());
+                ps.setString(3, mi1.getTel1());
+                ps.setString(4, mi1.getTel2());
+                ps.setString(5, mi1.getCommune_rattach());
                 
-                ps.setString(7, mi1.getCommune_actuelle());
-                ps.setString(8, mi1.getSexe());
-                ps.setString(9, mi1.getTranche_age());
-                ps.setString(10, mi1.getEtude());
-                ps.setString(11, mi1.getNiveau_etude());
-               
-                ps.setString(12, mi1.getFormation_prof());
-                ps.setString(13, mi1.getSejour());
-                ps.setString(14, mi1.getPays_sejourne());
-                ps.setString(15, mi1.getMotif_sejour());
-                ps.setString(16, mi1.getExperience_prof());
+                ps.setString(6, mi1.getCommune_actuelle());
+                ps.setString(7, mi1.getSexe());
+                ps.setString(8, mi1.getTranche_age());
+                ps.setString(9, mi1.getEtude());
+                ps.setString(10, mi1.getNiveau_etude());
                 
-                ps.setString(17, mi1.getDomaine_exp_prof());
-                ps.setString(18, mi1.getDuree_exp_prof());
-                ps.setString(19, mi1.getStatut_exp_prof());
-                ps.setString(20, mi1.getCommune_exp_prof());
-                ps.setString(21, mi1.getDepartement_exp_prof());
+                ps.setString(11, mi1.getFormation_prof());
+                ps.setString(12, mi1.getSejour());
+                ps.setString(13, mi1.getPays_sejourne());
+                ps.setString(14, mi1.getMotif_sejour());
+                ps.setString(15, mi1.getExperience_prof());
                 
-                ps.setString(22, mi1.getRegion_exp_prof());
-                ps.setString(23, mi1.getAutre_region_exp_prof());
-                ps.setString(24, mi1.getHors_senegal());
-                ps.setString(25, mi1.getSituation_prof());
-                ps.setString(26, mi1.getTitre_accompagnement());
+                ps.setString(16, mi1.getDomaine_exp_prof());
+                ps.setString(17, mi1.getDuree_exp_prof());
+                ps.setString(18, mi1.getStatut_exp_prof());
+                ps.setString(19, mi1.getCommune_exp_prof());
+                ps.setString(20, mi1.getDepartement_exp_prof());
+                
+                ps.setString(21, mi1.getRegion_exp_prof());
+                ps.setString(22, mi1.getAutre_region_exp_prof());
+                ps.setString(23, mi1.getHors_senegal());
+                ps.setString(24, mi1.getSituation_prof());
+                ps.setString(25, mi1.getTitre_accompagnement());
                 
                 ps.executeUpdate();
                 System.out.println("Tout est ok"+mi1.getPays_sejourne());
