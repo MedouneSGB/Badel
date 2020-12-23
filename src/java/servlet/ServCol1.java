@@ -56,7 +56,9 @@ public class ServCol1 extends HttpServlet {
         dataAccess da = new dataAccess();
         da.InsCol1(mc1);
 
-        request.setAttribute("id", formulaire_id);
+        String idx = (String) request.getParameter("id");
+        request.setAttribute("idx", idx);
+        request.setAttribute("formulaire_id", formulaire_id);
         RequestDispatcher rd = request.getRequestDispatcher("inscriptionCollective2.jsp");
         rd.forward(request, response);
 

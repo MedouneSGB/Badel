@@ -53,6 +53,9 @@ public class ServInd3 extends HttpServlet {
         dataAccess da = new dataAccess();
         da.addModInd3(mi3);
 
+        
+        String idx = (String) request.getParameter("id");
+        request.setAttribute("idx", idx);
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");

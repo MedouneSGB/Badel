@@ -47,7 +47,7 @@
             String idx = (String) request.getAttribute("id");
             String tpe = (String) request.getAttribute("tpe");
             if (idx == null) {
-                ix = idx;
+                idx = ix;
             }
             String sql = "SELECT * FROM loginadmin where Id=?";
             try {
@@ -104,33 +104,15 @@
 								</button>
                             </div>
                             <div id="at-navigation" class="collapse navbar-collapse at-navigation">
-                                <ul>
+                              <ul>
                                     <li class="menu-item-has-children">
                                         <a href="index.html">Accueil</a>
                                     </li>
                                         <li class="menu-item-has-children">
                                             <a href="Principal.jsp?id=<%=ix%>">Menu Admin</a>
                                         </li>
-                     <!--            <li class="menu-item-has-children">
-                                        <a href="https://taataan.sn/qui-sommes-nous/">A Propos</a>
-                                    </li> 
-                                    <li class="menu-item-has-children">
-                                        <a href="javascript:void(0);">S'inscrire</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="connection.html" target="blank">Individuellement</a></li>
-                                            <li><a href="connection.html" target="blank">Collectivement</a></li>
-                                        </ul>
-                                    </li>
-                     -->
                                     <li class="menu-item-has-children">
                                         <a href="connection.html">Se déconnecter</a>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="javascript:void(0);">Partenaires</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="https://www.taataan.sn/" target="blank">TAATAAN</a></li>
-                                            <li><a href="https://www.adel-invest.com/" target="blank">ADEL-INVEST</a></li>
-                                        </ul>
                                     </li>
                                 </ul>
                             </div>
@@ -168,7 +150,7 @@
             <div class="clearfix"></div>
             <section class="at-sectionspace at-haslayout">
                 <div class="container">
-                    <h1 style="text-align: center;">Inscription Collective</h1>
+                    <h1 style="text-align: center;">Inscription Collective form = <%=formulaire_id%></h1>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="at-content">
@@ -178,7 +160,6 @@
                                         <div class="at-sectiontitleborder">
                                             <br/>
                                         <hr/>
-                                        Suite formulaire <%=formulaire_id%>
                                             <h2><center>Veuillez remplir ce formulaire : <strong>Etape 2</strong> </center></h2>
                                          <hr/>
                                         </div>
@@ -404,6 +385,7 @@
                                             </fieldset>
                                         <fieldset>
                                             <hr/>
+                                            <input type="hidden" value="<%=idx%>" name="id">  
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
                                                     <center><button type="submit" class="at-btn">ENREGISTRER & RETOURNER...</button></center>
                                                 </div>

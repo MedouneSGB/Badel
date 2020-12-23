@@ -1,6 +1,6 @@
 <%-- 
     Document   : inscriptionCollective1
-    Created on : 23 dÃ©c. 2020, 15:07:34
+    Created on : 23 déc. 2020, 15:07:34
     Author     : user
 --%>
 
@@ -11,7 +11,7 @@
 <%@page import="java.sql.*"%>
 <%@page import="java.util.LinkedList"%>
 <%@page import="java.util.List"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 
 <html class="no-js" lang="">
@@ -46,7 +46,7 @@
             String idx = (String) request.getAttribute("id");
             String tpe = (String) request.getAttribute("tpe");
             if (idx == null) {
-                ix = idx;
+                idx = ix;
             }
             String sql = "SELECT * FROM loginadmin where Id=?";
             try {
@@ -111,26 +111,8 @@
                                         <li class="menu-item-has-children">
                                             <a href="Principal.jsp?id=<%=ix%>">Menu Admin</a>
                                         </li>
-                     <!--            <li class="menu-item-has-children">
-                                        <a href="https://taataan.sn/qui-sommes-nous/">A Propos</a>
-                                    </li> 
                                     <li class="menu-item-has-children">
-                                        <a href="javascript:void(0);">S'inscrire</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="connection.html" target="blank">Individuellement</a></li>
-                                            <li><a href="connection.html" target="blank">Collectivement</a></li>
-                                        </ul>
-                                    </li>
-                     -->
-                                    <li class="menu-item-has-children">
-                                        <a href="connection.html">Se dÃ©connecter</a>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="javascript:void(0);">Partenaires</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="https://www.taataan.sn/" target="blank">TAATAAN</a></li>
-                                            <li><a href="https://www.adel-invest.com/" target="blank">ADEL-INVEST</a></li>
-                                        </ul>
+                                        <a href="connection.html">Se déconnecter</a>
                                     </li>
                                 </ul>
                             </div>
@@ -177,7 +159,7 @@
                                         
                                         <div class="at-sectiontitleborder">
                                             <br>
-                                            <h2><center>Veuillez remplir ce formulaire : <strong>Ã©tape 1</strong> </center></h2>
+                                            <h2><center>Veuillez remplir ce formulaire : <strong>étape 1</strong> </center></h2>
                                         </div>
 
                                         <fieldset>
@@ -190,7 +172,7 @@
                                                         <select class="form-control" name="titre" id="demo-category" onchange="changementType( this.value);">
                                                         <option value="">- Quel est votre titre dans le Collectif -</option>
                                                         <option value="responsable_morale">Responsable Moral</option>
-                                                        <option value="responsable_delegue">Responsable dÃ©lÃ©guÃ©</option>
+                                                        <option value="responsable_delegue">Responsable délégué</option>
                                                         <option value="membre">Membre</option>
                                                         <option value="partenaire">Partenaire</option>
                                                         <option value="autre">Autre</option>
@@ -217,11 +199,11 @@
                                          </fieldset>
                                          <fieldset>
                                 <hr/>
-                                     <h3><center>Quelle est la dÃ©nomination du Collectif ? </center></h3>  
+                                     <h3><center>Quelle est la dénomination du Collectif ? </center></h3>  
                                 <hr/>
                                                 <div class="col-xs-12 col-sm-4 col-md-10 col-lg-12 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="denomination" class="form-control" placeholder="DÃ©nomination">
+                                                        <input type="text" name="denomination" class="form-control" placeholder="Dénomination">
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -241,7 +223,7 @@
                                             </fieldset>
                                             <fieldset>
                                 <hr/>
-                                    <h3><center>OÃ© se trouve le siÃ©ge social du Collectif ? </center></h3>  
+                                    <h3><center>Oé se trouve le siége social du Collectif ? </center></h3>  
                                 <hr/>
                                                 <br/>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
@@ -251,12 +233,12 @@
                                                 </div>   
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="region" class="form-control" placeholder="2- Dans quelle rÃ©gion se trouve le Collectif ? ">
+                                                        <input type="text" name="region" class="form-control" placeholder="2- Dans quelle région se trouve le Collectif ? ">
                                                     </div>
                                                 </div>  
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="departement" class="form-control" placeholder="3- Dans quel dÃ©partement se trouve le Collectif ? ">
+                                                        <input type="text" name="departement" class="form-control" placeholder="3- Dans quel département se trouve le Collectif ? ">
                                                     </div>
                                                 </div>  
                                                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
@@ -266,17 +248,17 @@
                                                 </div>   
                                                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="hors_senegal" class="form-control" placeholder="5- PrÃ©cisez si hors SÃ©nÃ©gal ? ">
+                                                        <input type="text" name="hors_senegal" class="form-control" placeholder="5- Précisez si hors Sénégal ? ">
                                                     </div>
                                                 </div>
                                             </fieldset>
                                             <fieldset>
                                 <hr/>
-                                                <h3><center>Quelle est la date de crÃ©ation du Collectif ? </center></h3>  
+                                                <h3><center>Quelle est la date de création du Collectif ? </center></h3>  
                                 <hr/>   
                                                 <div class="col-xs-12 col-sm-4 col-md-10 col-lg-12 pull-left">
                                                     <div class="form-group">
-                                                        <input type="date" name="date_creation" class="form-control" placeholder="Date de crÃ©ation du Collectif.">
+                                                        <input type="date" name="date_creation" class="form-control" placeholder="Date de création du Collectif.">
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -325,7 +307,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="at-emailsubscribearea">
-                            <p>Recevez nos derniÃ©res informations</p>
+                            <p>Recevez nos derniéres informations</p>
                             <form class="at-formtheme at-formnewsletter">
                                 <fieldset>
                                     <input type="email" name="email" class="form-control" placeholder="Votre adresse e-mail">
@@ -384,7 +366,7 @@
                             </div>
                         </div>
                         <div class="at-copyright">
-                            <p>Adresse: ZAC MBAO villa NÃ©3 4iÃ©me Etage CitÃ© Socidak 1 en face Brioche DorÃ©e, Rufisque Ouvert de 08H Ã© 18H</p>
+                            <p>Adresse: ZAC MBAO villa Né3 4iéme Etage Cité Socidak 1 en face Brioche Dorée, Rufisque Ouvert de 08H é 18H</p>
                             <p>Copyright @ 2020. <a href="javascript:void(0);">Badel</a> All rights reserved.</p>
                         </div>
                     </div>

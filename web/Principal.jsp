@@ -82,32 +82,14 @@ Header Start
                                     </button>
                                 </div>
                                 <div id="at-navigation" class="collapse navbar-collapse at-navigation">
-                                    <ul>
-                                        <li class="menu-item-has-children">
-                                            <a href="index.html">Accueil</a>
-                                        </li>
-                                        <!--            <li class="menu-item-has-children">
-                                                           <a href="https://taataan.sn/qui-sommes-nous/">A Propos</a>
-                                                       </li> 
-                                                       <li class="menu-item-has-children">
-                                                           <a href="javascript:void(0);">S'inscrire</a>
-                                                           <ul class="sub-menu">
-                                                               <li><a href="connection.html" target="blank">Individuellement</a></li>
-                                                               <li><a href="connection.html" target="blank">Collectivement</a></li>
-                                                           </ul>
-                                                       </li>
-                                        -->
-                                        <li class="menu-item-has-children">
-                                            <a href="connection.html">Se déconnecter</a>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="javascript:void(0);">Partenaires</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="https://www.taataan.sn/" target="blank">TAATAAN</a></li>
-                                                <li><a href="https://www.adel-invest.com/" target="blank">ADEL-INVEST</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                  <ul>
+                                    <li class="menu-item-has-children">
+                                        <a href="index.html">Accueil</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="connection.html">Se déconnecter</a>
+                                    </li>
+                                </ul>
                                 </div>
                             </nav>
                             <div class="at-contactsocial">

@@ -46,6 +46,8 @@ public class ServInd2 extends HttpServlet {
             da.addModInd2(mi2);
             
         
+        String idx = (String) request.getParameter("id");
+        request.setAttribute("idx", idx);
         request.setAttribute("formulaire_id", formulaire_id);
         RequestDispatcher rd = request.getRequestDispatcher("inscriptionIndividuelle3.jsp");
         rd.forward(request, response);

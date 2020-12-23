@@ -45,7 +45,7 @@
             String idx = (String) request.getAttribute("id");
             String tpe = (String) request.getAttribute("tpe");
             if (idx == null) {
-                ix = idx;
+                idx = ix;
             }
             String sql = "SELECT * FROM loginadmin where Id=?";
             try {
@@ -103,35 +103,17 @@
                                     </button>
                                 </div>
                                 <div id="at-navigation" class="collapse navbar-collapse at-navigation">
-                                    <ul>
-                                        <li class="menu-item-has-children">
-                                            <a href="index.html">Accueil</a>
-                                        </li>
+                                 <ul>
+                                    <li class="menu-item-has-children">
+                                        <a href="index.html">Accueil</a>
+                                    </li>
                                         <li class="menu-item-has-children">
                                             <a href="Principal.jsp?id=<%=ix%>">Menu Admin</a>
                                         </li>
-                                        <!-- <li class="menu-item-has-children">
-                                            <a href="https://taataan.sn/qui-sommes-nous/">A Propos</a>
-                                        </li>
-                                        <li class="menu-item-has-children current-menu-item">
-                                            <a href="javascript:void(0);">S'inscrire</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="inscriptionIndividuelle.html" target="blank">Individuellement</a></li>
-                                                <li><a href="inscriptionCollective.html" target="blank">Collectivement</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="connection.html">Se connecter</a>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="javascript:void(0);">Partenaires</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="https://www.taataan.sn/" target="blank">Tataan</a></li>
-                                                <li><a href="https://www.adel-invest.com/" target="blank">Adel-invest</a></li>
-                                            </ul>
-                                        </li>
-                                        -->
-                                    </ul>
+                                    <li class="menu-item-has-children">
+                                        <a href="connection.html">Se déconnecter</a>
+                                    </li>
+                                </ul>
                                 </div>
                             </nav>
                             <div class="at-contactsocial">
