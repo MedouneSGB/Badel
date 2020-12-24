@@ -385,6 +385,7 @@
                                             </fieldset>
                                         <fieldset>
                                             <hr/>
+                                            <input type="hidden" value="<%=formulaire_id%>" name="formulaire_id">  
                                             <input type="hidden" value="<%=idx%>" name="id">  
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
                                                     <center><button type="submit" class="at-btn">ENREGISTRER & RETOURNER...</button></center>

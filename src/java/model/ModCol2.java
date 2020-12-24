@@ -14,7 +14,6 @@ public class ModCol2 {
     //Déclaration des Variables
  //  private int idDC;
     
-    private String sit_economique;
     private String activ_equip;
     private String activ_equip_depart;
     private String activ_equip_region;
@@ -43,8 +42,8 @@ public class ModCol2 {
 
     // Importation Constructeur avec Paramètres 
 
-    public ModCol2(String sit_economique, String activ_equip, String activ_equip_depart, String activ_equip_region, String activ_equip_autre_region, String activ_equip_hors_senegal, String activ_economique, String mont_cap_social, String nbre_empl_perman, String nbre_empl_tempor, String mont_eparg_mob, String mont_endettement, String mont_sub_recu, String fonctionnalite, String prise_decision, String charte_relationnelle, String plan_developpement, String manuel_procedure, String part_princ_technique, String part_princ_financier, String app_reseau, String nature_reseau, String localite_reseau, String departement_reseau, String nat_intern_reseau, String formulaire_id) {
-        this.sit_economique = sit_economique;
+    public ModCol2( String activ_equip, String activ_equip_depart, String activ_equip_region, String activ_equip_autre_region, String activ_equip_hors_senegal, String activ_economique, String mont_cap_social, String nbre_empl_perman, String nbre_empl_tempor, String mont_eparg_mob, String mont_endettement, String mont_sub_recu, String fonctionnalite, String prise_decision, String charte_relationnelle, String plan_developpement, String manuel_procedure, String part_princ_technique, String part_princ_financier, String app_reseau, String nature_reseau, String localite_reseau, String departement_reseau, String nat_intern_reseau, String formulaire_id) {
+      
         this.activ_equip = activ_equip;
         this.activ_equip_depart = activ_equip_depart;
         this.activ_equip_region = activ_equip_region;
@@ -73,13 +72,6 @@ public class ModCol2 {
     }
 
 
-    public String getSit_economique() {
-        return sit_economique;
-    }
-
-    public void setSit_economique(String sit_economique) {
-        this.sit_economique = sit_economique;
-    }
     
     public String getActiv_equip() {
         return activ_equip;

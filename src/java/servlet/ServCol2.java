@@ -41,7 +41,6 @@ public class ServCol2 extends HttpServlet {
         String activ_equip_hors_senegal = (String) request.getParameter("activ_equip_hors_senegal");
 
         String activ_economique = (String) request.getParameter("activ_economique");
-        String sit_economique = (String) request.getParameter("sit_economique");
         String fonctionnalite = (String) request.getParameter("fonctionnalite");
         String prise_decision = (String) request.getParameter("prise_decision");
         String charte_relationnelle = (String) request.getParameter("charte_relationnelle");
@@ -65,7 +64,7 @@ public class ServCol2 extends HttpServlet {
         String mont_sub_recu = (String) request.getParameter("mont_sub_recu");
         String formulaire_id = (String) request.getParameter("formulaire_id");
 
-        ModCol2 mc2 = new ModCol2(sit_economique, formulaire_id, activ_equip, activ_equip_depart, activ_equip_region, activ_equip_autre_region, activ_equip_hors_senegal, activ_economique, mont_cap_social, nbre_empl_perman, nbre_empl_tempor, mont_eparg_mob, mont_endettement, mont_sub_recu, fonctionnalite, prise_decision, charte_relationnelle, plan_developpement, manuel_procedure, part_princ_technique, part_princ_financier, app_reseau, nature_reseau, localite_reseau, departement_reseau, nat_intern_reseau);
+        ModCol2 mc2 = new ModCol2(formulaire_id, activ_equip, activ_equip_depart, activ_equip_region, activ_equip_autre_region, activ_equip_hors_senegal, activ_economique, mont_cap_social, nbre_empl_perman, nbre_empl_tempor, mont_eparg_mob, mont_endettement, mont_sub_recu, fonctionnalite, prise_decision, charte_relationnelle, plan_developpement, manuel_procedure, part_princ_technique, part_princ_financier, app_reseau, nature_reseau, localite_reseau, departement_reseau, nat_intern_reseau);
         dataAccess da = new dataAccess();
         da.addModCol2(mc2);
 
