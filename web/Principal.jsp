@@ -41,23 +41,39 @@
         <link rel="stylesheet" href="css/responsive.css">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script>
-function myFunction() {
-  var x = document.getElementById("myDIV");
-  var y = document.getElementById("myAff");
-  
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-    
-  if (y.style.display === "block") {
-    y.style.display = "none";
-  } else {
-    y.style.display = "block";
-  }
-}
-</script>
+            function myFunction() {
+                var x = document.getElementById("myDIV");
+                var y = document.getElementById("myAff");
+
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+
+                if (y.style.display === "block") {
+                    y.style.display = "none";
+                } else {
+                    y.style.display = "block";
+                }
+            }
+            function myFunction1() {
+                var a = document.getElementById("myDIV");
+                var b = document.getElementById("myDIVIns");
+
+                if (a.style.display === "none") {
+                    a.style.display = "block";
+                } else {
+                    a.style.display = "none";
+                }
+
+                if (b.style.display === "block") {
+                    b.style.display = "none";
+                } else {
+                    b.style.display = "block";
+                }
+            }
+        </script>
     </head>
 
     <body>
@@ -100,14 +116,14 @@ Header Start
                                     </button>
                                 </div>
                                 <div id="at-navigation" class="collapse navbar-collapse at-navigation">
-                                  <ul>
-                                    <li class="menu-item-has-children">
-                                        <a href="index.html">Accueil</a>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="connection.html">Se déconnecter</a>
-                                    </li>
-                                </ul>
+                                    <ul>
+                                        <li class="menu-item-has-children">
+                                            <a href="index.html">Accueil</a>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="connection.html">Se déconnecter</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </nav>
                             <div class="at-contactsocial">
@@ -177,28 +193,22 @@ Main Start
                                             <br>  
                                             <br>
                                             <center><button style="width: 300px; height: 70px" onclick="myFunction()" type="submit" class="at-btn" >Afficher les Inscriptions</button></center>
-                                         
+
                                             <br>
-                                            <form  action="inscriptionIndividuelle1.jsp" method="post">
-                                                <input type="hidden" value="<%=idx%>" name="id">  
-                                                <center><button style="width: 300px; height: 70px" type="submit" class="at-btn" >Inscription Individuelle</button></center>
-                                            </form>
-                                            <br>
-                                            <form action="inscriptionCollective1.jsp" method="post">
-                                                <input type="hidden" value="<%=idx%>" name="id">
-                                                <center><button style="width: 300px; height: 70px" type="submit" class="at-btn">Inscription Collective</button></center>
-                                            </form>
+                                                <center><button style="width: 300px; height: 70px" onclick="myFunction1()" type="submit" class="at-btn">Faire une Inscription</button></center>
+                                          
                                             <br>
                                             <form action="connection.html" method="post">
                                                 <center><button style="width: 300px; height: 70px" type="submit" class="at-btn">Se Déconnecter</button></center>
                                             </form>
-                                            
-                                            
-                                        </div><div id="myAff" class="row" style="display: none">
+
+
+                                        </div>
+                                        <div id="myAff" class="row" style="display: none">
                                             <br>  
                                             <br>
                                             <center><button style="width: 320px; height: 70px" onclick="myFunction()" type="submit" class="at-btn" >Menu Pricipal</button></center>
-                                         
+
                                             <br>
                                             <form  action="AfficherDemandeInd.jsp" method="post">
                                                 <input type="hidden" value="<%=idx%>" name="id">  
@@ -209,6 +219,25 @@ Main Start
                                                 <input type="hidden" value="<%=idx%>" name="id">
                                                 <center><button style="width: 320px; height: 70px" type="submit" class="at-btn">Afficher Inscription Collective</button></center>
                                             </form>
+                                        </div>
+                                                
+                                        <div id="myDIVIns" class="row" style="display: none">
+                                            <br>  
+                                            <br>
+                                            <center><button style="width: 300px; height: 70px" onclick="myFunction1()" type="submit" class="at-btn" >Menu Pricipal</button></center>
+
+                                            <br>
+                                            <form  action="inscriptionIndividuelle1.jsp" method="post">
+                                                <input type="hidden" value="<%=idx%>" name="id">  
+                                                <center><button style="width: 300px; height: 70px" type="submit" class="at-btn" >Inscription Individuelle</button></center>
+                                            </form>
+                                            <br>
+                                            <form action="inscriptionCollective1.jsp" method="post">
+                                                <input type="hidden" value="<%=idx%>" name="id">
+                                                <center><button style="width: 300px; height: 70px" type="submit" class="at-btn">Inscription Collective</button></center>
+                                            </form>
+
+
                                         </div>
                                     </div>
                                 </div>

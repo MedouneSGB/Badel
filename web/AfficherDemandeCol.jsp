@@ -197,7 +197,7 @@
                                                             while (rs1.next()) {
                                                     %>         
                                                     <tr>
-                                                        <td><input style="background-color: #09b83e; color: white" type="button" value=" Ouvrir Dossier " onclick="location.href = 'dossierComplet.jsp?idform=<%=rs1.getString(2)%>&type=col'"/> </td>
+                                                        <td><input style="background-color: #09b83e; color: white" type="button" value=" Ouvrir Dossier " onclick="location.href = 'dossierComplet.jsp?idform=<%=rs1.getString(2)%>&type=col&id=<%=ix%>'"/> </td>
                                                         <td><%=compte%> </td>
                                                         <td><%=rs1.getString(2)%></td>
                                                         <td><%=rs1.getString(3)%></td>

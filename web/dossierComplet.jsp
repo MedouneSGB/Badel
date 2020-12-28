@@ -67,7 +67,7 @@
             if (idx == null) {
                 idx = ix;
             }
-            ix = "1";
+            //ix = "1";
             String sql = "SELECT * FROM loginadmin where Id=?";
             Connection con = new JavaConnect().createConnection();
             PreparedStatement pst, pst1;
@@ -770,8 +770,12 @@
             </main>    
             <%
                 }
-            %>                                   
-
+            %>            
+            <form  action="Principal.jsp" method="post">
+                <input type="hidden" value="<%=id%>" name="id">  
+                <center><button style="width: 320px; height: 70px; background-color: #09b83e" type="submit" class="at-btn" >Retour au Menu Principal</button></center>
+            </form>   
+            <br/>                        
             <!--************************************
                                     Footer Start
                     *************************************-->
@@ -780,7 +784,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="at-emailsubscribearea">
-                                <p>Recevez nos derni?res informations</p>
+                                <p>Recevez nos dernières informations</p>
                                 <form class="at-formtheme at-formnewsletter">
                                     <fieldset>
                                         <input type="email" name="email" class="form-control" placeholder="Votre adresse e-mail">
