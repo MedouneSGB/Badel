@@ -1,6 +1,6 @@
 <%-- 
     Document   : inscriptionIndividuelle3
-    Created on : 23 dÃ©c. 2020, 14:27:12
+    Created on : 23 déc. 2020, 14:27:12
     Author     : user
 --%>
 
@@ -11,7 +11,7 @@
 <%@page import="java.sql.*"%>
 <%@page import="java.util.LinkedList"%>
 <%@page import="java.util.List"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 
 <html class="no-js" lang="">
@@ -112,7 +112,7 @@
                                             <a href="Principal.jsp?id=<%=ix%>">Menu Admin</a>
                                         </li>
                                     <li class="menu-item-has-children">
-                                        <a href="connection.html">Se dÃ©connecter</a>
+                                        <a href="connection.html">Se déconnecter</a>
                                     </li>
                                 </ul>
                             </div>
@@ -161,8 +161,8 @@
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
                                                         <select class="form-control" name="inscritPar" id="demo-category" onchange="changementType( this.value);">
-                                                        <option value="">- Qui Ãªtes vous ? -</option>
-                                                        <option value="Demandeur">Je suis moi mÃªme le demandeur</option>
+                                                        <option value="">- Qui êtes vous ? -</option>
+                                                        <option value="Demandeur">Je suis moi même le demandeur</option>
                                                         <option value="Animateur">Animateur BEL - MDL - CIEL</option>
                                                         <option value="Parent/Connaissance">Parent ou connaissance du demandeur</option>
                                                         <option value="Organisme">Un organisme d'appui au demandeur</option>
@@ -174,7 +174,7 @@
                                         <div class="at-sectiontitleborder">
                                             <br/>
                                         <hr/>
-                                            <h2><center>Veuillez remplir ce formulaire : <strong>Ã‰tape 3</strong> </center></h2>
+                                            <h2><center>Veuillez remplir ce formulaire : <strong>Étape 3</strong> </center></h2>
                                          <hr/>
                                         </div>
                                         <br/>
@@ -183,13 +183,13 @@
 
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
-                                                    <input type="text" name="soutien_immediat" class="form-control" placeholder=" Quel soutien dÃ©sirez-vous disposer dans l'immÃ©diat?">
+                                                    <input type="text" name="soutien_immediat" class="form-control" placeholder=" Quel soutien désirez-vous disposer dans l'immédiat?">
                                                 </div>
                                             </div>
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
                                                     <select class="form-control" name="regi_commerce" id="demo-category">
-                                                        <option value="">- Avez-vous un RÃ©gi de Commerce : -</option>
+                                                        <option value="">- Avez-vous un Régi de Commerce : -</option>
                                                         <option value="oui">OUI</option>
                                                         <option value="non">NON</option>
                                                     </select> 
@@ -197,7 +197,7 @@
                                             </div>
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
-                                                    <input type="text" name="numero_regi_comm" class="form-control" placeholder=" Et quelle est le numÃ©ro du REGI DE COMMERCE ?">
+                                                    <input type="text" name="numero_regi_comm" class="form-control" placeholder=" Et quelle est le numéro du REGI DE COMMERCE ?">
                                                 </div>
                                             </div>
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
@@ -211,25 +211,25 @@
                                             </div>
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
-                                                    <input type="text" name="numero_ninea" class="form-control" placeholder=" Et quelle est le numÃ©ro du NINEA ?">
+                                                    <input type="text" name="numero_ninea" class="form-control" placeholder=" Et quelle est le numéro du NINEA ?">
                                                 </div>
                                             </div>
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
                                                     <select class="form-control" name="reference_prof" id="demo-category">
-                                                        <option value="">- Avez-vous d'autres rÃ©fÃ©rences professionnelles ? -</option>
+                                                        <option value="">- Avez-vous d'autres références professionnelles ? -</option>
                                                         <option value="carte_artisanat">Carte Artisanat</option>
-                                                        <option value="agrement">AgrÃ©ment</option>
+                                                        <option value="agrement">Agrément</option>
                                                         <option value="licence">Licence</option>
                                                         <option value="autorisation">Autorisation</option>
-                                                        <option value="autre">Autres Ã  prÃ©ciser</option>
+                                                        <option value="autre">Autres à préciser</option>
                                                         <option value="NON">NON</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
-                                                    <input type="text" name="numero_reference_prof" class="form-control" placeholder=" Et quelle est le numÃ©ro du RÃ©fÃ©rence ?">
+                                                    <input type="text" name="numero_reference_prof" class="form-control" placeholder=" Et quelle est le numéro du Référence ?">
                                                 </div>
                                             </div>
                                         <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
@@ -249,13 +249,13 @@
                                        </div>
                                         <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
-                                                    <input type="text" name="numero_compte_banque_sfd" class="form-control" placeholder=" Et quelle est le numÃ©ro du Compte ? ( - Ne pas remplir si NON - )">
+                                                    <input type="text" name="numero_compte_banque_sfd" class="form-control" placeholder=" Et quelle est le numéro du Compte ? ( - Ne pas remplir si NON - )">
                                                 </div>
                                             </div>    
                                        <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                         <div class="form-group">
                                             <select class="form-control" name="soutien_parent" id="demo-category">
-                                                <option value="">- Pour mener Ã  bien votre projet avez-vous le soutien d'un parent ? -</option>
+                                                <option value="">- Pour mener à bien votre projet avez-vous le soutien d'un parent ? -</option>
                                                 <option value="oui">OUI</option>
                                                 <option value="non">NON</option>
                                             </select>
@@ -263,12 +263,12 @@
                                      </div>
                                      <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                         <div class="form-group">
-                                            <input type="text" name="ville_parent" class="form-control" placeholder="Si OUI dans quelle ville rÃ©side-t-il ?      ( - Ne pas remplir si NON - )">
+                                            <input type="text" name="ville_parent" class="form-control" placeholder="Si OUI dans quelle ville réside-t-il ?      ( - Ne pas remplir si NON - )">
                                         </div>
                                    </div>
                                    <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                     <div class="form-group">
-                                        <input type="text" name="pays_parent" class="form-control" placeholder="Si OUI dans quel pays rÃ©side-t-il ?     ( - Ne pas remplir si NON - )">
+                                        <input type="text" name="pays_parent" class="form-control" placeholder="Si OUI dans quel pays réside-t-il ?     ( - Ne pas remplir si NON - )">
                                     </div>
                                </div>
                                             <input type="hidden" value="<%=idx%>" name="id">  
@@ -297,7 +297,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="at-emailsubscribearea">
-                            <p>Recevez nos derniÃ¨res informations</p>
+                            <p>Recevez nos dernières informations</p>
                             <form class="at-formtheme at-formnewsletter">
                                 <fieldset>
                                     <input type="email" name="email" class="form-control" placeholder="Votre adresse e-mail">
@@ -356,7 +356,7 @@
                             </div>
                         </div>
                         <div class="at-copyright">
-                            <p>Adresse: ZAC MBAO villa NÂ°3 4iÃ¨me Etage CitÃ© Socidak 1 en face Brioche DorÃ©e, Rufisque Ouvert de 08H Ã  18H</p>
+                            <p>Adresse: ZAC MBAO villa N°3 4ième Etage Cité Socidak 1 en face Brioche Dorée, Rufisque Ouvert de 08H à 18H</p>
                             <p>Copyright @ 2020. <a href="javascript:void(0);">Badel</a> All rights reserved.</p>
                         </div>
                     </div>

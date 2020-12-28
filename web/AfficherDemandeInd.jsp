@@ -21,7 +21,7 @@
     <head>
         <meta charset="ISO-8859-1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Afficher les Demandes Collectives </title>
+        <title>Afficher les Demandes Individuelles </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="favicon.ico">
@@ -77,7 +77,7 @@
                 ResultSet rs = pst.executeQuery();
 
                 while (rs.next()) {
-                    System.out.println("hello 5");
+                    System.out.println("hello 4");
                     String id = rs.getString(1);
                     String Prenom = rs.getString(2);
                     String nom = rs.getString(3);
@@ -156,7 +156,7 @@
                 <div class="clearfix"></div>
                 <section class="at-sectionspace at-haslayout">
                     <div class="container">
-                        <h1 style="text-align: center;">Liste des Demandes Collectives</h1>
+                        <h1 style="text-align: center;">Liste des Demandes Individuelles</h1>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="at-content">
@@ -167,37 +167,37 @@
                                                     <tr>
                                                         <th>Option</th>
                                                         <th>N°</th>
-                                                        <th>Formulaire</th>
-                                                        <th>Titre</th>
-                                                        <th>Nature juridique</th>
-                                                        <th>Dénomination</th>
-                                                        <th>Reconnaisance juridique</th>
-                                                        <th>Pays</th>
-                                                        <th>Region</th>
-                                                        <th>Département</th>
-                                                        <th>Commune</th>
-                                                        <th>Hors_senegal</th>
-                                                        <th>Date Creation</th>
-                                                        <th>Total Membre</th>
-                                                        <th>Total homme</th>
-                                                        <th>Total femme</th>
+                                                        <th>Id_Formulaire</th>
+                                                        <th>Prenom</th>
+                                                        <th>Nom</th>
+                                                        <th>Tél_1</th>
+                                                        <th>Tél_2</th>
+                                                        <th>Commune_de_Rattachement</th>
+                                                        <th>Commune_Actuelle</th>
+                                                        <th>Sexe</th>
+                                                        <th>Tranche_d'Age</th>
+                                                        <th>Etude</th>
+                                                        <th>Niveau_d'Etude</th>
+                                                        <th>Formation_Professionnelle</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <%
 
-                                                        String sql1 = "SELECT * FROM p1demandeurcollectif";
+                                                        String sql1 = "SELECT * FROM p1demandeurindividuel";
+                                                        String sql2 = "SELECT * FROM p2demandeurindividuel";
                                                         try {
 
                                                             // String idx = "0";
                                                             pst = con.prepareStatement(sql1);
+                                                            pst1 = con.prepareStatement(sql2);
                                                             ResultSet rs1 = pst.executeQuery();
-
+                                                            ResultSet rs2 = pst1.executeQuery();
                                                             int compte = 1;
                                                             while (rs1.next()) {
                                                     %>         
                                                     <tr>
-                                                        <td><input style="background-color: #09b83e; color: white" type="button" value=" Ouvrir Dossier " onclick="location.href = 'dossierComplet.jsp?idform=<%=rs1.getString(2)%>&type=col'"/> </td>
+                                                        <td><input style="background-color: #09b83e; color: white" type="button" value=" Ouvrir Dossier " onclick="location.href = 'dossierComplet.jsp?idform=<%=rs1.getString(2)%>&type=ind'"/> </td>
                                                         <td><%=compte%> </td>
                                                         <td><%=rs1.getString(2)%></td>
                                                         <td><%=rs1.getString(3)%></td>
@@ -211,8 +211,6 @@
                                                         <td><%=rs1.getString(11)%></td>
                                                         <td><%=rs1.getString(12)%></td>
                                                         <td><%=rs1.getString(13)%></td>
-                                                        <td><%=rs1.getString(14)%></td>
-                                                        <td><%=rs1.getString(15)%></td>
 
 
                                                         <%
@@ -242,7 +240,7 @@
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                             <div class="at-emailsubscribearea">
-                                                <p>Recevez nos dernières informations</p>
+                                                <p>Recevez nos derni?res informations</p>
                                                 <form class="at-formtheme at-formnewsletter">
                                                     <fieldset>
                                                         <input type="email" name="email" class="form-control" placeholder="Votre adresse e-mail">

@@ -40,6 +40,24 @@
         <link rel="stylesheet" href="css/color.css">
         <link rel="stylesheet" href="css/responsive.css">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  var y = document.getElementById("myAff");
+  
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+    
+  if (y.style.display === "block") {
+    y.style.display = "none";
+  } else {
+    y.style.display = "block";
+  }
+}
+</script>
     </head>
 
     <body>
@@ -155,8 +173,11 @@ Main Start
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="at-content">
                                     <div class="at-contactusvone">
-                                        <div class="row">
+                                        <div id="myDIV" class="row">
                                             <br>  
+                                            <br>
+                                            <center><button style="width: 300px; height: 70px" onclick="myFunction()" type="submit" class="at-btn" >Afficher les Inscriptions</button></center>
+                                         
                                             <br>
                                             <form  action="inscriptionIndividuelle1.jsp" method="post">
                                                 <input type="hidden" value="<%=idx%>" name="id">  
@@ -170,6 +191,23 @@ Main Start
                                             <br>
                                             <form action="connection.html" method="post">
                                                 <center><button style="width: 300px; height: 70px" type="submit" class="at-btn">Se Déconnecter</button></center>
+                                            </form>
+                                            
+                                            
+                                        </div><div id="myAff" class="row" style="display: none">
+                                            <br>  
+                                            <br>
+                                            <center><button style="width: 320px; height: 70px" onclick="myFunction()" type="submit" class="at-btn" >Menu Pricipal</button></center>
+                                         
+                                            <br>
+                                            <form  action="AfficherDemandeInd.jsp" method="post">
+                                                <input type="hidden" value="<%=idx%>" name="id">  
+                                                <center><button style="width: 320px; height: 70px" type="submit" class="at-btn" > Afficher Inscription Individuelle</button></center>
+                                            </form>
+                                            <br>
+                                            <form action="AfficherDemandeCol.jsp" method="post">
+                                                <input type="hidden" value="<%=idx%>" name="id">
+                                                <center><button style="width: 320px; height: 70px" type="submit" class="at-btn">Afficher Inscription Collective</button></center>
                                             </form>
                                         </div>
                                     </div>

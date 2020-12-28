@@ -1,6 +1,6 @@
 <%-- 
     Document   : inscriptionIndividuelle1
-    Created on : 23 dÃ©c. 2020, 15:07:51
+    Created on : 23 déc. 2020, 15:07:51
     Author     : user
 --%>
 
@@ -11,7 +11,7 @@
 <%@page import="java.sql.*"%>
 <%@page import="java.util.LinkedList"%>
 <%@page import="java.util.List"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 
 <html class="no-js" lang="">
@@ -111,7 +111,7 @@
                                             <a href="Principal.jsp?id=<%=ix%>">Menu Admin</a>
                                         </li>
                                     <li class="menu-item-has-children">
-                                        <a href="connection.html">Se dÃ©connecter</a>
+                                        <a href="connection.html">Se déconnecter</a>
                                     </li>
                                 </ul>
                                 </div>
@@ -160,8 +160,8 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="inscritPar" id="demo-category" onchange="changementType( this.value);">
-                                                            <option value="">- Qui Ãªtes vous ? -</option>
-                                                            <option value="Demandeur">Je suis moi mÃªme le demandeur</option>
+                                                            <option value="">- Qui êtes vous ? -</option>
+                                                            <option value="Demandeur">Je suis moi même le demandeur</option>
                                                             <option value="Animateur">Animateur BEL - MDL - CIEL</option>
                                                             <option value="Parent/Connaissance">Parent ou connaissance du demandeur</option>
                                                             <option value="Organisme">Un organisme d'appui au demandeur</option>
@@ -174,7 +174,7 @@
                                                 <br/>
                                                 <hr/>
                                                 <h2>
-                                                    <center>Veuillez remplir ce formulaire : <strong>Ã‰tape 1</strong> </center>
+                                                    <center>Veuillez remplir ce formulaire : <strong>Étape 1</strong> </center>
                                                 </h2>
                                                 <hr/>
                                             </div>
@@ -189,7 +189,7 @@
                                                     <hr/>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="prenom" class="form-control" placeholder="1- PrÃ©nom" required>
+                                                            <input type="text" name="prenom" class="form-control" placeholder="1- Prénom" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
@@ -200,12 +200,12 @@
 
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="tel1" class="form-control" placeholder="3- NumÃ©ro de TÃ©lÃ©phone 1" required>
+                                                            <input type="text" name="tel1" class="form-control" placeholder="3- Numéro de Téléphone 1" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="tel2" class="form-control" placeholder="4- NumÃ©ro de TÃ©lÃ©phone 2" required>
+                                                            <input type="text" name="tel2" class="form-control" placeholder="4- Numéro de Téléphone 2" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
@@ -233,7 +233,7 @@
                                                             <select class="form-control" name="sexe" id="demo-category" required>
                                                                 <option value="">1- Sexe : -</option>                                                     
                                                                 <option value="masculin">Masculin</option>
-                                                                <option value="feminin">FÃ©minin</option>  
+                                                                <option value="feminin">Féminin</option>  
                                                             </select>
                                                         </div>
                                                     </div>
@@ -241,11 +241,11 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="tranche_age" id="demo-category" required>
-                                                                <option value="">2- Tranche d'Ã¢ge: -</option>
-                                                                <option value="15-25 ans">15 Ã  25 ans</option>
-                                                                <option value="26-35 ans">26 Ã  35 ans</option>
-                                                                <option value="36-45 ans">36 Ã  45 ans</option>
-                                                                <option value="46-55 ans">46 Ã  55 ans</option>
+                                                                <option value="">2- Tranche d'âge: -</option>
+                                                                <option value="15-25 ans">15 à 25 ans</option>
+                                                                <option value="26-35 ans">26 à 35 ans</option>
+                                                                <option value="36-45 ans">36 à 45 ans</option>
+                                                                <option value="46-55 ans">46 à 55 ans</option>
                                                                 <option value="+55 ans">Plus de 55 ans</option>
                                                             </select>
                                                         </div>
@@ -254,8 +254,8 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="etude" id="demo-category" onchange="changementType1(this.value);" required>
-                                                                <option value="">3- Avez vous fait des Ã©tudes: -</option>
-                                                                <option value="Ecole FranÃ§aise">Oui - Ecole FranÃ§aise</option>
+                                                                <option value="">3- Avez vous fait des études: -</option>
+                                                                <option value="Ecole Française">Oui - Ecole Française</option>
                                                                 <option value="Ecole Arabe">Oui - Ecole Arabe</option>
                                                                 <option value="NON">Non</option>
                                                             </select>
@@ -264,12 +264,12 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group" id="niveau">
                                                             <select class="form-control" name="niveau_etude">
-                                                                <option value="">4- Niveau d'Ã©tudes: -</option>
-                                                                <option value="Francais Primaire">Ecole FranÃ§aise - Primaire</option>
-                                                                <option value="Francais Secondaire">Ecole FranÃ§aise - Secondaire</option>
-                                                                <option value="Francais Universitaire">Ecole FranÃ§aise - Universitaire</option>
-                                                                <option value="Arabe General">Ecole Arabe - Etudes gÃ©nÃ©rales de base</option>
-                                                                <option value="Arabe Approfondi de SpÃ©cilisation">Ecole Arabe - Etudes approfondies de spÃ©cialisation</option>
+                                                                <option value="">4- Niveau d'études: -</option>
+                                                                <option value="Francais Primaire">Ecole Française - Primaire</option>
+                                                                <option value="Francais Secondaire">Ecole Française - Secondaire</option>
+                                                                <option value="Francais Universitaire">Ecole Française - Universitaire</option>
+                                                                <option value="Arabe General">Ecole Arabe - Etudes générales de base</option>
+                                                                <option value="Arabe Approfondi de Spécilisation">Ecole Arabe - Etudes approfondies de spécialisation</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -285,7 +285,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="sejour" id="demo-category" required>
-                                                                <option value="">6- Avez-vous sÃ©journÃ© dans un pays Ã©trangers ?-</option>
+                                                                <option value="">6- Avez-vous séjourné dans un pays étrangers ?-</option>
                                                                 <option value="OUI">OUI</option>                                                       
                                                                 <option value="NON">NON</option>
                                                             </select>
@@ -298,14 +298,14 @@
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="motif_sejour" class="form-control" placeholder="8- Et quel est le motif du sÃ©jour ?">
+                                                            <input type="text" name="motif_sejour" class="form-control" placeholder="8- Et quel est le motif du séjour ?">
                                                         </div>
                                                     </div>
 
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="experience_prof" id="demo-category">
-                                                                <option value="">9- ExpÃ©rience Professionnelle : -</option>
+                                                                <option value="">9- Expérience Professionnelle : -</option>
                                                                 <option value="OUI">OUI</option>                                                       
                                                                 <option value="NON">NON</option>
                                                             </select>
@@ -314,7 +314,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="domaine_exp_prof" id="demo-category">
-                                                                <option value="">10- Domaine d'activitÃ© : -</option>
+                                                                <option value="">10- Domaine d'activité : -</option>
                                                                 <option value="Production">Production</option>                                                       
                                                                 <option value="Transformation">Transformation</option>
                                                                 <option value="Distribution_Commerce">Distribution - Commerce</option>
@@ -326,10 +326,10 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="duree_exp_prof" id="demo-category" required> 
-                                                                <option value="">11- DurÃ©e ExpÃ©rience Professionnelle : -</option>
-                                                                <option value="3mois-1an">3mois Ã  1an</option>                                                       
-                                                                <option value="+1an-3ans">+1an Ã  3ans</option>
-                                                                <option value="+3ans-5ans">+3ans Ã  5ans</option>
+                                                                <option value="">11- Durée Expérience Professionnelle : -</option>
+                                                                <option value="3mois-1an">3mois à 1an</option>                                                       
+                                                                <option value="+1an-3ans">+1an à 3ans</option>
+                                                                <option value="+3ans-5ans">+3ans à 5ans</option>
                                                                 <option value="+5ans">+5ans</option>
                                                             </select>
                                                         </div>
@@ -347,38 +347,38 @@
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="commune_exp_prof" class="form-control" placeholder="13- Commune d'activitÃ©">
+                                                            <input type="text" name="commune_exp_prof" class="form-control" placeholder="13- Commune d'activité">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="departement_exp_prof" class="form-control" placeholder="14- DÃ©partement d'activitÃ©">
+                                                            <input type="text" name="departement_exp_prof" class="form-control" placeholder="14- Département d'activité">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="region_exp_prof" class="form-control" placeholder="15- RÃ©gion d'activitÃ©">
+                                                            <input type="text" name="region_exp_prof" class="form-control" placeholder="15- Région d'activité">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="autre_region_exp_prof" class="form-control" placeholder="16- Autre RÃ©gion d'activitÃ©">
+                                                            <input type="text" name="autre_region_exp_prof" class="form-control" placeholder="16- Autre Région d'activité">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="hors_senegal" class="form-control" placeholder="17- ActivitÃ© hors SÃ©nÃ©gal">
+                                                            <input type="text" name="hors_senegal" class="form-control" placeholder="17- Activité hors Sénégal">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="situation_prof" id="demo-category">
                                                                 <option value="">18- Quelle est votre situation professionnelle actuelle ? -</option>
-                                                                <option value="ElÃ¨ve - Etudiant">ElÃ¨ve/Etudiant</option>                                                       
+                                                                <option value="Elève - Etudiant">Elève/Etudiant</option>                                                       
                                                                 <option value="En Chomage">En Chomage</option>
                                                                 <option value="A mon propre compte">A mon propre compte</option>
-                                                                <option value="EmployÃ©/SalariÃ©">EmployÃ©/SalariÃ©</option>
-                                                                <option value="autres">Autre (Ã  prÃ©ciser)</option>
+                                                                <option value="Employé/Salarié">Employé/Salarié</option>
+                                                                <option value="autres">Autre (à préciser)</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -386,7 +386,7 @@
                                                         <div class="row">
                                                             <hr/>
                                                             <h3>
-                                                                <center> Vous sollicitez un accompagnement Ã  quel titre ? </center>
+                                                                <center> Vous sollicitez un accompagnement à quel titre ? </center>
                                                             </h3>
                                                             <hr/>
                                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-12 pull-left">
@@ -430,7 +430,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="at-emailsubscribearea">
-                                <p>Recevez nos derniÃ¨res informations</p>
+                                <p>Recevez nos dernières informations</p>
                                 <form class="at-formtheme at-formnewsletter">
                                     <fieldset>
                                         <input type="email" name="email" class="form-control" placeholder="Votre adresse e-mail">
@@ -491,7 +491,7 @@
                                 </div>
                             </div>
                             <div class="at-copyright">
-                                <p>Adresse: ZAC MBAO villa NÂ°3 4iÃ¨me Etage CitÃ© Socidak 1 en face Brioche DorÃ©e, Rufisque Ouvert de 08H Ã  18H</p>
+                                <p>Adresse: ZAC MBAO villa N°3 4ième Etage Cité Socidak 1 en face Brioche Dorée, Rufisque Ouvert de 08H à 18H</p>
                                 <p>Copyright @ 2020. <a href="javascript:void(0);">Badel</a> All rights reserved.</p>
                             </div>
                         </div>
