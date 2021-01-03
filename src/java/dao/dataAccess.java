@@ -127,9 +127,7 @@ public class dataAccess {
         try {
 
             System.out.println(mc2.getActiv_equip()+ " " + mc2.getNat_intern_reseau());
-            //PreparedStatement ps = JavaConnect.getPreparedStatement("UPDATE p2demandeurcollectif set (activ_equip, activ_equip_depart, activ_equip_region, activ_equip_autre_region, activ_equip_hors_senegal, activ_economique, mont_cap_social, nbre_empl_perman, nbre_empl_tempor, mont_eparg_mob, mont_endettement, mont_sub_recu, fonctionnalite, prise_decision, charte_relationnelle, plan_developpement, manuel_procedure, part_princ_technique, part_princ_financier, app_reseau, nature_reseau, localite_reseau, departement_reseau, international_reseau ) = (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) where formulaire_id like "+mc2.getFormulaire_id() );
-            
-            PreparedStatement ps = JavaConnect.getPreparedStatement("UPDATE p2demandeurcollectif set (activ_equip, activ_equip_depart, activ_equip_region, activ_equip_autre_region, activ_equip_hors_senegal, activ_economique, mont_cap_social, nbre_empl_perman, nbre_empl_tempor, mont_eparg_mob, mont_endettement, mont_sub_recu, fonctionnalite, prise_decision, charte_relationnelle, plan_developpement, manuel_procedure, part_princ_technique, part_princ_financier, app_reseau, nature_reseau, localite_reseau, departement_reseau, international_reseau ) = (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) where formulaire_id like "+mc2.getFormulaire_id() );
+            PreparedStatement ps = JavaConnect.getPreparedStatement("UPDATE p2demandeurcollectif set activ_equip = ?, activ_equip_depart = ?, activ_equip_region = ?, activ_equip_autre_region = ?, activ_equip_hors_senegal = ?, activ_economique = ?, mont_cap_social = ?, nbre_empl_perman = ?, nbre_empl_tempor = ?, mont_eparg_mob = ?, mont_endettement = ?, mont_sub_recu = ?, fonctionnalite = ?, prise_decision = ?, charte_relationnelle = ?, plan_developpement = ?, manuel_procedure = ?, part_princ_technique = ?, part_princ_financier = ?, app_reseau = ?, nature_reseau = ?, localite_reseau = ?, departement_reseau = ?, international_reseau = ? where formulaire_id like ? ");
                     
                     ps.setString(1, mc2.getActiv_equip());
                     ps.setString(2, mc2.getActiv_equip_depart());
@@ -154,7 +152,8 @@ public class dataAccess {
                     ps.setString(21, mc2.getNature_reseau());
                     ps.setString(22, mc2.getLocalite_reseau());
                     ps.setString(23, mc2.getDepartement_reseau());
-                    ps.setString(24, mc2.getNat_intern_reseau());               
+                    ps.setString(24, mc2.getNat_intern_reseau());  
+                    ps.setString(25, mc2.getFormulaire_id());               
 
             ps.executeUpdate();
             System.out.println("Tout est ok" + mc2.getActiv_equip());

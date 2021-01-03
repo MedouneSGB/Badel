@@ -63,15 +63,15 @@ public class UpdateCol2 extends HttpServlet {
         String mont_endettement = (String) request.getParameter("mont_endettement");
         String mont_sub_recu = (String) request.getParameter("mont_sub_recu");
         String formulaire_id = (String) request.getParameter("formulaire_id");
-
-        ModCol2 mc2 = new ModCol2(formulaire_id, activ_equip, activ_equip_depart, activ_equip_region, activ_equip_autre_region, activ_equip_hors_senegal, activ_economique, mont_cap_social, nbre_empl_perman, nbre_empl_tempor, mont_eparg_mob, mont_endettement, mont_sub_recu, fonctionnalite, prise_decision, charte_relationnelle, plan_developpement, manuel_procedure, part_princ_technique, part_princ_financier, app_reseau, nature_reseau, localite_reseau, departement_reseau, nat_intern_reseau);
+        System.out.println("FormID from Serv = " +formulaire_id);
+        ModCol2 mc2 = new ModCol2(activ_equip, activ_equip_depart, activ_equip_region, activ_equip_autre_region, activ_equip_hors_senegal, activ_economique, mont_cap_social, nbre_empl_perman, nbre_empl_tempor, mont_eparg_mob, mont_endettement, mont_sub_recu, fonctionnalite, prise_decision, charte_relationnelle, plan_developpement, manuel_procedure, part_princ_technique, part_princ_financier, app_reseau, nature_reseau, localite_reseau, departement_reseau, nat_intern_reseau, formulaire_id);
         dataAccess da = new dataAccess();
         da.updateCol2(mc2);
 
         String idx = (String) request.getParameter("id");
         request.setAttribute("idx", idx);
         request.setAttribute("formulaire_id", formulaire_id);
-        RequestDispatcher rd = request.getRequestDispatcher("Principal.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("dossierComplet.jsp");
         rd.forward(request, response);
     }
 
