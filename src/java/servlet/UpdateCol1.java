@@ -57,7 +57,7 @@ public class UpdateCol1 extends HttpServlet {
 
         ModCol1 mc1 = new ModCol1(formulaire_id, titre, nat_juridique, denomination, reconnaisance_juridique, pays, region, departement, commune, hors_senegal, date_creation, total_membre, total_homme, total_femme);
         dataAccess da = new dataAccess();
-        da.updateInd1(mc1);
+      //  da.updateInd1(mc1);
 
         String idx = (String) request.getParameter("id");
         request.setAttribute("idx", idx);

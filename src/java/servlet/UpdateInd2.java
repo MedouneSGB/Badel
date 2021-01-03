@@ -44,7 +44,7 @@ public class UpdateInd2 extends HttpServlet {
         
             ModInd2 mi2 = new ModInd2(formulaire_id, categories, sous_categories, parcours, marqueurs);
             dataAccess da = new dataAccess();
-            da.updateInd2(mi2);
+       //     da.updateInd2(mi2);
             
         
         String idx = (String) request.getParameter("id");

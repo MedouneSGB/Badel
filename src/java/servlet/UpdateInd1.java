@@ -73,7 +73,7 @@ public class UpdateInd1 extends HttpServlet {
 
         ModInd1 mi1 = new ModInd1(formulaire_id, prenom, nom, tel1, tel2, commune_rattach, commune_actuelle, sexe, tranche_age, etude, niveau_etude, formation_prof, sejour, pays_sejourne, motif_sejour, experience_prof, domaine_exp_prof, duree_exp_prof, statut_exp_prof, commune_exp_prof, departement_exp_prof, region_exp_prof, autre_region_exp_prof, hors_senegal, situation_prof, titre_accompagnement);
         dataAccess da = new dataAccess();
-        da.updateInd1(mi1);
+      //  da.updateInd1(mi1);
 
         String idx = (String) request.getParameter("id");
         request.setAttribute("idx", idx);

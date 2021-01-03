@@ -51,7 +51,7 @@ public class UpdateInd3 extends HttpServlet {
 
         ModInd3 mi3 = new ModInd3(formulaire_id, soutien_immediat, regi_commerce, numero_regi_comm, ninea, numero_ninea, reference_prof, numero_reference_prof, compte_bancaire_sfd, nom_banque_sfd, numero_compte_banque_sfd, soutien_parent, ville_parent, pays_parent);
         dataAccess da = new dataAccess();
-        da.updateInd3(mi3);
+      //  da.updateInd3(mi3);
 
         
         String idx = (String) request.getParameter("id");
