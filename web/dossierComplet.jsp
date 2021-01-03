@@ -160,6 +160,9 @@
                     String remplir = " Remplir ";
                     String remplir2 = " Remplir ";
                     String remplir3 = " Remplir ";
+                    
+                    String location2 = "inscriptionIndividuelle2";
+                    String location3 = "inscriptionIndividuelle3";
 
                     String formIn1 = "";
                     String formIn2 = "";
@@ -256,6 +259,7 @@
                             form2In5 = rs1.getString(5);
                             form2In6 = rs1.getString(6);
                             remplir2 = " Modifier ";
+                            location2 = "updateInd2";
 
                         }
                     } catch (SQLException ex) {
@@ -305,6 +309,7 @@
                             form3In14 = rs1.getString(14);
                             form3In15 = rs1.getString(15);
                             remplir3 = " Modifier ";
+                            location3 = "updateInd3";
 
                         }
                     } catch (SQLException ex) {
@@ -360,7 +365,7 @@
                                                 <tbody>
 
                                                     <tr>
-                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir%>" onclick="location.href = 'modifierDossier.jsp?idform=<%=formIn2%>&form=p1ind'"/></td>
+                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir%>" onclick="location.href = 'updateInd1.jsp?formulaire_id=<%=formIn2%>&id=<%=idx%>&form=p1ind'"/></td>
                                                         <td><%=formIn2%></td>
                                                         <td><%=formIn3%></td>
                                                         <td><%=formIn4%></td>
@@ -419,7 +424,7 @@
                                                 <tbody>
 
                                                     <tr>
-                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir2%>" onclick="location.href = 'modifierDossier.jsp?idform=<%=form2In2%>&form=p2ind'"/></td>
+                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir2%>" onclick="location.href = '<%=location2%>.jsp?formulaire_id=<%=formIn2%>&id=<%=idx%>&form=p2ind'"/></td>
 
                                                         <td><%=form2In2%></td>
                                                         <td><%=form2In3%></td>
@@ -467,7 +472,7 @@
                                                 <tbody>
 
                                                     <tr>
-                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir3%>" onclick="location.href = 'modifierDossier.jsp?idform=<%=form3In2%>&form=p3ind'"/></td>
+                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir3%>" onclick="location.href = '<%=location3%>.jsp?formulaire_id=<%=formIn2%>&id=<%=idx%>&form=p3ind'"/></td>
                                                         <td><%=form3In2%></td>
                                                         <td><%=form3In3%></td>
                                                         <td><%=form3In4%></td>
@@ -500,6 +505,7 @@
                 //int compte = 1;
                 String remplir = " Remplir ";
                 String remplir2 = " Remplir ";
+                String location2 = "inscriptionCollective2";
 
                 String formCon1 = "";
                 String formCon2 = "";
@@ -613,7 +619,8 @@
                         form2Con24 = rs1.getString(24);
                         form2Con25 = rs1.getString(25);
                         form2Con26 = rs1.getString(26);
-                        remplir = " Modifier ";
+                        remplir2 = " Modifier ";
+                        location2 = "updateCol2";
 
                         System.out.println("hey2");
                     }
@@ -660,7 +667,7 @@
                                                 <tbody>
 
                                                     <tr>
-                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir%>" onclick="location.href = 'modifierDossier.jsp?idform=<%=formCon2%>&form=p1col'"/></td>
+                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir%>" onclick="location.href = 'updateCol1.jsp?formulaire_id=<%=formCon2%>&id=<%=idx%>&form=p1col'"/></td>
                                                         <td><%=formCon1%></td>
                                                         <td><%=formCon2%></td>
                                                         <td><%=formCon3%></td>
@@ -728,7 +735,7 @@
                                                 <tbody>
 
                                                     <tr>
-                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir2%>" onclick="location.href = 'modifierDossier.jsp?idform=<%=form2Con2%>&form=p2col'"/></td>
+                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir2%>" onclick="location.href = '<%=location2%>.jsp?formulaire_id=<%=formCon2%>&id=<%=idx%>&form=p2col'"/></td>
 
                                                         <td><%=form2Con2%></td>
                                                         <td><%=form2Con3%></td>

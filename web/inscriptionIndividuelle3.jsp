@@ -40,7 +40,12 @@
 
 <body>
     <%
+        String formulaire_idx = request.getParameter("formulaire_id");
         String formulaire_id = (String) request.getAttribute("formulaire_id");
+
+            if (formulaire_id == null) {
+                formulaire_id = formulaire_idx;
+            }
 
             String ix = request.getParameter("id");
             String idx = (String) request.getAttribute("id");

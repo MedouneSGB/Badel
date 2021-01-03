@@ -21,7 +21,7 @@
 <head>
         <meta charset="ISO-8859-1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Inscription Collective 2</title>
+    <title>Modifier Collective 2</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico">
@@ -57,7 +57,7 @@
             String sql = "SELECT * FROM loginadmin where Id=?";
             try {
                 Connection con = new JavaConnect().createConnection();
-                PreparedStatement pst;
+                PreparedStatement pst,pst1;
 
                 // String idx = "0";
                 pst = con.prepareStatement(sql);
@@ -150,6 +150,79 @@
         <!--************************************
 				Main Start
 		*************************************-->
+        <%
+                /* Récupération des données de p2demandCol*/
+                //int compte1 = 1;
+                String form2Con1 = "";
+                String form2Con2 = "";
+                String form2Con3 = "";
+                String form2Con4 = "";
+                String form2Con5 = "";
+                String form2Con6 = "";
+                String form2Con7 = "";
+                String form2Con8 = "";
+                String form2Con9 = "";
+                String form2Con10 = "";
+                String form2Con11 = "";
+                String form2Con12 = "";
+                String form2Con13 = "";
+                String form2Con14 = "";
+                String form2Con15 = "";
+                String form2Con16 = "";
+                String form2Con17 = "";
+                String form2Con18 = "";
+                String form2Con19 = "";
+                String form2Con20 = "";
+                String form2Con21 = "";
+                String form2Con22 = "";
+                String form2Con23 = "";
+                String form2Con24 = "";
+                String form2Con25 = "";
+                String form2Con26 = "";
+
+                try {
+
+                    String sql1 = "SELECT * FROM `p2demandeurcollectif` WHERE `formulaire_id` LIKE '" + formulaire_id + "'";
+                    // String idx = "0";
+                    pst1 = con.prepareStatement(sql1);
+                    ResultSet rs1 = pst1.executeQuery();
+
+                    System.out.println("hey1");
+                    while (rs1.next()) {
+
+                        form2Con1 = rs1.getString(1);
+                        form2Con2 = rs1.getString(2);
+                        form2Con3 = rs1.getString(3);
+                        form2Con4 = rs1.getString(4);
+                        form2Con5 = rs1.getString(5);
+                        form2Con6 = rs1.getString(6);
+                        form2Con7 = rs1.getString(7);
+                        form2Con8 = rs1.getString(8);
+                        form2Con9 = rs1.getString(9);
+                        form2Con10 = rs1.getString(10);
+                        form2Con11 = rs1.getString(11);
+                        form2Con12 = rs1.getString(12);
+                        form2Con13 = rs1.getString(13);
+                        form2Con14 = rs1.getString(14);
+                        form2Con15 = rs1.getString(15);
+                        form2Con16 = rs1.getString(16);
+                        form2Con17 = rs1.getString(17);
+                        form2Con18 = rs1.getString(18);
+                        form2Con19 = rs1.getString(19);
+                        form2Con20 = rs1.getString(20);
+                        form2Con21 = rs1.getString(21);
+                        form2Con22 = rs1.getString(22);
+                        form2Con23 = rs1.getString(23);
+                        form2Con24 = rs1.getString(24);
+                        form2Con25 = rs1.getString(25);
+                        form2Con26 = rs1.getString(26);
+
+                        System.out.println("hey2");
+                    }
+                } catch (SQLException ex) {
+                    System.out.println("Erreur recup col2 " + ex);
+                }
+                %>
         <main id="at-main" class="at-main at-haslayout">
 
             <div class="clearfix"></div>
@@ -160,7 +233,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="at-content">
                                 <div class="at-contactusvone">
-                                    <form class="at-formtheme at-formcontacus"  action="ServCol2" method="post">
+                                    <form class="at-formtheme at-formcontacus"  action="UpdateCol2" method="post">
                                         
                                         <div class="at-sectiontitleborder">
                                             <br/>
@@ -179,7 +252,7 @@
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                             <div class="form-group">
                                                 <select class="form-control" name="activ_equip" id="demo-category" onchange="changementType( this.value);">
-                                                <option value="">1- Avez-vous des activit&eacute;s ou &eacute;quipements dans la commune ? -</option>
+                                                <option value="<%=form2Con3%>">1- Avez-vous des activit&eacute;s ou &eacute;quipements dans la commune ? -</option>
                                                 <option value="OUI">OUI</option>
                                                 <option value="NON">NON</option>
                                                 </select>
@@ -187,22 +260,22 @@
                                         </div>
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                             <div class="form-group">
-                                                <input type="text" name="activ_equip_depart" class="form-control" placeholder="2- Dans quelle d&eacute;partement ? ">
+                                                <input type="text" name="activ_equip_depart" value="<%=form2Con4%>" class="form-control" placeholder="2- Dans quelle d&eacute;partement ? ">
                                             </div>
                                         </div>  
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                             <div class="form-group">
-                                                <input type="text" name="activ_equip_region" class="form-control" placeholder="3- Dans quel r&eacute;gion ? ">
+                                                <input type="text" name="activ_equip_region" value="<%=form2Con5%>" class="form-control" placeholder="3- Dans quel r&eacute;gion ? ">
                                             </div>
                                         </div>  
                                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
                                             <div class="form-group">
-                                                <input type="text" name="activ_equip_autre_region" class="form-control" placeholder="4- Dans quelle autre r&eacute;gion ? ">
+                                                <input type="text" name="activ_equip_autre_region" value="<%=form2Con6%>" class="form-control" placeholder="4- Dans quelle autre r&eacute;gion ? ">
                                             </div>
                                         </div>   
                                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
                                             <div class="form-group">
-                                                <input type="text" name="activ_equip_hors_senegal" class="form-control" placeholder="5- Hors S&eacute;n&eacute;gal ? ">
+                                                <input type="text" name="activ_equip_hors_senegal" value="<%=form2Con7%>" class="form-control" placeholder="5- Hors S&eacute;n&eacute;gal ? ">
                                             </div>
                                         </div>
                                         
@@ -215,7 +288,7 @@
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-12 pull-left">
                                             <div class="form-group">
                                                 <select class="form-control" name="activ_economique" id="demo-category" onchange="changementType( this.value);">
-                                                <option value="">- Quelles activit&eacute;s &eacute;conomiques sont men&eacute;es par le Collectif ? -</option>
+                                                <option value="<%=form2Con8%>">- Quelles activit&eacute;s &eacute;conomiques sont men&eacute;es par le Collectif ? -</option>
                                                 <option value="Epargne">Epargne</option>
                                                 <option value="Production">Production</option>
                                                 <option value="Transformation">Transformation</option>
@@ -234,32 +307,32 @@
                                          
                                                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="mont_cap_social" class="form-control" placeholder=" 1- Quel est le montant Capital social ?">
+                                                        <input type="text" name="mont_cap_social" value="<%=form2Con9%>" class="form-control" placeholder=" 1- Quel est le montant Capital social ?">
                                                     </div>
                                                 </div>
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="nbre_empl_perman" class="form-control" placeholder=" 2- Quel est le nombre d'employ&eacute;s permanents actuellement ? ">
+                                                        <input type="text" name="nbre_empl_perman" value="<%=form2Con10%>" class="form-control" placeholder=" 2- Quel est le nombre d'employ&eacute;s permanents actuellement ? ">
                                                     </div>
                                                 </div>
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="nbre_empl_tempor" class="form-control" placeholder=" 3-  Quel est le nombre d'employ&eacute;s temporaires actuellement ? ">
+                                                        <input type="text" name="nbre_empl_tempor" value="<%=form2Con11%>" class="form-control" placeholder=" 3-  Quel est le nombre d'employ&eacute;s temporaires actuellement ? ">
                                                     </div>
                                                 </div>
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="mont_eparg_mob" class="form-control" placeholder=" 4- Quel est le montant épagn&eacute; mobilis&eacute; ces trois (3ans) dernières ann&eacute;es ? ">
+                                                        <input type="text" name="mont_eparg_mob" value="<%=form2Con12%>" class="form-control" placeholder=" 4- Quel est le montant épagn&eacute; mobilis&eacute; ces trois (3ans) dernières ann&eacute;es ? ">
                                                     </div>
                                                 </div>
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="mont_endettement" class="form-control" placeholder=" 5- Quel est le montant endettement ces trois (3ans) dernières ann&eacute;es ? ">
+                                                        <input type="text" name="mont_endettement" value="<%=form2Con13%>" class="form-control" placeholder=" 5- Quel est le montant endettement ces trois (3ans) dernières ann&eacute;es ? ">
                                                     </div>
                                                 </div>
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="mont_sub_recu" class="form-control" placeholder=" 6- Quel est le montant subvention reçu ces trois (3ans) dernières ann&eacute;es ?">
+                                                        <input type="text" name="mont_sub_recu" value="<%=form2Con14%>" class="form-control" placeholder=" 6- Quel est le montant subvention reçu ces trois (3ans) dernières ann&eacute;es ?">
                                                     </div>
                                                 </div>
                                         
@@ -272,14 +345,14 @@
                                          </fieldset>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="fonctionnalite" class="form-control" placeholder="1- Fonctionnalit&eacute; des organes?">
+                                                        <input type="text" name="fonctionnalite" value="<%=form2Con15%>" class="form-control" placeholder="1- Fonctionnalit&eacute; des organes?">
                                                     </div>
                                                 </div>
                                                 
                                                 
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="prise_decision" class="form-control" placeholder="2- Mode prise de d&eacute;cision?">
+                                                        <input type="text" name="prise_decision" value="<%=form2Con16%>" class="form-control" placeholder="2- Mode prise de d&eacute;cision?">
                                                     </div>
                                                 </div>
                                                
@@ -292,7 +365,7 @@
                                                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
                                                         <select class="form-control" name="charte_relationnelle" id="demo-category" onchange="changementType( this.value);">
-                                                        <option value=""> 3- Disponibilit&eacute; d'une charte des membres ? -</option>
+                                                        <option value="<%=form2Con17%>"> 3- Disponibilit&eacute; d'une charte des membres ? -</option>
                                                         <option value="OUI">OUI</option>
                                                         <option value="NON">NON</option>
                                                         </select>
@@ -307,7 +380,7 @@
                                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
                                                     <div class="form-group">
                                                         <select class="form-control" name="plan_developpement" id="demo-category" onchange="changementType( this.value);">
-                                                        <option value=""> 4- Disponibilit&eacute; d'un plan de d&eacute;veloppement ? -</option>
+                                                        <option value="<%=form2Con18%>"> 4- Disponibilit&eacute; d'un plan de d&eacute;veloppement ? -</option>
                                                         <option value="OUI">OUI</option>
                                                         <option value="NON">NON</option>
                                                         </select>
@@ -322,7 +395,7 @@
                                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
                                                     <div class="form-group">
                                                         <select class="form-control" name="manuel_procedure" id="demo-category" onchange="changementType( this.value);">
-                                                        <option value=""> 5- Disponibilit&eacute; d'un manuel de proc&eacute;dure ? -</option>
+                                                        <option value="<%=form2Con19%>"> 5- Disponibilit&eacute; d'un manuel de proc&eacute;dure ? -</option>
                                                         <option value="OUI">OUI</option>
                                                         <option value="NON">NON</option>
                                                         </select>
@@ -342,19 +415,19 @@
                                         
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="part_princ_technique" class="form-control" placeholder="1- Principal Partenaire technique ? -">
+                                                        <input type="text" name="part_princ_technique" value="<%=form2Con20%>" class="form-control" placeholder="1- Principal Partenaire technique ? -">
                                                     </div>
                                                 </div>  
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="part_princ_financier" class="form-control" placeholder="2- Principal Partenaire financier ? -">
+                                                        <input type="text" name="part_princ_financier" value="<%=form2Con21%>" class="form-control" placeholder="2- Principal Partenaire financier ? -">
                                                     </div>
                                                 </div>     
                                                 
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
                                                         <select class="form-control" name="app_reseau" id="demo-category" onchange="changementType( this.value);">
-                                                        <option value="">3 - Appartenance &agrave; un r&eacute;seau ? -</option>
+                                                        <option value="<%=form2Con22%>">3 - Appartenance &agrave; un r&eacute;seau ? -</option>
                                                         <option value="OUI">OUI</option>
                                                         <option value="NON">NON</option>
                                                         </select>
@@ -363,24 +436,24 @@
                                                 <br />
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="nature_reseau" class="form-control" placeholder="4- Nature R&eacute;seau ? -">
+                                                        <input type="text" name="nature_reseau" value="<%=form2Con23%>" class="form-control" placeholder="4- Nature R&eacute;seau ? -">
                                                     </div>
                                                 </div>
                                                  
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="localite_reseau" class="form-control" placeholder="5- Localit&eacute; du R&eacute;seau ? -">
+                                                        <input type="text" name="localite_reseau" value="<%=form2Con24%>" class="form-control" placeholder="5- Localit&eacute; du R&eacute;seau ? -">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="departement_reseau" class="form-control" placeholder="6- Departement R&eacute;seau ? -">
+                                                        <input type="text" name="departement_reseau" value="<%=form2Con25%>" class="form-control" placeholder="6- Departement R&eacute;seau ? -">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
                                                     <div class="form-group">
                                                         <select class="form-control" name="nat_intern_reseau" id="demo-category" onchange="changementType( this.value);">
-                                                        <option value="">7- National ou International ? -</option>
+                                                        <option value="<%=form2Con26%>">7- National ou International ? -</option>
                                                         <option value="national">National</option>
                                                         <option value="international">International</option>
                                                         </select>
@@ -393,7 +466,7 @@
                                             <input type="hidden" value="<%=formulaire_id%>" name="formulaire_id">  
                                             <input type="hidden" value="<%=idx%>" name="id">  
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
-                                                    <center><button type="submit" class="at-btn">ENREGISTRER & RETOURNER...</button></center>
+                                                    <center><button type="submit" class="at-btn">ENREGISTRER LES MODIFICATIONS</button></center>
                                                 </div>
                                             </div>
                                             <hr/>

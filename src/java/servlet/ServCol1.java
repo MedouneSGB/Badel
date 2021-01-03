@@ -35,6 +35,9 @@ public class ServCol1 extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=ISO-8859-1");
 
+        
+        String typeAction = (String) request.getParameter("type1");
+        
         String titre = (String) request.getParameter("titre");
         String nat_juridique = (String) request.getParameter("nat_juridique");
         String denomination = (String) request.getParameter("denomination");
@@ -59,8 +62,13 @@ public class ServCol1 extends HttpServlet {
         String idx = (String) request.getParameter("id");
         request.setAttribute("idx", idx);
         request.setAttribute("formulaire_id", formulaire_id);
+        if(typeAction != null){
         RequestDispatcher rd = request.getRequestDispatcher("inscriptionCollective2.jsp");
         rd.forward(request, response);
+        }else{
+        RequestDispatcher rd = request.getRequestDispatcher("Principal.jsp");
+        rd.forward(request, response);
+        }
 
     }
 

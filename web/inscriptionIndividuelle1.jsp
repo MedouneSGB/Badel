@@ -407,7 +407,7 @@
 
                                             <input type="hidden" value="<%=idx%>" name="id">  
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
-                                                <center><button type="submit" class="at-btn">ENREGISTRER & RETOURNER...</button>&nbsp;<button type="submit" class="at-btn">ENREGISTRER & POURSUIVRE...</button></center>
+                                                <center><button type="submit" name="type2" class="at-btn">ENREGISTRER & RETOURNER...</button>&nbsp;<button type="submit" name="type1" class="at-btn">ENREGISTRER & POURSUIVRE...</button></center>
                                             </div>
                                     </div>
                                     </fieldset>

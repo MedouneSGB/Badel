@@ -34,6 +34,7 @@ public class ServInd2 extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=ISO-8859-1");
         
+        String typeAction = (String) request.getParameter("type1");
         
         String categories = (String) request.getParameter("categories");
         String sous_categories = (String) request.getParameter("sous_categories");
@@ -49,8 +50,14 @@ public class ServInd2 extends HttpServlet {
         String idx = (String) request.getParameter("id");
         request.setAttribute("idx", idx);
         request.setAttribute("formulaire_id", formulaire_id);
+        if(typeAction != null){
         RequestDispatcher rd = request.getRequestDispatcher("inscriptionIndividuelle3.jsp");
         rd.forward(request, response);
+        }else{
+        RequestDispatcher rd = request.getRequestDispatcher("Principal.jsp");
+        rd.forward(request, response);
+        }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

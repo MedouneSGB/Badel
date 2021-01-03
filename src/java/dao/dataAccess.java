@@ -89,7 +89,7 @@ public class dataAccess {
         try {
 
             System.out.println(mc2.getActiv_equip()+ " " + mc2.getNat_intern_reseau());
-            PreparedStatement ps = JavaConnect.getPreparedStatement("insert into p2demandeurcollectif (idDC, formulaire_id, activ_equip, activ_equip_depart, activ_equip_region, activ_equip_autre_region, activ_equip_hors_senegal, activ_economique, mont_cap_social, nbre_empl_perman, nbre_empl_tempor, mont_eparg_mob, mont_endettement, mont_sub_recu, fonctionnalite, prise_decision, charte_relationnelle, plan_developpement, manuel_procedure, part_princ_technique, part_princ_financier, app_reseau, nature_reseau, localite_reseau, departement_reseau, international_reseau ) values (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            PreparedStatement ps = JavaConnect.getPreparedStatement("insert into p2demandeurcollectif (idDC, activ_equip, activ_equip_depart, activ_equip_region, activ_equip_autre_region, activ_equip_hors_senegal, activ_economique, mont_cap_social, nbre_empl_perman, nbre_empl_tempor, mont_eparg_mob, mont_endettement, mont_sub_recu, fonctionnalite, prise_decision, charte_relationnelle, plan_developpement, manuel_procedure, part_princ_technique, part_princ_financier, app_reseau, nature_reseau, localite_reseau, departement_reseau, international_reseau, formulaire_id ) values (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
                     
                     ps.setString(1, mc2.getActiv_equip());
                     ps.setString(2, mc2.getActiv_equip_depart());
@@ -121,6 +121,45 @@ public class dataAccess {
             System.out.println("Tout est ok" + mc2.getActiv_equip());
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(dataAccess.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+     public void updateCol2(ModCol2 mc2) {
+        try {
+
+            System.out.println(mc2.getActiv_equip()+ " " + mc2.getNat_intern_reseau());
+            //PreparedStatement ps = JavaConnect.getPreparedStatement("UPDATE p2demandeurcollectif set (activ_equip, activ_equip_depart, activ_equip_region, activ_equip_autre_region, activ_equip_hors_senegal, activ_economique, mont_cap_social, nbre_empl_perman, nbre_empl_tempor, mont_eparg_mob, mont_endettement, mont_sub_recu, fonctionnalite, prise_decision, charte_relationnelle, plan_developpement, manuel_procedure, part_princ_technique, part_princ_financier, app_reseau, nature_reseau, localite_reseau, departement_reseau, international_reseau ) = (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) where formulaire_id like "+mc2.getFormulaire_id() );
+            
+            PreparedStatement ps = JavaConnect.getPreparedStatement("UPDATE p2demandeurcollectif set (activ_equip, activ_equip_depart, activ_equip_region, activ_equip_autre_region, activ_equip_hors_senegal, activ_economique, mont_cap_social, nbre_empl_perman, nbre_empl_tempor, mont_eparg_mob, mont_endettement, mont_sub_recu, fonctionnalite, prise_decision, charte_relationnelle, plan_developpement, manuel_procedure, part_princ_technique, part_princ_financier, app_reseau, nature_reseau, localite_reseau, departement_reseau, international_reseau ) = (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) where formulaire_id like "+mc2.getFormulaire_id() );
+                    
+                    ps.setString(1, mc2.getActiv_equip());
+                    ps.setString(2, mc2.getActiv_equip_depart());
+                    ps.setString(3, mc2.getActiv_equip_region());
+                    ps.setString(4, mc2.getActiv_equip_autre_region());
+                    ps.setString(5, mc2.getActiv_equip_hors_senegal());
+                    ps.setString(6, mc2.getActiv_economique());
+                    ps.setString(7, mc2.getMont_cap_social());
+                    ps.setString(8, mc2.getNbre_empl_perman());
+                    ps.setString(9, mc2.getNbre_empl_tempor());
+                    ps.setString(10, mc2.getMont_eparg_mob());
+                    ps.setString(11, mc2.getMont_endettement());
+                    ps.setString(12, mc2.getMont_sub_recu());   
+                    ps.setString(13, mc2.getFonctionnalite());
+                    ps.setString(14, mc2.getPrise_decision());
+                    ps.setString(15, mc2.getCharte_relationnelle());
+                    ps.setString(16, mc2.getPlan_developpement());
+                    ps.setString(17, mc2.getManuel_procedure());
+                    ps.setString(18, mc2.getPart_princ_technique());
+                    ps.setString(19, mc2.getPart_princ_financier());
+                    ps.setString(20, mc2.getApp_reseau());
+                    ps.setString(21, mc2.getNature_reseau());
+                    ps.setString(22, mc2.getLocalite_reseau());
+                    ps.setString(23, mc2.getDepartement_reseau());
+                    ps.setString(24, mc2.getNat_intern_reseau());               
+
+            ps.executeUpdate();
+            System.out.println("Tout est ok" + mc2.getActiv_equip());
+        } catch (SQLException | ClassNotFoundException ex) {
+            System.out.println("Erreur updateCol2 " +ex);
         }
     }
     

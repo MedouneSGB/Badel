@@ -17,9 +17,9 @@ import model.ModInd3;
 
 /**
  *
- * @author HP
+ * @author user
  */
-public class ServInd3 extends HttpServlet {
+public class UpdateInd3 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -51,14 +51,13 @@ public class ServInd3 extends HttpServlet {
 
         ModInd3 mi3 = new ModInd3(formulaire_id, soutien_immediat, regi_commerce, numero_regi_comm, ninea, numero_ninea, reference_prof, numero_reference_prof, compte_bancaire_sfd, nom_banque_sfd, numero_compte_banque_sfd, soutien_parent, ville_parent, pays_parent);
         dataAccess da = new dataAccess();
-        da.addModInd3(mi3);
+        da.updateInd3(mi3);
 
         
         String idx = (String) request.getParameter("id");
         request.setAttribute("idx", idx);
         RequestDispatcher rd = request.getRequestDispatcher("Principal.jsp");
         rd.forward(request, response);
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -99,4 +98,5 @@ public class ServInd3 extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
 }

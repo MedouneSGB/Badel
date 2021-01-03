@@ -1,6 +1,6 @@
 <%-- 
-    Document   : inscriptionIndividuelle2
-    Created on : 23 déc. 2020, 14:25:30
+    Document   : inscriptionIndividuelle3
+    Created on : 23 déc. 2020, 14:27:12
     Author     : user
 --%>
 
@@ -13,13 +13,14 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
+
 <html class="no-js" lang="">
 
 
 <head>
     <meta charset="ISO-8859-1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Inscription Individuelle 2</title>
+    <title>Modifier Individuelle 3</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico">
@@ -45,7 +46,7 @@
             if (formulaire_id == null) {
                 formulaire_id = formulaire_idx;
             }
-            
+
             String ix = request.getParameter("id");
             String idx = (String) request.getAttribute("id");
             String tpe = (String) request.getAttribute("tpe");
@@ -108,7 +109,7 @@
 								</button>
                             </div>
                             <div id="at-navigation" class="collapse navbar-collapse at-navigation">
-                              <ul>
+                            <ul>
                                     <li class="menu-item-has-children">
                                         <a href="index.html">Accueil</a>
                                     </li>
@@ -154,12 +155,12 @@
             <div class="clearfix"></div>
             <section class="at-sectionspace at-haslayout">
                 <div class="container">
-                    <h1 style="text-align: center;">Inscription Individuelle 2 form = <%=formulaire_id%></h1>
+                    <h1 style="text-align: center;">Inscription Individuelle 3 form = <%=formulaire_id%></h1>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="at-content">
                                 <div class="at-contactusvone">
-                                    <form class="at-formtheme at-formcontacus" action="ServInd2" method="post" >
+                                    <form class="at-formtheme at-formcontacus" action="UpdateInd3" method="post" >
                                      <!--   <fieldset>
                                             <div class="row">
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
@@ -178,89 +179,108 @@
                                         <div class="at-sectiontitleborder">
                                             <br/>
                                         <hr/>
-                                            <h2><center>Veuillez remplir ce formulaire : <strong>Étape 2</strong> </center></h2>
+                                            <h2><center>Veuillez remplir ce formulaire : <strong>Étape 3</strong> </center></h2>
                                          <hr/>
-                                         <br/>
-                                         <hr/>
-                                            <h3><center>ORIENTATION PROFESSIONNELLE :<strong>OPTION INITIALE DEMANDEUR</strong> </center></h3>
-                                            <hr/>
-                                        </div> 
+                                        </div>
+                                        <br/>
+                                            
                                         <fieldset>
+
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
-                                                    <select class="form-control" name="categories" id="demo-category">
-                                                        <option value="">- CATEGORIES : -</option>
-                                                        <option value="Insertion à l'emploi">Insertion à l'emploi</option>
-                                                        <option value="Insertion ou Reconversion par l'auto-emploi">Insertion ou Reconversion par l'auto-emploi</option>
-                                                        <option value="Renforcement ou Extension Activité">Renforcement ou Extension Activité</option>
-                                                        <option value="Migrants">Migrants</option>
+                                                    <input type="text" name="soutien_immediat" class="form-control" placeholder=" Quel soutien désirez-vous disposer dans l'immédiat?">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
+                                                <div class="form-group">
+                                                    <select class="form-control" name="regi_commerce" id="demo-category">
+                                                        <option value="">- Avez-vous un Régi de Commerce : -</option>
+                                                        <option value="oui">OUI</option>
+                                                        <option value="non">NON</option>
+                                                    </select> 
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
+                                                <div class="form-group">
+                                                    <input type="text" name="numero_regi_comm" class="form-control" placeholder=" Et quelle est le numéro du REGI DE COMMERCE ?">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
+                                                <div class="form-group">
+                                                    <select class="form-control" name="ninea" id="demo-category">
+                                                        <option value="">- Avez-vous votre NINEA : -</option>
+                                                        <option value="oui">OUI</option>
+                                                        <option value="non">NON</option>
+                                                    </select>   
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
+                                                <div class="form-group">
+                                                    <input type="text" name="numero_ninea" class="form-control" placeholder=" Et quelle est le numéro du NINEA ?">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
+                                                <div class="form-group">
+                                                    <select class="form-control" name="reference_prof" id="demo-category">
+                                                        <option value="">- Avez-vous d'autres références professionnelles ? -</option>
+                                                        <option value="carte_artisanat">Carte Artisanat</option>
+                                                        <option value="agrement">Agrément</option>
+                                                        <option value="licence">Licence</option>
+                                                        <option value="autorisation">Autorisation</option>
+                                                        <option value="autre">Autres à préciser</option>
+                                                        <option value="NON">NON</option>
                                                     </select>
                                                 </div>
                                             </div>
-                                        </fieldset>
-                                        <fieldset>
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
-                                                    <select class="form-control" name="sous_categories" id="demo-category">
-                                                        <option value="">- SOUS-CATEGORIES : -</option>
-                                                        <option value="Recherche de Qualification Professionnelle">Recherche de Qualification Professionnelle</option>
-                                                        <option value="Qualifié à la recherche d'un emploi">Qualifié à la recherche d'un emploi</option>
-                                                        <option value="Primo demandeur auto emploi">Primo demandeur auto emploi</option>
-                                                        <option value="Déflaté-Licencé">Déflaté-Licencé</option>
-                                                        <option value="Reconversion Professionnelle">Reconversion Professionnelle</option>
-                                                        <option value="Informelle/Formelle">Informelle/Formelle</option>
-                                                        <option value="Résident/Non-Résident">Résident/Non-Résident</option>
-                                                        <option value="Migrants en Préparation de son retour">Migrants en Préparation de son retour</option>
-                                                        <option value="Migrants de retour">Migrants de retour</option>
-                                                        <option value="Migrants Retourné">Migrants Retourné</option>
-                                                    </select>
+                                                    <input type="text" name="numero_reference_prof" class="form-control" placeholder=" Et quelle est le numéro du Référence ?">
                                                 </div>
                                             </div>
-                                        </fieldset>
-                                        <fieldset>
                                         <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
-                                            <div class="form-group">
-                                                <select class="form-control" name="parcours" id="demo-category">
-                                                    <option value="">- PARCOURS : -</option>
-                                                    <option value="parcours1">Parcours-1</option>
-                                                    <option value="parcours2">Parcours-2</option>
-                                                    <option value="parcours3">Parcours-3</option>
-                                                    <option value="parcours4">Parcours-4</option>
-                                                    <option value="parcours1_2">Parcours-1_2</option>
-                                                    <option value="parcours1_3">Parcours-1_3</option>
-                                                    <option value="parcours1_4">Parcours-1_4</option>
-                                                    <option value="parcours2_3">Parcours-2_3</option>
-                                                    <option value="parcours2_4">Parcours-2_4</option>
-                                                    <option value="parcours3_4">Parcours-3_4</option>
-                                                    <option value="parcours1_2_3">Parcours-1_2_3</option>
-                                                    <option value="parcours1_2_4">Parcours-1_2_4</option>
-                                                    <option value="parcours1_2_3_4">Parcours-1_2_3_4</option>
-                                                    <option value="audit_org_financier">Audit organisationnel et financier</option>
-                                                    <option value="contrat_accompagnement">Contrat d'accompagnement</option>
-                                                    <option value="accomp_distant">Accompagnement distant</option>
-                                                </select>
-                                            </div>
-                                        </div>  
-                                        </fieldset>
-                                        <fieldset>
+                                                <div class="form-group">
+                                                    <select class="form-control" name="compte_bancaire_sfd" id="demo-category">
+                                                        <option value="">- Disposez-vous d'un compte ? -</option>
+                                                        <option value="oui_banque">OUI dans une Banque</option>
+                                                        <option value="oui_sfd">OUI dans une SFD</option>
+                                                        <option value="non">NON</option>
+                                                    </select>
+                                                </div>
+                                        </div>
+                                       <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
+                                                <div class="form-group">
+                                                    <input type="text" name="nom_banque_sfd" class="form-control" placeholder="Si OUI dans quelle banque ou SFD ? ( - Ne pas remplir si NON - )">
+                                                </div>
+                                       </div>
                                         <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
-                                            <div class="form-group">
-                                                <select class="form-control" name="marqueurs" id="demo-category">
-                                                    <option value="">- MARQUEURS : -</option>
-                                                    <option value="Définition et accompagnement du projet personnel">Définition et accompagnement du projet personnel</option>
-                                                    <option value="Accompagnement le recherche d'emploi/stage">Accompagnement le recherche d'emploi/stage</option>
-                                                    <option value="Accompagnement de Groupe">Accompagnement de Groupe</option>
-                                                    <option value="Accompagnement Individualisé">Accompagnement Individualisé</option>
-                                                    <option value="Définition et Accompagnement du projet personnel">Définition et Accompagnement du projet personnel</option>
-                                                    <option value="Accompagnements de Groupe et individualisé">Accompagnements de Groupe et individualisé</option>
-                                                   </select>
-                                            </div>
-                                        </div> 
+                                                <div class="form-group">
+                                                    <input type="text" name="numero_compte_banque_sfd" class="form-control" placeholder=" Et quelle est le numéro du Compte ? ( - Ne pas remplir si NON - )">
+                                                </div>
+                                            </div>    
+                                       <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
+                                        <div class="form-group">
+                                            <select class="form-control" name="soutien_parent" id="demo-category">
+                                                <option value="">- Pour mener à bien votre projet avez-vous le soutien d'un parent ? -</option>
+                                                <option value="oui">OUI</option>
+                                                <option value="non">NON</option>
+                                            </select>
+                                        </div>
+                                     </div>
+                                     <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
+                                        <div class="form-group">
+                                            <input type="text" name="ville_parent" class="form-control" placeholder="Si OUI dans quelle ville réside-t-il ?      ( - Ne pas remplir si NON - )">
+                                        </div>
+                                   </div>
+                                   <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
+                                    <div class="form-group">
+                                        <input type="text" name="pays_parent" class="form-control" placeholder="Si OUI dans quel pays réside-t-il ?     ( - Ne pas remplir si NON - )">
+                                    </div>
+                               </div>
                                             <input type="hidden" value="<%=idx%>" name="id">  
-                                            <input type="hidden" value="<%=formulaire_id%>" name="formulaire_id">
+                                            <input type="hidden" value="<%=formulaire_id%>" name="formulaire_id">           
                                         </fieldset>                                      
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
-                                                <center><button type="submit" name="type2" class="at-btn">ENREGISTRER & RETOURNER</button>&nbsp;<button type="submit" name="type1" class="at-btn">ENREGISTRER & POURSUIVRE...</button></center>
+                                                <center><button type="submit" class="at-btn">ENREGISTRER LES MODIFICATIONS</button></center>
                                             </div>
                                     
                                     </form>

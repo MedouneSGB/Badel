@@ -28,7 +28,26 @@
         <servlet-name>ServCol2</servlet-name>
         <servlet-class>servlet.ServCol2</servlet-class>
     </servlet>
-    
+    <servlet>
+        <servlet-name>UpdateInd1</servlet-name>
+        <servlet-class>servlet.UpdateInd1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateInd2</servlet-name>
+        <servlet-class>servlet.UpdateInd2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateCol1</servlet-name>
+        <servlet-class>servlet.UpdateCol1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateInd3</servlet-name>
+        <servlet-class>servlet.UpdateInd3</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateCol2</servlet-name>
+        <servlet-class>servlet.UpdateCol2</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>IndividVerif</servlet-name>
         <url-pattern>/IndividVerif</url-pattern>
@@ -56,6 +75,26 @@
     <servlet-mapping>
         <servlet-name>ServCol2</servlet-name>
         <url-pattern>/ServCol2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateInd1</servlet-name>
+        <url-pattern>/UpdateInd1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateInd2</servlet-name>
+        <url-pattern>/UpdateInd2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateCol1</servlet-name>
+        <url-pattern>/UpdateCol1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateInd3</servlet-name>
+        <url-pattern>/UpdateInd3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateCol2</servlet-name>
+        <url-pattern>/UpdateCol2</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
