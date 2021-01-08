@@ -20,7 +20,7 @@
 <head>
     <meta charset="ISO-8859-1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Modifier Individuelle 3</title>
+    <title>Inscription Individuelle 3</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico">
@@ -160,7 +160,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="at-content">
                                 <div class="at-contactusvone">
-                                    <form class="at-formtheme at-formcontacus" action="UpdateInd3" method="post" >
+                                    <form class="at-formtheme at-formcontacus" action="ServInd3" method="post" >
                                      <!--   <fieldset>
                                             <div class="row">
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
@@ -280,7 +280,7 @@
                                             <input type="hidden" value="<%=formulaire_id%>" name="formulaire_id">           
                                         </fieldset>                                      
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
-                                                <center><button type="submit" class="at-btn">ENREGISTRER LES MODIFICATIONS</button></center>
+                                                <center><button type="submit" class="at-btn">ENREGISTRER & RETOURNER</button></center>
                                             </div>
                                     
                                     </form>

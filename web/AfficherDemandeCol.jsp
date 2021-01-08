@@ -167,6 +167,7 @@
                                                     <tr>
                                                         <th>Option</th>
                                                         <th>N°</th>
+                                                        <th>Inscrit_Par</th>
                                                         <th>Formulaire</th>
                                                         <th>Titre</th>
                                                         <th>Nature juridique</th>
@@ -186,7 +187,7 @@
                                                 <tbody>
                                                     <%
 
-                                                        String sql1 = "SELECT * FROM p1demandeurcollectif";
+                                                        String sql1 = "SELECT * FROM p1demandeurcollectif where supp = 0";
                                                         try {
 
                                                             // String idx = "0";
@@ -199,6 +200,7 @@
                                                     <tr>
                                                         <td><input style="background-color: #09b83e; color: white" type="button" value=" Ouvrir Dossier " onclick="location.href = 'dossierComplet.jsp?idform=<%=rs1.getString(2)%>&type=col&id=<%=ix%>'"/> </td>
                                                         <td><%=compte%> </td>
+                                                        <td>User <%=rs1.getString(18)%></td>
                                                         <td><%=rs1.getString(2)%></td>
                                                         <td><%=rs1.getString(3)%></td>
                                                         <td><%=rs1.getString(4)%></td>

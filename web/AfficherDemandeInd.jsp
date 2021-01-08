@@ -167,6 +167,7 @@
                                                     <tr>
                                                         <th>Option</th>
                                                         <th>N°</th>
+                                                        <th>Inscrit_Par</th>
                                                         <th>Id_Formulaire</th>
                                                         <th>Prenom</th>
                                                         <th>Nom</th>
@@ -184,21 +185,19 @@
                                                 <tbody>
                                                     <%
 
-                                                        String sql1 = "SELECT * FROM p1demandeurindividuel";
-                                                        String sql2 = "SELECT * FROM p2demandeurindividuel";
+                                                        String sql1 = "SELECT * FROM p1demandeurindividuel where supp = 0";
                                                         try {
 
                                                             // String idx = "0";
                                                             pst = con.prepareStatement(sql1);
-                                                            pst1 = con.prepareStatement(sql2);
                                                             ResultSet rs1 = pst.executeQuery();
-                                                            ResultSet rs2 = pst1.executeQuery();
                                                             int compte = 1;
                                                             while (rs1.next()) {
                                                     %>         
                                                     <tr>
                                                         <td><input style="background-color: #09b83e; color: white" type="button" value=" Ouvrir Dossier " onclick="location.href = 'dossierComplet.jsp?idform=<%=rs1.getString(2)%>&type=ind&id=<%=ix%>'"/> </td>
                                                         <td><%=compte%> </td>
+                                                        <td>User <%=rs1.getString(29)%></td>
                                                         <td><%=rs1.getString(2)%></td>
                                                         <td><%=rs1.getString(3)%></td>
                                                         <td><%=rs1.getString(4)%></td>

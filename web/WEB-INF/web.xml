@@ -48,6 +48,10 @@
         <servlet-name>UpdateCol2</servlet-name>
         <servlet-class>servlet.UpdateCol2</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Delete</servlet-name>
+        <servlet-class>servlet.Delete</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>IndividVerif</servlet-name>
         <url-pattern>/IndividVerif</url-pattern>
@@ -95,6 +99,10 @@
     <servlet-mapping>
         <servlet-name>UpdateCol2</servlet-name>
         <url-pattern>/UpdateCol2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Delete</servlet-name>
+        <url-pattern>/Delete</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

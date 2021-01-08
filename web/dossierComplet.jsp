@@ -194,6 +194,8 @@
                     String formIn25 = "";
                     String formIn26 = "";
                     String formIn27 = "";
+                    
+                    String formIn29 = "";
 
                     try {
 
@@ -231,6 +233,7 @@
                             formIn25 = rs1.getString(25);
                             formIn26 = rs1.getString(26);
                             formIn27 = rs1.getString(27);
+                            formIn29 = rs1.getString(29);
                             remplir = " Modifier ";
                         }
                     } catch (SQLException ex) {
@@ -336,6 +339,7 @@
                                                 <thead>
                                                     <tr>
                                                         <th>Option</th>
+                                                        <th>Inscrit_Par</th>
                                                         <th>Id_Formulaire</th>
                                                         <th>Prenom</th>
                                                         <th>Nom</th>
@@ -368,7 +372,8 @@
                                                 <tbody>
 
                                                     <tr>
-                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir%>" onclick="location.href = 'updateInd1.jsp?formulaire_id=<%=formIn2%>&id=<%=idx%>&form=p1ind'"/></td>
+                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir%>" onclick="location.href = 'updateInd1.jsp?formulaire_id=<%=formIn2%>&id=<%=idx%>&form=p1ind'"/><input style="background-color: red; color: white" type="button" value="  Effacer " onclick="location.href ='delete.jsp?formulaire_id=<%=formIn2%>&id=<%=idx%>&table=p1demandeurindividuel'"/></td>
+                                                        <td><%=formIn29%></td>                                                        
                                                         <td><%=formIn2%></td>
                                                         <td><%=formIn3%></td>
                                                         <td><%=formIn4%></td>
@@ -525,10 +530,11 @@
                 String formCon13 = "";
                 String formCon14 = "";
                 String formCon15 = "";
+                String formCon18 = "";
 
                 try {
 
-                    String sql1 = "SELECT * FROM `p1demandeurcollectif` WHERE `formulaire_id` LIKE '" + idform + "'";
+                    String sql1 = "SELECT * FROM `p1demandeurcollectif` WHERE `formulaire_id` LIKE '" + idform + "' and supp = 0";
                     // String idx = "0";
                     pst1 = con.prepareStatement(sql1);
                     ResultSet rs1 = pst1.executeQuery();
@@ -550,6 +556,7 @@
                         formCon13 = rs1.getString(13);
                         formCon14 = rs1.getString(14);
                         formCon15 = rs1.getString(15);
+                        formCon18 = rs1.getString(18);
                         remplir = " Modifier ";
 
                     }
@@ -649,6 +656,7 @@
                                                 <thead>
                                                     <tr>
                                                         <th>Option</th>
+                                                        <th>Inscrit_Par</th>
                                                         <th>N°</th>
                                                         <th>Formulaire</th>
                                                         <th>Titre</th>
@@ -670,7 +678,8 @@
                                                 <tbody>
 
                                                     <tr>
-                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir%>" onclick="location.href = 'updateCol1.jsp?formulaire_id=<%=formCon2%>&id=<%=idx%>&form=p1col'"/></td>
+                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir%>" onclick="location.href = 'updateCol1.jsp?formulaire_id=<%=formCon2%>&id=<%=idx%>&form=p1col'"/><input style="background-color: red; color: white" type="button" value="  Effacer " onclick="location.href ='delete.jsp?formulaire_id=<%=formCon2%>&id=<%=idx%>&table=p1demandeurcollectif'"/></td>
+                                                        <td><%=formCon18%></td>                                                        
                                                         <td><%=formCon1%></td>
                                                         <td><%=formCon2%></td>
                                                         <td><%=formCon3%></td>
