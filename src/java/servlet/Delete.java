@@ -8,19 +8,18 @@ package servlet;
 import dao.dataAccess;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Timestamp;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.ModCol1;
+import model.delete;
 
 /**
  *
- * @author HP
+ * @author user
  */
-public class ServCol1 extends HttpServlet {
+public class Delete extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,44 +32,37 @@ public class ServCol1 extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=ISO-8859-1");
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
 
+            String formulaire_id = (String) request.getParameter("formulaire_id");
+            String idx = (String) request.getParameter("id");
+            String table = (String) request.getParameter("table");
+
+            delete del = new delete(formulaire_id, table);
+            dataAccess da = new dataAccess();
+            da.delete(del);
+
+            request.setAttribute("idx", idx);
+            if ("p1demandeurindividuel".equals(table)) {
+                RequestDispatcher rd = request.getRequestDispatcher("AfficherDemandeInd.jsp");
+                rd.forward(request, response);
+            } else {
+                RequestDispatcher rd = request.getRequestDispatcher("AfficherDemandeCol.jsp");
+                rd.forward(request, response);
+            }
+            /*
         
-        String typeAction = (String) request.getParameter("type1");
-        
-        String titre = (String) request.getParameter("titre");
-        String nat_juridique = (String) request.getParameter("nat_juridique");
-        String denomination = (String) request.getParameter("denomination");
-        String reconnaisance_juridique = (String) request.getParameter("reconnaisance_juridique");
-        String pays = (String) request.getParameter("pays");
-        String region = (String) request.getParameter("region");
-        String departement = (String) request.getParameter("departement");
-        String commune = (String) request.getParameter("commune");
-        String hors_senegal = (String) request.getParameter("hors_senegal");
-        String date_creation = (String) request.getParameter("date_creation");
-        String total_membre = (String) request.getParameter("total_membre");
-        String total_homme = (String) request.getParameter("total_homme");
-        String total_femme = (String) request.getParameter("total_femme");
-
-        String idx = (String) request.getParameter("id");
-        
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        String formulaire_id = "Form" + timestamp.getTime();
-
-        ModCol1 mc1 = new ModCol1(formulaire_id, titre, nat_juridique, denomination, reconnaisance_juridique, pays, region, departement, commune, hors_senegal, date_creation, total_membre, total_homme, total_femme, idx);
-        dataAccess da = new dataAccess();
-        da.InsCol1(mc1);
-
-        request.setAttribute("idx", idx);
-        request.setAttribute("formulaire_id", formulaire_id);
-        if(typeAction != null){
-        RequestDispatcher rd = request.getRequestDispatcher("inscriptionCollective2.jsp");
-        rd.forward(request, response);
-        }else{
-        RequestDispatcher rd = request.getRequestDispatcher("Principal.jsp");
-        rd.forward(request, response);
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("formid = "+formulaire_id);
+            out.println("idx = "+idx);
+            out.println("table = "+table);
+            out.println("</body>");
+            out.println("</html>");
+             */
         }
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -26,13 +26,14 @@ public class ModCol1 {
     private String total_membre;
     private String total_homme;
     private String total_femme;
+    private String inscritPar;
     // Importation Constructeur avec Paramètres  
 
     public ModCol1(String formulaire_id, String titre, String nat_juridique, String denomination,
             String reconnaisance_juridique, String pays, String region,
             String departement, String commune, String hors_senegal,
             String date_creation, String total_membre, String total_homme,
-            String total_femme) {
+            String total_femme, String inscritPar) {
         
         this.formulaire_id = formulaire_id;
         this.titre = titre;
@@ -48,6 +49,7 @@ public class ModCol1 {
         this.total_membre = total_membre;
         this.total_homme = total_homme;
         this.total_femme = total_femme;
+        this.inscritPar = inscritPar;
     }       
 
     // Importation des Getteurs et Setteurs
@@ -161,6 +163,13 @@ public class ModCol1 {
 
     public void setTotal_femme(String total_femme) {
         this.total_femme = total_femme;
+    }
+    public String getInscritPar() {
+        return inscritPar;
+    }
+
+    public void setInscritPar(String inscritPar) {
+        this.inscritPar = inscritPar;
     }
 
 }

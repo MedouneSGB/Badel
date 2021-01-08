@@ -68,14 +68,15 @@ public class ServInd1 extends HttpServlet {
         String situation_prof = (String) request.getParameter("situation_prof");
         String titre_accompagnement = (String) request.getParameter("titre_accompagnement");
 
+        String idx = (String) request.getParameter("id");
+        
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         String formulaire_id = "Form" + timestamp.getTime();
 
-        ModInd1 mi1 = new ModInd1(formulaire_id, prenom, nom, tel1, tel2, commune_rattach, commune_actuelle, sexe, tranche_age, etude, niveau_etude, formation_prof, sejour, pays_sejourne, motif_sejour, experience_prof, domaine_exp_prof, duree_exp_prof, statut_exp_prof, commune_exp_prof, departement_exp_prof, region_exp_prof, autre_region_exp_prof, hors_senegal, situation_prof, titre_accompagnement);
+        ModInd1 mi1 = new ModInd1(formulaire_id, prenom, nom, tel1, tel2, commune_rattach, commune_actuelle, sexe, tranche_age, etude, niveau_etude, formation_prof, sejour, pays_sejourne, motif_sejour, experience_prof, domaine_exp_prof, duree_exp_prof, statut_exp_prof, commune_exp_prof, departement_exp_prof, region_exp_prof, autre_region_exp_prof, hors_senegal, situation_prof, titre_accompagnement, idx);
         dataAccess da = new dataAccess();
         da.addModInd1(mi1);
 
-        String idx = (String) request.getParameter("id");
         request.setAttribute("idx", idx);
         request.setAttribute("formulaire_id", formulaire_id);
         if(typeAction != null){

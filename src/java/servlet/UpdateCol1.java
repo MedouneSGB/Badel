@@ -51,15 +51,16 @@ public class UpdateCol1 extends HttpServlet {
         String total_membre = (String) request.getParameter("total_membre");
         String total_homme = (String) request.getParameter("total_homme");
         String total_femme = (String) request.getParameter("total_femme");
-
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        String formulaire_id = "Form" + timestamp.getTime();
-
-        ModCol1 mc1 = new ModCol1(formulaire_id, titre, nat_juridique, denomination, reconnaisance_juridique, pays, region, departement, commune, hors_senegal, date_creation, total_membre, total_homme, total_femme);
-        dataAccess da = new dataAccess();
-      //  da.updateInd1(mc1);
-
+        
         String idx = (String) request.getParameter("id");
+
+        //Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        String formulaire_id = (String) request.getParameter("formulaire_id");
+
+        ModCol1 mc1 = new ModCol1(formulaire_id, titre, nat_juridique, denomination, reconnaisance_juridique, pays, region, departement, commune, hors_senegal, date_creation, total_membre, total_homme, total_femme, idx);
+        dataAccess da = new dataAccess();
+        da.updateCol1(mc1);
+
         request.setAttribute("idx", idx);
         request.setAttribute("formulaire_id", formulaire_id);
         if(typeAction != null){

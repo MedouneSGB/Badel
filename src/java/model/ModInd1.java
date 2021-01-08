@@ -42,8 +42,9 @@ public class ModInd1 {
     private String hors_senegal;
     private String situation_prof;
     private String titre_accompagnement;
-
-    public ModInd1(String formulaire_id, String prenom, String nom, String tel1, String tel2, String commune_rattach, String commune_actuelle, String sexe, String tranche_age, String etude, String niveau_etude, String formation_prof, String sejour, String pays_sejourne, String motif_sejour, String experience_prof, String domaine_exp_prof, String duree_exp_prof, String statut_exp_prof, String commune_exp_prof, String departement_exp_prof, String region_exp_prof, String autre_region_exp_prof, String hors_senegal, String situation_prof, String titre_accompagnement) {
+    private String inscritPar;
+    
+    public ModInd1(String formulaire_id, String prenom, String nom, String tel1, String tel2, String commune_rattach, String commune_actuelle, String sexe, String tranche_age, String etude, String niveau_etude, String formation_prof, String sejour, String pays_sejourne, String motif_sejour, String experience_prof, String domaine_exp_prof, String duree_exp_prof, String statut_exp_prof, String commune_exp_prof, String departement_exp_prof, String region_exp_prof, String autre_region_exp_prof, String hors_senegal, String situation_prof, String titre_accompagnement, String inscritPar) {
         this.formulaire_id = formulaire_id;
         this.prenom = prenom;
         this.nom = nom;
@@ -70,6 +71,7 @@ public class ModInd1 {
         this.hors_senegal = hors_senegal;
         this.situation_prof = situation_prof;
         this.titre_accompagnement = titre_accompagnement;
+        this.inscritPar = inscritPar;
     }
 
     public String getFormulaire_id() {
@@ -279,5 +281,14 @@ public class ModInd1 {
     public void setTitre_accompagnement(String titre_accompagnement) {
         this.titre_accompagnement = titre_accompagnement;
     }
+
+    public String getInscritPar() {
+        return inscritPar;
+    }
+
+    public void setInscritPar(String inscritPar) {
+        this.inscritPar = inscritPar;
+    }
+
 
 }
