@@ -53,10 +53,13 @@ public class UpdateInd3 extends HttpServlet {
         dataAccess da = new dataAccess();
         da.updateInd3(mi3);
 
-        
+        System.out.println("servlet.UpdateInd3 = "+formulaire_id);
+        String type = "ind";
+        request.setAttribute("type", type);
         String idx = (String) request.getParameter("id");
         request.setAttribute("idx", idx);
-        RequestDispatcher rd = request.getRequestDispatcher("Principal.jsp");
+        request.setAttribute("formulaire_id", formulaire_id);
+        RequestDispatcher rd = request.getRequestDispatcher("dossierComplet.jsp");
         rd.forward(request, response);
     }
 

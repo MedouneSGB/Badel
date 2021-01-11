@@ -68,6 +68,8 @@ public class UpdateCol2 extends HttpServlet {
         dataAccess da = new dataAccess();
         da.updateCol2(mc2);
 
+        String type = "col";
+        request.setAttribute("type", type);
         String idx = (String) request.getParameter("id");
         request.setAttribute("idx", idx);
         request.setAttribute("formulaire_id", formulaire_id);

@@ -47,6 +47,8 @@ public class UpdateInd2 extends HttpServlet {
             da.updateInd2(mi2);
             
         
+        String type = "ind";
+        request.setAttribute("type", type);
         String idx = (String) request.getParameter("id");
         request.setAttribute("idx", idx);
         request.setAttribute("formulaire_id", formulaire_id);
@@ -54,7 +56,7 @@ public class UpdateInd2 extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("inscriptionIndividuelle3.jsp");
         rd.forward(request, response);
         }else{
-        RequestDispatcher rd = request.getRequestDispatcher("Principal.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("dossierComplet.jsp");
         rd.forward(request, response);
         }
     }

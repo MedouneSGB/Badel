@@ -77,13 +77,15 @@ public class UpdateInd1 extends HttpServlet {
         dataAccess da = new dataAccess();
         da.updateInd1(mi1);
 
+        String type = "ind";
+        request.setAttribute("type", type);
         request.setAttribute("idx", idx);
         request.setAttribute("formulaire_id", formulaire_id);
         if(typeAction != null){
         RequestDispatcher rd = request.getRequestDispatcher("inscriptionIndividuelle2.jsp");
         rd.forward(request, response);
         }else{
-        RequestDispatcher rd = request.getRequestDispatcher("Principal.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("dossierComplet.jsp");
         rd.forward(request, response);
         }
     }
