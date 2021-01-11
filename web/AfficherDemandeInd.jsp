@@ -160,9 +160,15 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="at-content">
+                                    <h3>Rechercher par :</h3> <br/>
+                                    <input id="myInput" onkeyup="myFunction()" placeholder="ID Formulaire"  type="text" name="" value="" />
+                                    <input id="myInput1" onkeyup="myFunction1()" placeholder="Prenom" type="text" name="" value="" />
+                                    <input id="myInput2" onkeyup="myFunction2()" placeholder="Nom" type="text" name="" value="" />
+
+                                    <br/> <br/>
                                     <div class="at-contactusvone">
                                         <div style="overflow-x:auto;">
-                                            <table>
+                                            <table id="myTable">
                                                 <thead>
                                                     <tr>
                                                         <th>Option</th>
@@ -336,6 +342,60 @@
                         <!--************************************
                                             Wrapper End
                             *************************************-->
+                        <script>
+
+                            function myFunction() {
+                                var input, filter, table, tr, td, i;
+                                input = document.getElementById("myInput");
+                                filter = input.value.toUpperCase();
+                                table = document.getElementById("myTable");
+                                tr = table.getElementsByTagName("tr");
+                                for (i = 0; i < tr.length; i++) {
+                                    td = tr[i].getElementsByTagName("td")[3];
+                                    if (td) {
+                                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                            tr[i].style.display = "";
+                                        } else {
+                                            tr[i].style.display = "none";
+                                        }
+                                    }
+                                }
+                            }
+                              function myFunction1() {
+                                var input, filter, table, tr, td, i;
+                                input = document.getElementById("myInput1");
+                                filter = input.value.toUpperCase();
+                                table = document.getElementById("myTable");
+                                tr = table.getElementsByTagName("tr");
+                                for (i = 0; i < tr.length; i++) {
+                                    td = tr[i].getElementsByTagName("td")[4];
+                                    if (td) {
+                                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                            tr[i].style.display = "";
+                                        } else {
+                                            tr[i].style.display = "none";
+                                        }
+                                    }
+                                }
+                            }
+                              function myFunction2() {
+                                var input, filter, table, tr, td, i;
+                                input = document.getElementById("myInput2");
+                                filter = input.value.toUpperCase();
+                                table = document.getElementById("myTable");
+                                tr = table.getElementsByTagName("tr");
+                                for (i = 0; i < tr.length; i++) {
+                                    td = tr[i].getElementsByTagName("td")[5];
+                                    if (td) {
+                                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                            tr[i].style.display = "";
+                                        } else {
+                                            tr[i].style.display = "none";
+                                        }
+                                    }
+                                }
+                            }
+                        </script>
                         <script src="js/vendor/jquery-library.js"></script>
                         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcvAXp35fi4q7HXm7vcG9JMtzQbMzjRe8"></script>
                         <script src="js/vendor/jquery-migrate.js"></script>

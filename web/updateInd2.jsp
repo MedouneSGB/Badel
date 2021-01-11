@@ -55,7 +55,7 @@
             String sql = "SELECT * FROM loginadmin where Id=?";
             try {
                 Connection con = new JavaConnect().createConnection();
-                PreparedStatement pst;
+                PreparedStatement pst, pst1;
 
                 // String idx = "0";
                 pst = con.prepareStatement(sql);
@@ -149,6 +149,37 @@
         <!--************************************
 				Main Start
 		*************************************-->
+        <%
+                    /* Récupération des données de p2demandind */
+                    //int compte1 = 1;
+                    String form2In1 = "";
+                    String form2In2 = "";
+                    String form2In3 = "";
+                    String form2In4 = "";
+                    String form2In5 = "";
+                    String form2In6 = "";
+
+                    try {
+
+                        String sql1 = "SELECT * FROM `p2demandeurindividuel` WHERE `formulaire_id` LIKE '" + formulaire_id + "'";
+                        // String idx = "0";
+                        pst1 = con.prepareStatement(sql1);
+                        ResultSet rs1 = pst1.executeQuery();
+
+                        while (rs1.next()) {
+
+                            form2In1 = rs1.getString(1);
+                            form2In2 = rs1.getString(2);
+                            form2In3 = rs1.getString(3);
+                            form2In4 = rs1.getString(4);
+                            form2In5 = rs1.getString(5);
+                            form2In6 = rs1.getString(6);
+
+                        }
+                    } catch (SQLException ex) {
+                        System.out.println("Erreur recup ind1 " + ex);
+                    }
+                    %>
         <main id="at-main" class="at-main at-haslayout">
 
             <div class="clearfix"></div>
@@ -159,7 +190,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="at-content">
                                 <div class="at-contactusvone">
-                                    <form class="at-formtheme at-formcontacus" action="ServInd2" method="post" >
+                                    <form class="at-formtheme at-formcontacus" action="UpdateInd2" method="post" >
                                      <!--   <fieldset>
                                             <div class="row">
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
@@ -189,7 +220,7 @@
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
                                                     <select class="form-control" name="categories" id="demo-category">
-                                                        <option value="">- CATEGORIES : -</option>
+                                                        <option value="<%=form2In3%>">- CATEGORIES : -</option>
                                                         <option value="Insertion à l'emploi">Insertion à l'emploi</option>
                                                         <option value="Insertion ou Reconversion par l'auto-emploi">Insertion ou Reconversion par l'auto-emploi</option>
                                                         <option value="Renforcement ou Extension Activité">Renforcement ou Extension Activité</option>
@@ -202,7 +233,7 @@
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
                                                     <select class="form-control" name="sous_categories" id="demo-category">
-                                                        <option value="">- SOUS-CATEGORIES : -</option>
+                                                        <option value="<%=form2In4%>">- SOUS-CATEGORIES : -</option>
                                                         <option value="Recherche de Qualification Professionnelle">Recherche de Qualification Professionnelle</option>
                                                         <option value="Qualifié à la recherche d'un emploi">Qualifié à la recherche d'un emploi</option>
                                                         <option value="Primo demandeur auto emploi">Primo demandeur auto emploi</option>
@@ -221,7 +252,7 @@
                                         <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                             <div class="form-group">
                                                 <select class="form-control" name="parcours" id="demo-category">
-                                                    <option value="">- PARCOURS : -</option>
+                                                    <option value="<%=form2In5%>">- PARCOURS : -</option>
                                                     <option value="parcours1">Parcours-1</option>
                                                     <option value="parcours2">Parcours-2</option>
                                                     <option value="parcours3">Parcours-3</option>
@@ -246,7 +277,7 @@
                                         <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                             <div class="form-group">
                                                 <select class="form-control" name="marqueurs" id="demo-category">
-                                                    <option value="">- MARQUEURS : -</option>
+                                                    <option value="<%=form2In6%>">- MARQUEURS : -</option>
                                                     <option value="Définition et accompagnement du projet personnel">Définition et accompagnement du projet personnel</option>
                                                     <option value="Accompagnement le recherche d'emploi/stage">Accompagnement le recherche d'emploi/stage</option>
                                                     <option value="Accompagnement de Groupe">Accompagnement de Groupe</option>
@@ -260,7 +291,7 @@
                                             <input type="hidden" value="<%=formulaire_id%>" name="formulaire_id">
                                         </fieldset>                                      
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
-                                                <center><button type="submit" name="type2" class="at-btn">ENREGISTRER & RETOURNER</button>&nbsp;<button type="submit" name="type1" class="at-btn">ENREGISTRER & POURSUIVRE...</button></center>
+                                                <center><button type="submit" name="type2" class="at-btn">ENREGISTRER LES MODIFICATIONS</button></center>
                                             </div>
                                     
                                     </form>

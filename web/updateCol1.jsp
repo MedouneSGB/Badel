@@ -41,7 +41,7 @@
 <body>
     <%
         String formulaire_id = (String) request.getAttribute("formulaire_id");
-            String idform = request.getParameter("idform");
+            String idform = request.getParameter("formulaire_id");
             
             if (idform == null) {
                 idform = formulaire_id;
@@ -55,7 +55,7 @@
             String sql = "SELECT * FROM loginadmin where Id=?";
             try {
                 Connection con = new JavaConnect().createConnection();
-                PreparedStatement pst;
+                PreparedStatement pst, pst1;
 
                 // String idx = "0";
                 pst = con.prepareStatement(sql);
@@ -149,6 +149,56 @@
         <!--************************************
 				Main Start
 		*************************************-->
+        <%
+                /* Récupération des données de p1demandCol */
+                //int compte = 1;
+                String formCon1 = "";
+                String formCon2 = "";
+                String formCon3 = "";
+                String formCon4 = "";
+                String formCon5 = "";
+                String formCon6 = "";
+                String formCon7 = "";
+                String formCon8 = "";
+                String formCon9 = "";
+                String formCon10 = "";
+                String formCon11 = "";
+                String formCon12 = "";
+                String formCon13 = "";
+                String formCon14 = "";
+                String formCon15 = "";
+                String formCon18 = "";
+
+                try {
+
+                    String sql1 = "SELECT * FROM `p1demandeurcollectif` WHERE `formulaire_id` LIKE '" + idform + "' and supp = 0";
+                    // String idx = "0";
+                    pst1 = con.prepareStatement(sql1);
+                    ResultSet rs1 = pst1.executeQuery();
+
+                    while (rs1.next()) {
+                        formCon1 = rs1.getString(1);
+                        formCon2 = rs1.getString(2);
+                        formCon3 = rs1.getString(3);
+                        formCon4 = rs1.getString(4);
+                        formCon5 = rs1.getString(5);
+                        formCon6 = rs1.getString(6);
+                        formCon7 = rs1.getString(7);
+                        formCon8 = rs1.getString(8);
+                        formCon9 = rs1.getString(9);
+                        formCon10 = rs1.getString(10);
+                        formCon11 = rs1.getString(11);
+                        formCon12 = rs1.getString(12);
+                        formCon13 = rs1.getString(13);
+                        formCon14 = rs1.getString(14);
+                        formCon15 = rs1.getString(15);
+                        formCon18 = rs1.getString(18);
+
+                    }
+                } catch (SQLException ex) {
+                    System.out.println("Erreur recup col1 " + ex);
+                }
+        %>
         <main id="at-main" class="at-main at-haslayout">
 
             <div class="clearfix"></div>
@@ -159,7 +209,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="at-content">
                                 <div class="at-contactusvone">
-                                    <form class="at-formtheme at-formcontacus" method="post" action="ServCol1">
+                                    <form class="at-formtheme at-formcontacus" method="post" action="UpdateCol1">
                                         
                                         <div class="at-sectiontitleborder">
                                             <br>
@@ -174,7 +224,7 @@
                                                 <div class="col-xs-12 col-sm-4 col-md-10 col-lg-12 pull-left">
                                                     <div class="form-group">
                                                         <select class="form-control" name="titre" id="demo-category" onchange="changementType( this.value);">
-                                                        <option value="">- Quel est votre titre dans le Collectif -</option>
+                                                        <option value="<%=formCon3%>">- Quel est votre titre dans le Collectif -</option>
                                                         <option value="responsable_morale">Responsable Moral</option>
                                                         <option value="responsable_delegue">Responsable délégué</option>
                                                         <option value="membre">Membre</option>
@@ -191,7 +241,7 @@
                                                 <div class="col-xs-12 col-sm-4 col-md-10 col-lg-12 pull-left">
                                                     <div class="form-group">
                                                         <select class="form-control" name="nat_juridique" id="demo-category" onchange="changementType( this.value);">
-                                                        <option value="">- Nature Juridique -</option>
+                                                        <option value="<%=formCon4%>">- Nature Juridique -</option>
                                                         <option value="gpf">GPF</option>
                                                         <option value="association">Association</option>
                                                         <option value="organisation_professionnelle">Organisation Professionnelle</option>
@@ -207,7 +257,7 @@
                                 <hr/>
                                                 <div class="col-xs-12 col-sm-4 col-md-10 col-lg-12 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="denomination" class="form-control" placeholder="Dénomination">
+                                                        <input type="text" name="denomination" value="<%=formCon5%>" class="form-control" placeholder="Dénomination">
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -218,7 +268,7 @@
                                                 <div class="col-xs-12 col-sm-4 col-md-10 col-lg-12 pull-left">
                                                     <div class="form-group">
                                                         <select class="form-control" name="reconnaisance_juridique" id="demo-category" onchange="changementType( this.value);">
-                                                        <option value="">- Avez-vous une reconnaissance juridique -</option>
+                                                        <option value="<%=formCon6%>">- Avez-vous une reconnaissance juridique -</option>
                                                         <option value="oui">OUI</option>
                                                         <option value="non">NON</option>
                                                         </select>
@@ -232,27 +282,27 @@
                                                 <br/>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="pays" class="form-control" placeholder="1- Dans quel pays se trouve le Collectif ? ">
+                                                        <input type="text" name="pays" value="<%=formCon7%>" class="form-control" placeholder="1- Dans quel pays se trouve le Collectif ? ">
                                                     </div>
                                                 </div>   
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="region" class="form-control" placeholder="2- Dans quelle région se trouve le Collectif ? ">
+                                                        <input type="text" name="region" value="<%=formCon8%>" class="form-control" placeholder="2- Dans quelle région se trouve le Collectif ? ">
                                                     </div>
                                                 </div>  
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="departement" class="form-control" placeholder="3- Dans quel département se trouve le Collectif ? ">
+                                                        <input type="text" name="departement" value="<%=formCon9%>" class="form-control" placeholder="3- Dans quel département se trouve le Collectif ? ">
                                                     </div>
                                                 </div>  
                                                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="commune" class="form-control" placeholder="4- Dans quelle commune se trouve le Collectif ? ">
+                                                        <input type="text" name="commune" value="<%=formCon10%>" class="form-control" placeholder="4- Dans quelle commune se trouve le Collectif ? ">
                                                     </div>
                                                 </div>   
                                                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="hors_senegal" class="form-control" placeholder="5- Précisez si hors Sénégal ? ">
+                                                        <input type="text" name="hors_senegal" value="<%=formCon11%>" class="form-control" placeholder="5- Précisez si hors Sénégal ? ">
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -262,7 +312,7 @@
                                 <hr/>   
                                                 <div class="col-xs-12 col-sm-4 col-md-10 col-lg-12 pull-left">
                                                     <div class="form-group">
-                                                        <input type="date" name="date_creation" class="form-control" placeholder="Date de création du Collectif.">
+                                                        <input type="date" name="date_creation" value="<%=formCon12%>" class="form-control" placeholder="Date de création du Collectif.">
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -272,17 +322,17 @@
                                 <hr/>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="total_membre" class="form-control" placeholder="1- Combien de membres compte le Collectif ?">
+                                                        <input type="text" name="total_membre" value="<%=formCon13%>" class="form-control" placeholder="1- Combien de membres compte le Collectif ?">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="total_homme" class="form-control" placeholder="2- Combien d'hommes dans le Collectif ?">
+                                                        <input type="text" name="total_homme" value="<%=formCon14%>" class="form-control" placeholder="2- Combien d'hommes dans le Collectif ?">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="total_femme" class="form-control" placeholder="3- Combien de femmes dans le Collectif ?">
+                                                        <input type="text" name="total_femme" value="<%=formCon15%>" class="form-control" placeholder="3- Combien de femmes dans le Collectif ?">
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -290,7 +340,7 @@
                                             <input type="hidden" value="<%=idx%>" name="id">  
                                             <input type="hidden" value="<%=idform%>" name="formulaire_id">  
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
-                                                    <center><button type="submit" name="type2" class="at-btn">ENREGISTRER & RETOURNER...</button>&nbsp;<button type="submit" name="type1" class="at-btn">ENREGISTRER & SUIVRE...</button></center>
+                                                    <center><button type="submit" name="type2" class="at-btn">ENREGISTRER LES MODIFICATIONS</button></center>
                                                 </div>
                                             </div>
                                     </form>

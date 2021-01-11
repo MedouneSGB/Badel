@@ -41,11 +41,11 @@
     <body>
         <%
 
-            String formulaire_id = (String) request.getAttribute("formulaire_id");
-            String idform = request.getParameter("idform");
+            String formulaire_idx = (String) request.getAttribute("formulaire_id");
+            String formulaire_id = request.getParameter("formulaire_id");
             
-            if (idform == null) {
-                idform = formulaire_id;
+            if (formulaire_id == null) {
+                formulaire_id = formulaire_idx;
             }
             String ix = request.getParameter("id");
             String idx = (String) request.getAttribute("id");
@@ -56,7 +56,7 @@
             String sql = "SELECT * FROM loginadmin where Id=?";
             try {
                 Connection con = new JavaConnect().createConnection();
-                PreparedStatement pst;
+                PreparedStatement pst, pst1;
 
                 // String idx = "0";
                 pst = con.prepareStatement(sql);
@@ -150,6 +150,83 @@
             <!--************************************
                                     Main Start
                     *************************************-->
+            <%
+             /* Récupération des données de p1demandind */
+                    //int compte = 1;
+                    
+
+                    String formIn1 = "";
+                    String formIn2 = "";
+                    String formIn3 = "";
+                    String formIn4 = "";
+                    String formIn5 = "";
+                    String formIn6 = "";
+                    String formIn7 = "";
+                    String formIn8 = "";
+                    String formIn9 = "";
+                    String formIn10 = "";
+                    String formIn11 = "";
+                    String formIn12 = "";
+                    String formIn13 = "";
+                    String formIn14 = "";
+                    String formIn15 = "";
+                    String formIn16 = "";
+                    String formIn17 = "";
+                    String formIn18 = "";
+                    String formIn19 = "";
+                    String formIn20 = "";
+                    String formIn21 = "";
+                    String formIn22 = "";
+                    String formIn23 = "";
+                    String formIn24 = "";
+                    String formIn25 = "";
+                    String formIn26 = "";
+                    String formIn27 = "";
+                    
+                    String formIn29 = "";
+
+                    try {
+
+                        String sql1 = "SELECT * FROM `p1demandeurindividuel` WHERE `formulaire_id` LIKE '" + formulaire_id + "'";
+                        // String idx = "0";
+                        pst1 = con.prepareStatement(sql1);
+                        ResultSet rs1 = pst1.executeQuery();
+
+                        while (rs1.next()) {
+
+                            formIn1 = rs1.getString(1);
+                            formIn2 = rs1.getString(2);
+                            formIn3 = rs1.getString(3);
+                            formIn4 = rs1.getString(4);
+                            formIn5 = rs1.getString(5);
+                            formIn6 = rs1.getString(6);
+                            formIn7 = rs1.getString(7);
+                            formIn8 = rs1.getString(8);
+                            formIn9 = rs1.getString(9);
+                            formIn10 = rs1.getString(10);
+                            formIn11 = rs1.getString(11);
+                            formIn12 = rs1.getString(12);
+                            formIn13 = rs1.getString(13);
+                            formIn14 = rs1.getString(14);
+                            formIn15 = rs1.getString(15);
+                            formIn16 = rs1.getString(16);
+                            formIn17 = rs1.getString(17);
+                            formIn18 = rs1.getString(18);
+                            formIn19 = rs1.getString(19);
+                            formIn20 = rs1.getString(20);
+                            formIn21 = rs1.getString(21);
+                            formIn22 = rs1.getString(22);
+                            formIn23 = rs1.getString(23);
+                            formIn24 = rs1.getString(24);
+                            formIn25 = rs1.getString(25);
+                            formIn26 = rs1.getString(26);
+                            formIn27 = rs1.getString(27);
+                            formIn29 = rs1.getString(29);
+                        }
+                    } catch (SQLException ex) {
+                        System.out.println("Erreur recup ind1 " + ex);
+                    }
+                    %>
             <main id="at-main" class="at-main at-haslayout">
 
                 <div class="clearfix"></div>
@@ -160,7 +237,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="at-content">
                                     <div class="at-contactusvone">
-                                        <form class="at-formtheme at-formcontacus" action="ServInd1" method="post">
+                                        <form class="at-formtheme at-formcontacus" action="UpdateInd1" method="post">
                                             <!--   <fieldset>
                                                 <div class="row">
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
@@ -195,33 +272,33 @@
                                                     <hr/>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="prenom" class="form-control" placeholder="1- Prénom" required>
+                                                            <input type="text" value="<%=formIn3%>" name="prenom" class="form-control" placeholder="1- Prénom" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="nom" class="form-control" placeholder="2- Nom" required>
+                                                            <input type="text" value="<%=formIn4%>" name="nom" class="form-control" placeholder="2- Nom" required>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="tel1" class="form-control" placeholder="3- Numéro de Téléphone 1" required>
+                                                            <input type="text" value="<%=formIn5%>" name="tel1" class="form-control" placeholder="3- Numéro de Téléphone 1" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="tel2" class="form-control" placeholder="4- Numéro de Téléphone 2" required>
+                                                            <input type="text" value="<%=formIn6%>" name="tel2" class="form-control" placeholder="4- Numéro de Téléphone 2" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="commune_rattach" class="form-control" placeholder="5- Commune de Rattachement" required>
+                                                            <input type="text" value="<%=formIn7%>" name="commune_rattach" class="form-control" placeholder="5- Commune de Rattachement" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="commune_actuelle" class="form-control" placeholder="6- Commune actuelle" required>
+                                                            <input type="text" value="<%=formIn8%>" name="commune_actuelle" class="form-control" placeholder="6- Commune actuelle" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -237,7 +314,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="sexe" id="demo-category" required>
-                                                                <option value="">1- Sexe : -</option>                                                     
+                                                                <option value="<%=formIn9%>">1- Sexe : -</option>                                                     
                                                                 <option value="masculin">Masculin</option>
                                                                 <option value="feminin">Féminin</option>  
                                                             </select>
@@ -247,7 +324,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="tranche_age" id="demo-category" required>
-                                                                <option value="">2- Tranche d'âge: -</option>
+                                                                <option value="<%=formIn10%>">2- Tranche d'âge: -</option>
                                                                 <option value="15-25 ans">15 à 25 ans</option>
                                                                 <option value="26-35 ans">26 à 35 ans</option>
                                                                 <option value="36-45 ans">36 à 45 ans</option>
@@ -260,7 +337,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="etude" id="demo-category" onchange="changementType1(this.value);" required>
-                                                                <option value="">3- Avez vous fait des études: -</option>
+                                                                <option value="<%=formIn11%>">3- Avez vous fait des études: -</option>
                                                                 <option value="Ecole Française">Oui - Ecole Française</option>
                                                                 <option value="Ecole Arabe">Oui - Ecole Arabe</option>
                                                                 <option value="NON">Non</option>
@@ -270,7 +347,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group" id="niveau">
                                                             <select class="form-control" name="niveau_etude">
-                                                                <option value="">4- Niveau d'études: -</option>
+                                                                <option value="<%=formIn12%>">4- Niveau d'études: -</option>
                                                                 <option value="Francais Primaire">Ecole Française - Primaire</option>
                                                                 <option value="Francais Secondaire">Ecole Française - Secondaire</option>
                                                                 <option value="Francais Universitaire">Ecole Française - Universitaire</option>
@@ -282,7 +359,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="formation_prof" id="demo-category" required>
-                                                                <option value="">5- Formation Technique Professionnelle : -</option>
+                                                                <option value="<%=formIn13%>">5- Formation Technique Professionnelle : -</option>
                                                                 <option value="OUI">OUI</option>                                                       
                                                                 <option value="NON">NON</option>
                                                             </select>
@@ -291,7 +368,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="sejour" id="demo-category" required>
-                                                                <option value="">6- Avez-vous séjourné dans un pays étrangers ?-</option>
+                                                                <option value="<%=formIn14%>">6- Avez-vous séjourné dans un pays étrangers ?-</option>
                                                                 <option value="OUI">OUI</option>                                                       
                                                                 <option value="NON">NON</option>
                                                             </select>
@@ -299,19 +376,19 @@
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="pays_sejourne" class="form-control" placeholder="7- SI OUI dans quel pays ?">
+                                                            <input type="text" value="<%=formIn15%>" name="pays_sejourne" class="form-control" placeholder="7- SI OUI dans quel pays ?">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="motif_sejour" class="form-control" placeholder="8- Et quel est le motif du séjour ?">
+                                                            <input type="text" value="<%=formIn16%>" name="motif_sejour" class="form-control" placeholder="8- Et quel est le motif du séjour ?">
                                                         </div>
                                                     </div>
 
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="experience_prof" id="demo-category">
-                                                                <option value="">9- Expérience Professionnelle : -</option>
+                                                                <option value="<%=formIn17%>">9- Expérience Professionnelle : -</option>
                                                                 <option value="OUI">OUI</option>                                                       
                                                                 <option value="NON">NON</option>
                                                             </select>
@@ -320,7 +397,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="domaine_exp_prof" id="demo-category">
-                                                                <option value="">10- Domaine d'activité : -</option>
+                                                                <option value="<%=formIn18%>">10- Domaine d'activité : -</option>
                                                                 <option value="Production">Production</option>                                                       
                                                                 <option value="Transformation">Transformation</option>
                                                                 <option value="Distribution_Commerce">Distribution - Commerce</option>
@@ -332,7 +409,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="duree_exp_prof" id="demo-category" required> 
-                                                                <option value="">11- Durée Expérience Professionnelle : -</option>
+                                                                <option value="<%=formIn19%>">11- Durée Expérience Professionnelle : -</option>
                                                                 <option value="3mois-1an">3mois à 1an</option>                                                       
                                                                 <option value="+1an-3ans">+1an à 3ans</option>
                                                                 <option value="+3ans-5ans">+3ans à 5ans</option>
@@ -343,7 +420,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="statut_exp_prof" id="demo-category">
-                                                                <option value="">12- Statut : -</option>
+                                                                <option value="<%=formIn20%>">12- Statut : -</option>
                                                                 <option value="Journalier">Journalier</option>                                                       
                                                                 <option value="Apprenti">Apprenti</option>
                                                                 <option value="Stagiaire">Stagiaire</option>
@@ -353,33 +430,33 @@
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="commune_exp_prof" class="form-control" placeholder="13- Commune d'activité">
+                                                            <input type="text" value="<%=formIn21%>" name="commune_exp_prof" class="form-control" placeholder="13- Commune d'activité">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="departement_exp_prof" class="form-control" placeholder="14- Département d'activité">
+                                                            <input type="text" value="<%=formIn22%>" name="departement_exp_prof" class="form-control" placeholder="14- Département d'activité">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="region_exp_prof" class="form-control" placeholder="15- Région d'activité">
+                                                            <input type="text" value="<%=formIn23%>" name="region_exp_prof" class="form-control" placeholder="15- Région d'activité">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="autre_region_exp_prof" class="form-control" placeholder="16- Autre Région d'activité">
+                                                            <input type="text" value="<%=formIn24%>" name="autre_region_exp_prof" class="form-control" placeholder="16- Autre Région d'activité">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="hors_senegal" class="form-control" placeholder="17- Activité hors Sénégal">
+                                                            <input type="text" value="<%=formIn25%>" name="hors_senegal" class="form-control" placeholder="17- Activité hors Sénégal">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="situation_prof" id="demo-category">
-                                                                <option value="">18- Quelle est votre situation professionnelle actuelle ? -</option>
+                                                                <option value="<%=formIn26%>">18- Quelle est votre situation professionnelle actuelle ? -</option>
                                                                 <option value="Elève - Etudiant">Elève/Etudiant</option>                                                       
                                                                 <option value="En Chomage">En Chomage</option>
                                                                 <option value="A mon propre compte">A mon propre compte</option>
@@ -398,7 +475,7 @@
                                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-12 pull-left">
                                                                 <div class="form-group">
                                                                     <select class="form-control" name="titre_accompagnement" id="demo-category">
-                                                                        <option value="">- Titre Accompagnement : -</option>
+                                                                        <option value="<%=formIn27%>">- Titre Accompagnement : -</option>
                                                                         <option value="Personnel">Personnel</option>
                                                                         <option value="Collectif">Collectif</option>
                                                                         <option value="Collectif et Personnel">Collectif et Personnel</option>
@@ -412,9 +489,9 @@
                                             </fieldset>
 
                                             <input type="hidden" value="<%=idx%>" name="id">  
-                                            <input type="hidden" value="<%=idform%>" name="formulaire_id">  
+                                            <input type="hidden" value="<%=formulaire_id%>" name="formulaire_id">  
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
-                                                <center><button type="submit" name="type2" class="at-btn">ENREGISTRER & RETOURNER...</button>&nbsp;<button type="submit" name="type1" class="at-btn">ENREGISTRER & POURSUIVRE...</button></center>
+                                                <center><button type="submit" name="type2" class="at-btn">ENREGISTRER LES MODIFICATIONS</button></center>
                                             </div>
                                     </div>
                                     </fieldset>

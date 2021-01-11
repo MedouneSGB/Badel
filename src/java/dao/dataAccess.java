@@ -374,8 +374,8 @@ public class dataAccess {
     
         try {
 
-            System.out.println(ndc.getTitre() + " " + ndc.getCommune());
-            PreparedStatement ps = JavaConnect.getPreparedStatement("UPDATE p2demandeurcollectif set titre = ?, nat_juridique = ?, denomination = ?, reconnaisance_juridique = ?, pays = ?, region = ?, departement = ?, commune = ?, hors_senegal = ?, date_creation = ?, total_membre = ?, total_homme = ?, total_femme = ?, inscritPar = ? where formulaire_id like ? ");
+            System.out.println("h1 " +ndc.getHors_senegal());
+            PreparedStatement ps = JavaConnect.getPreparedStatement("UPDATE p1demandeurcollectif set titre = ?, nat_juridique = ?, denomination = ?, reconnaisance_juridique = ?, pays = ?, region = ?, departement = ?, commune = ?, hors_senegal = ?, date_creation = ?, total_membre = ?, total_homme = ?, total_femme = ?, inscritPar = ? where formulaire_id like ? ");
             
             ps.setString(1, ndc.getTitre());
             ps.setString(2, ndc.getNat_juridique());
@@ -390,12 +390,13 @@ public class dataAccess {
             ps.setString(11, ndc.getTotal_membre());
             ps.setString(12, ndc.getTotal_homme());
             ps.setString(13, ndc.getTotal_femme());
-            ps.setString(14, ndc.getFormulaire_id());
+            ps.setString(14, ndc.getInscritPar());
+            ps.setString(15, ndc.getFormulaire_id());
 
             ps.executeUpdate();
             System.out.println("Tout est ok" + ndc.getTitre());
         } catch (SQLException | ClassNotFoundException ex) {
-            Logger.getLogger(dataAccess.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("erreur updateCol1 "+ex);
         }
     }
     public void updateCol2(ModCol2 mc2) {
