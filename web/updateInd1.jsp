@@ -43,7 +43,7 @@
 
             String formulaire_idx = (String) request.getAttribute("formulaire_id");
             String formulaire_id = request.getParameter("formulaire_id");
-            
+
             if (formulaire_id == null) {
                 formulaire_id = formulaire_idx;
             }
@@ -109,17 +109,17 @@
                                     </button>
                                 </div>
                                 <div id="at-navigation" class="collapse navbar-collapse at-navigation">
-                                 <ul>
-                                    <li class="menu-item-has-children">
-                                        <a href="index.html">Accueil</a>
-                                    </li>
+                                    <ul>
+                                        <li class="menu-item-has-children">
+                                            <a href="index.html">Accueil</a>
+                                        </li>
                                         <li class="menu-item-has-children">
                                             <a href="Principal.jsp?id=<%=ix%>">Menu Admin</a>
                                         </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="connection.html">Se déconnecter</a>
-                                    </li>
-                                </ul>
+                                        <li class="menu-item-has-children">
+                                            <a href="connection.html">Se déconnecter</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </nav>
                             <div class="at-contactsocial">
@@ -151,82 +151,81 @@
                                     Main Start
                     *************************************-->
             <%
-             /* Récupération des données de p1demandind */
-                    //int compte = 1;
-                    
+                /* Récupération des données de p1demandind */
+                //int compte = 1;
 
-                    String formIn1 = "";
-                    String formIn2 = "";
-                    String formIn3 = "";
-                    String formIn4 = "";
-                    String formIn5 = "";
-                    String formIn6 = "";
-                    String formIn7 = "";
-                    String formIn8 = "";
-                    String formIn9 = "";
-                    String formIn10 = "";
-                    String formIn11 = "";
-                    String formIn12 = "";
-                    String formIn13 = "";
-                    String formIn14 = "";
-                    String formIn15 = "";
-                    String formIn16 = "";
-                    String formIn17 = "";
-                    String formIn18 = "";
-                    String formIn19 = "";
-                    String formIn20 = "";
-                    String formIn21 = "";
-                    String formIn22 = "";
-                    String formIn23 = "";
-                    String formIn24 = "";
-                    String formIn25 = "";
-                    String formIn26 = "";
-                    String formIn27 = "";
-                    
-                    String formIn29 = "";
+                String formIn1 = "";
+                String formIn2 = "";
+                String formIn3 = "";
+                String formIn4 = "";
+                String formIn5 = "";
+                String formIn6 = "";
+                String formIn7 = "";
+                String formIn8 = "";
+                String formIn9 = "";
+                String formIn10 = "";
+                String formIn11 = "";
+                String formIn12 = "";
+                String formIn13 = "";
+                String formIn14 = "";
+                String formIn15 = "";
+                String formIn16 = "";
+                String formIn17 = "";
+                String formIn18 = "";
+                String formIn19 = "";
+                String formIn20 = "";
+                String formIn21 = "";
+                String formIn22 = "";
+                String formIn23 = "";
+                String formIn24 = "";
+                String formIn25 = "";
+                String formIn26 = "";
+                String formIn27 = "";
 
-                    try {
+                String formIn29 = "";
 
-                        String sql1 = "SELECT * FROM `p1demandeurindividuel` WHERE `formulaire_id` LIKE '" + formulaire_id + "'";
-                        // String idx = "0";
-                        pst1 = con.prepareStatement(sql1);
-                        ResultSet rs1 = pst1.executeQuery();
+                try {
 
-                        while (rs1.next()) {
+                    String sql1 = "SELECT * FROM `p1demandeurindividuel` WHERE `formulaire_id` LIKE '" + formulaire_id + "'";
+                    // String idx = "0";
+                    pst1 = con.prepareStatement(sql1);
+                    ResultSet rs1 = pst1.executeQuery();
 
-                            formIn1 = rs1.getString(1);
-                            formIn2 = rs1.getString(2);
-                            formIn3 = rs1.getString(3);
-                            formIn4 = rs1.getString(4);
-                            formIn5 = rs1.getString(5);
-                            formIn6 = rs1.getString(6);
-                            formIn7 = rs1.getString(7);
-                            formIn8 = rs1.getString(8);
-                            formIn9 = rs1.getString(9);
-                            formIn10 = rs1.getString(10);
-                            formIn11 = rs1.getString(11);
-                            formIn12 = rs1.getString(12);
-                            formIn13 = rs1.getString(13);
-                            formIn14 = rs1.getString(14);
-                            formIn15 = rs1.getString(15);
-                            formIn16 = rs1.getString(16);
-                            formIn17 = rs1.getString(17);
-                            formIn18 = rs1.getString(18);
-                            formIn19 = rs1.getString(19);
-                            formIn20 = rs1.getString(20);
-                            formIn21 = rs1.getString(21);
-                            formIn22 = rs1.getString(22);
-                            formIn23 = rs1.getString(23);
-                            formIn24 = rs1.getString(24);
-                            formIn25 = rs1.getString(25);
-                            formIn26 = rs1.getString(26);
-                            formIn27 = rs1.getString(27);
-                            formIn29 = rs1.getString(29);
-                        }
-                    } catch (SQLException ex) {
-                        System.out.println("Erreur recup ind1 " + ex);
+                    while (rs1.next()) {
+
+                        formIn1 = rs1.getString(1);
+                        formIn2 = rs1.getString(2);
+                        formIn3 = rs1.getString(3);
+                        formIn4 = rs1.getString(4);
+                        formIn5 = rs1.getString(5);
+                        formIn6 = rs1.getString(6);
+                        formIn7 = rs1.getString(7);
+                        formIn8 = rs1.getString(8);
+                        formIn9 = rs1.getString(9);
+                        formIn10 = rs1.getString(10);
+                        formIn11 = rs1.getString(11);
+                        formIn12 = rs1.getString(12);
+                        formIn13 = rs1.getString(13);
+                        formIn14 = rs1.getString(14);
+                        formIn15 = rs1.getString(15);
+                        formIn16 = rs1.getString(16);
+                        formIn17 = rs1.getString(17);
+                        formIn18 = rs1.getString(18);
+                        formIn19 = rs1.getString(19);
+                        formIn20 = rs1.getString(20);
+                        formIn21 = rs1.getString(21);
+                        formIn22 = rs1.getString(22);
+                        formIn23 = rs1.getString(23);
+                        formIn24 = rs1.getString(24);
+                        formIn25 = rs1.getString(25);
+                        formIn26 = rs1.getString(26);
+                        formIn27 = rs1.getString(27);
+                        formIn29 = rs1.getString(29);
                     }
-                    %>
+                } catch (SQLException ex) {
+                    System.out.println("Erreur recup ind1 " + ex);
+                }
+            %>
             <main id="at-main" class="at-main at-haslayout">
 
                 <div class="clearfix"></div>
@@ -586,8 +585,10 @@
                                         Footer End
                         *************************************-->
             <%
-                    }
-                } catch (SQLException ex) {%>
+                }
+                con.close();
+                System.out.println("Connection Closed");
+            } catch (SQLException ex) {%>
 
             <main id="at-main" class="at-main at-haslayout">
 
