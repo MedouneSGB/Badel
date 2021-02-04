@@ -54,6 +54,7 @@ public class ServInd3 extends HttpServlet {
         da.addModInd3(mi3);
 
         
+        request.setAttribute("formulaire_id", formulaire_id);
         String idx = (String) request.getParameter("id");
         request.setAttribute("idx", idx);
         RequestDispatcher rd = request.getRequestDispatcher("Principal.jsp");
