@@ -248,6 +248,8 @@ Main Start
             </main>
             <%
                 }
+                con.close();
+                System.out.println("Connection Closed");
             } catch (SQLException ex) {%>
 
             <main id="at-main" class="at-main at-haslayout">
