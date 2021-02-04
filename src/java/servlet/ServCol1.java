@@ -52,6 +52,10 @@ public class ServCol1 extends HttpServlet {
         String total_homme = (String) request.getParameter("total_homme");
         String total_femme = (String) request.getParameter("total_femme");
 
+        if("".equals(total_membre)){total_membre = "0";}
+        if("".equals(total_homme)){total_homme = "0";}
+        if("".equals(total_femme)){total_femme = "0";}
+        
         String idx = (String) request.getParameter("id");
         
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
