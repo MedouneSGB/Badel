@@ -174,7 +174,7 @@
                                                 <br/>
                                                 <hr/>
                                                 <h2>
-                                                    <center>Veuillez remplir ce formulaire : <strong>&eacute;tape 1</strong> </center>
+                                                    <center>Veuillez remplir ce formulaire : <strong>Étape 1</strong> </center>
                                                 </h2>
                                                 <hr/>
                                             </div>
@@ -189,33 +189,33 @@
                                                     <hr/>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="prenom" class="form-control" placeholder="1- Pr&eacute;nom*" required="Champ Obligatoire">
+                                                            <input type="text" name="prenom" class="form-control" placeholder="1- Prénom" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="nom" class="form-control" placeholder="2- Nom*" required="Champ Obligatoire">
+                                                            <input type="text" name="nom" class="form-control" placeholder="2- Nom" required>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="tel1" class="form-control" placeholder="3- Numéro de T&eacute;l&eacute;phone 1*" required="Champ Obligatoire">
+                                                            <input type="text" name="tel1" class="form-control" placeholder="3- Numéro de Téléphone 1" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="tel2" class="form-control" placeholder="4- Numéro de T&eacute;l&eacute;phone 2" >
+                                                            <input type="text" name="tel2" class="form-control" placeholder="4- Numéro de Téléphone 2" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="commune_rattach" class="form-control" placeholder="5- Commune de Rattachement*" required="Champ Obligatoire">
+                                                            <input type="text" name="commune_rattach" class="form-control" placeholder="5- Commune de Rattachement" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="commune_actuelle" class="form-control" placeholder="6- Commune actuelle*" required="Champ Obligatoire">
+                                                            <input type="text" name="commune_actuelle" class="form-control" placeholder="6- Commune actuelle" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -225,15 +225,15 @@
                                                 <div class="row">
                                                     <hr/>
                                                     <h3>
-                                                        <center> Vous &ecirc;tes porteur de projet individuel ? </center>
+                                                        <center> Vous etes porteur de projet individuel ? </center>
                                                     </h3>
                                                     <hr/>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="sexe" id="demo-category" required>
-                                                                <option value="" required="Champ Obligatoire">1- Sexe:* -</option>                                                     
+                                                                <option value="">1- Sexe : -</option>                                                     
                                                                 <option value="masculin">Masculin</option>
-                                                                <option value="feminin">F&eacute;minin</option>  
+                                                                <option value="feminin">Féminin</option>  
                                                             </select>
                                                         </div>
                                                     </div>
@@ -241,7 +241,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="tranche_age" id="demo-category" required>
-                                                                <option value="" required="Champ Obligatoire">2- Tranche d'&acirc;ge:* -</option>
+                                                                <option value="">2- Tranche d'âge: -</option>
                                                                 <option value="15-25 ans">15 à 25 ans</option>
                                                                 <option value="26-35 ans">26 à 35 ans</option>
                                                                 <option value="36-45 ans">36 à 45 ans</option>
@@ -254,8 +254,8 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="etude" id="demo-category" onchange="changementType1(this.value);" required>
-                                                                <option value="" required="Champ Obligatoire">3- Avez vous fait des &eacute;tudes?* -</option>
-                                                                <option value="Ecole Française">Oui - Ecole Fran&ccedil;aise</option>
+                                                                <option value="">3- Avez vous fait des études: -</option>
+                                                                <option value="Ecole Française">Oui - Ecole Française</option>
                                                                 <option value="Ecole Arabe">Oui - Ecole Arabe</option>
                                                                 <option value="NON">Non</option>
                                                             </select>
@@ -265,18 +265,18 @@
                                                         <div class="form-group" id="niveau">
                                                             <select class="form-control" name="niveau_etude">
                                                                 <option value="">4- Niveau d'études: -</option>
-                                                                <option value="Francais Primaire">Ecole Fran&ccedil;aise - Primaire</option>
-                                                                <option value="Francais Secondaire">Ecole Fran&Ccedil;aise - Secondaire</option>
-                                                                <option value="Francais Universitaire">Ecole Fran&ccedil;aise - Universitaire</option>
-                                                                <option value="Arabe General">Ecole Arabe - Etudes g&eacute;n&eacute;rales de base</option>
-                                                                <option value="Arabe Approfondi de Spécilisation">Ecole Arabe - Etudes approfondies de sp&eacute;cialisation</option>
+                                                                <option value="Francais Primaire">Ecole Française - Primaire</option>
+                                                                <option value="Francais Secondaire">Ecole Française - Secondaire</option>
+                                                                <option value="Francais Universitaire">Ecole Française - Universitaire</option>
+                                                                <option value="Arabe General">Ecole Arabe - Etudes générales de base</option>
+                                                                <option value="Arabe Approfondi de Spécilisation">Ecole Arabe - Etudes approfondies de spécialisation</option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="formation_prof" id="demo-category" required>
-                                                                <option value="" required="Champ Obligatoire">5- Formation Technique Professionnelle :* -</option>
+                                                                <option value="">5- Formation Technique Professionnelle : -</option>
                                                                 <option value="OUI">OUI</option>                                                       
                                                                 <option value="NON">NON</option>
                                                             </select>
@@ -285,7 +285,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="sejour" id="demo-category" required>
-                                                                <option value="" required="Champ Obligatoire">6- Avez-vous s&eacute;journ&eacute; dans un pays &eacute;trangers ?*-</option>
+                                                                <option value="">6- Avez-vous séjourné dans un pays étrangers ?-</option>
                                                                 <option value="OUI">OUI</option>                                                       
                                                                 <option value="NON">NON</option>
                                                             </select>
@@ -298,14 +298,14 @@
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="motif_sejour" class="form-control" placeholder="8- Et quel est le motif du s&eacute;jour ?">
+                                                            <input type="text" name="motif_sejour" class="form-control" placeholder="8- Et quel est le motif du séjour ?">
                                                         </div>
                                                     </div>
 
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="experience_prof" id="demo-category">
-                                                                <option value="" required="Champ Obligatoire">9- Exp&eacute;rience Professionnelle :* -</option>
+                                                                <option value="">9- Expérience Professionnelle : -</option>
                                                                 <option value="OUI">OUI</option>                                                       
                                                                 <option value="NON">NON</option>
                                                             </select>
@@ -314,7 +314,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="domaine_exp_prof" id="demo-category">
-                                                                <option value="" required="Champ Obligatoire">10- Domaine d'activit&eacute; :* -</option>
+                                                                <option value="">10- Domaine d'activité : -</option>
                                                                 <option value="Production">Production</option>                                                       
                                                                 <option value="Transformation">Transformation</option>
                                                                 <option value="Distribution_Commerce">Distribution - Commerce</option>
@@ -326,7 +326,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="duree_exp_prof" id="demo-category" required> 
-                                                                <option value="" required="Champ Obligatoire">11- Durée Exp&eacute;rience Professionnelle :* -</option>
+                                                                <option value="">11- Durée Expérience Professionnelle : -</option>
                                                                 <option value="3mois-1an">3mois à 1an</option>                                                       
                                                                 <option value="+1an-3ans">+1an à 3ans</option>
                                                                 <option value="+3ans-5ans">+3ans à 5ans</option>
@@ -337,7 +337,7 @@
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="statut_exp_prof" id="demo-category">
-                                                                <option value="" required="Champ Obligatoire">12- Statut :* -</option>
+                                                                <option value="">12- Statut : -</option>
                                                                 <option value="Journalier">Journalier</option>                                                       
                                                                 <option value="Apprenti">Apprenti</option>
                                                                 <option value="Stagiaire">Stagiaire</option>
@@ -347,38 +347,38 @@
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="commune_exp_prof" class="form-control" placeholder="13- Commune d'activit&eacute;*" required="Champ Obligatoire">
+                                                            <input type="text" name="commune_exp_prof" class="form-control" placeholder="13- Commune d'activité">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="departement_exp_prof" class="form-control" placeholder="14- D&eacute;partement d'activit&eacute;*" required="Champ Obligatoire">
+                                                            <input type="text" name="departement_exp_prof" class="form-control" placeholder="14- Département d'activité">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="region_exp_prof" class="form-control" placeholder="15- R&eacute;gion d'activit&eacute;*" required="Champ Obligatoire">
+                                                            <input type="text" name="region_exp_prof" class="form-control" placeholder="15- Région d'activité">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="autre_region_exp_prof" class="form-control" placeholder="16- Autre R&eacute;gion d'activit&eacute;">
+                                                            <input type="text" name="autre_region_exp_prof" class="form-control" placeholder="16- Autre Région d'activité">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
-                                                            <input type="text" name="hors_senegal" class="form-control" placeholder="17- Activit&eacute; hors S&eacute;n&eacute;gal">
+                                                            <input type="text" name="hors_senegal" class="form-control" placeholder="17- Activité hors Sénégal">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                         <div class="form-group">
                                                             <select class="form-control" name="situation_prof" id="demo-category">
-                                                                <option value="" required="Champ Obligatoire">18- Quelle est votre situation professionnelle actuelle ?* -</option>
-                                                                <option value="Elève - Etudiant">El&egrave;ve/Etudiant</option>                                                       
+                                                                <option value="">18- Quelle est votre situation professionnelle actuelle ? -</option>
+                                                                <option value="Elève - Etudiant">Elève/Etudiant</option>                                                       
                                                                 <option value="En Chomage">En Chomage</option>
-                                                                <option value="A mon propre compte">&Aacute; mon propre compte</option>
-                                                                <option value="Employé/Salarié">Employ&eacute;/Salari&eacute;</option>
-                                                                <option value="autres">Autre (&agrave; préciser)</option>
+                                                                <option value="A mon propre compte">A mon propre compte</option>
+                                                                <option value="Employé/Salarié">Employé/Salarié</option>
+                                                                <option value="autres">Autre (à préciser)</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -392,7 +392,7 @@
                                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-12 pull-left">
                                                                 <div class="form-group">
                                                                     <select class="form-control" name="titre_accompagnement" id="demo-category">
-                                                                        <option value="" required="Champ Obligatoire">- Titre Accompagnement :* -</option>
+                                                                        <option value="">- Titre Accompagnement : -</option>
                                                                         <option value="Personnel">Personnel</option>
                                                                         <option value="Collectif">Collectif</option>
                                                                         <option value="Collectif et Personnel">Collectif et Personnel</option>

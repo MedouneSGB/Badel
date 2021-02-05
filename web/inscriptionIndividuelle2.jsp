@@ -178,7 +178,7 @@
                                         <div class="at-sectiontitleborder">
                                             <br/>
                                         <hr/>
-                                            <h2><center>Veuillez remplir ce formulaire : <strong>Étape 2</strong> </center></h2>
+                                            <h2><center>Veuillez remplir ce formulaire : <strong>&eacute;tape 2</strong> </center></h2>
                                          <hr/>
                                          <br/>
                                          <hr/>
@@ -189,8 +189,8 @@
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
                                                     <select class="form-control" name="categories" id="demo-category">
-                                                        <option value="">- CATEGORIES : -</option>
-                                                        <option value="Insertion à l'emploi">Insertion à l'emploi</option>
+                                                        <option value="" required="Champ Obligatoire">- CATEGORIES :* -</option>
+                                                        <option value="Insertion à l'emploi">Insertion &agrave; l'emploi</option>
                                                         <option value="Insertion ou Reconversion par l'auto-emploi">Insertion ou Reconversion par l'auto-emploi</option>
                                                         <option value="Renforcement ou Extension Activité">Renforcement ou Extension Activité</option>
                                                         <option value="Migrants">Migrants</option>
@@ -202,17 +202,17 @@
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
                                                     <select class="form-control" name="sous_categories" id="demo-category">
-                                                        <option value="">- SOUS-CATEGORIES : -</option>
+                                                        <option value="" required="Champ Obligatoire">- SOUS-CATEGORIES :* -</option>
                                                         <option value="Recherche de Qualification Professionnelle">Recherche de Qualification Professionnelle</option>
-                                                        <option value="Qualifié à la recherche d'un emploi">Qualifié à la recherche d'un emploi</option>
+                                                        <option value="Qualifié à la recherche d'un emploi">Qualifi&eacute; &agrave; la recherche d'un emploi</option>
                                                         <option value="Primo demandeur auto emploi">Primo demandeur auto emploi</option>
-                                                        <option value="Déflaté-Licencé">Déflaté-Licencé</option>
+                                                        <option value="Déflaté-Licencé">Déflaté-Licenc&eacute;</option>
                                                         <option value="Reconversion Professionnelle">Reconversion Professionnelle</option>
                                                         <option value="Informelle/Formelle">Informelle/Formelle</option>
-                                                        <option value="Résident/Non-Résident">Résident/Non-Résident</option>
-                                                        <option value="Migrants en Préparation de son retour">Migrants en Préparation de son retour</option>
+                                                        <option value="Résident/Non-Résident">R&eacute;sident/Non-R&eacute;sident</option>
+                                                        <option value="Migrants en Préparation de son retour">Migrants en Pr&eacute;paration de son retour</option>
                                                         <option value="Migrants de retour">Migrants de retour</option>
-                                                        <option value="Migrants Retourné">Migrants Retourné</option>
+                                                        <option value="Migrants Retourné">Migrants Retourn&eacute;</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -221,7 +221,7 @@
                                         <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                             <div class="form-group">
                                                 <select class="form-control" name="parcours" id="demo-category">
-                                                    <option value="">- PARCOURS : -</option>
+                                                    <option value="" required="Champ Obligatoire">- PARCOURS :* -</option>
                                                     <option value="parcours1">Parcours-1</option>
                                                     <option value="parcours2">Parcours-2</option>
                                                     <option value="parcours3">Parcours-3</option>
@@ -246,13 +246,13 @@
                                         <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                             <div class="form-group">
                                                 <select class="form-control" name="marqueurs" id="demo-category">
-                                                    <option value="">- MARQUEURS : -</option>
-                                                    <option value="Définition et accompagnement du projet personnel">Définition et accompagnement du projet personnel</option>
+                                                    <option value="" required="Champ Obligatoire">- MARQUEURS :* -</option>
+                                                    <option value="Définition et accompagnement du projet personnel">D&eacute;finition et accompagnement du projet personnel</option>
                                                     <option value="Accompagnement le recherche d'emploi/stage">Accompagnement le recherche d'emploi/stage</option>
                                                     <option value="Accompagnement de Groupe">Accompagnement de Groupe</option>
-                                                    <option value="Accompagnement Individualisé">Accompagnement Individualisé</option>
-                                                    <option value="Définition et Accompagnement du projet personnel">Définition et Accompagnement du projet personnel</option>
-                                                    <option value="Accompagnements de Groupe et individualisé">Accompagnements de Groupe et individualisé</option>
+                                                    <option value="Accompagnement Individualisé">Accompagnement Individualis&eacute;</option>
+                                                    <option value="Définition et Accompagnement du projet personnel">D&eacute;finition et Accompagnement du projet personnel</option>
+                                                    <option value="Accompagnements de Groupe et individualisé">Accompagnements de Groupe et individualis&eacute;</option>
                                                    </select>
                                             </div>
                                         </div> 
