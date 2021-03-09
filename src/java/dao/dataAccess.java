@@ -356,7 +356,7 @@ public class dataAccess {
             ps.setString(8, mi3.getCompte_bancaire_sfd());
             ps.setString(9, mi3.getNom_banque_sfd());
             ps.setString(10, mi3.getNumero_compte_banque_sfd());
-            ps.setString(11, mi3.getSoutien_immediat());
+            ps.setString(11, mi3.getSoutien_parent());
             ps.setString(12, mi3.getVille_parent());
             ps.setString(13, mi3.getPays_parent());
             ps.setString(14, mi3.getFormulaire_id());
