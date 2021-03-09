@@ -17,8 +17,8 @@
 <html class="no-js" lang="">
 
 
-<head>
-    <meta charset="ISO-8859-1">
+<head><meta charset="windows-1252">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Inscription Collective 1</title>
     <meta name="description" content="">
@@ -112,7 +112,7 @@
                                             <a href="Principal.jsp?id=<%=ix%>">Menu Admin</a>
                                         </li>
                                     <li class="menu-item-has-children">
-                                        <a href="connection.html">Se d&eacute;connecter</a>
+                                        <a href="connection.html">Se déconnecter</a>
                                     </li>
                                 </ul>
                             </div>
@@ -169,10 +169,10 @@
                                             <hr/>
                                                 <div class="col-xs-12 col-sm-4 col-md-10 col-lg-12 pull-left">
                                                     <div class="form-group">
-                                                        <select class="form-control" name="titre" id="demo-category" onchange="changementType( this.value);">
-                                                        <option value="" required="Champ Obligatoire" >- Quel est votre titre dans le Collectif ?* -</option>
+                                                        <select class="form-control" name="titre" id="demo-category" onchange="changementType( this.value);" required="Champ Obligatoire">
+                                                        <option value="">- Quel est votre titre dans le Collectif ?** -</option>
                                                         <option value="responsable_morale">Responsable Moral</option>
-                                                        <option value="responsable_delegue">Responsable délégué</option>
+                                                        <option value="responsable_delegue">Responsable d&eacute;l&eacute;gu&eacute;</option>
                                                         <option value="membre">Membre</option>
                                                         <option value="partenaire">Partenaire</option>
                                                         <option value="autre">Autre</option>
@@ -187,7 +187,7 @@
                                                 <div class="col-xs-12 col-sm-4 col-md-10 col-lg-12 pull-left">
                                                     <div class="form-group">
                                                         <select class="form-control" name="nat_juridique" id="demo-category" onchange="changementType( this.value);" required="Champ Obligatoire">
-                                                        <option value="" >- Nature Juridique* -</option>
+                                                        <option value="">- Nature Juridique** -</option>
                                                         <option value="gpf">GPF</option>
                                                         <option value="association">Association</option>
                                                         <option value="organisation_professionnelle">Organisation Professionnelle</option>
@@ -199,11 +199,11 @@
                                          </fieldset>
                                          <fieldset>
                                 <hr/>
-                                <h3><center>Quelle est la d&eacute;nomination du Collectif ?</center></h3>  
+                                     <h3><center>Quelle est la d&eacute;nomination du Collectif ? </center></h3>  
                                 <hr/>
                                                 <div class="col-xs-12 col-sm-4 col-md-10 col-lg-12 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="denomination" class="form-control" placeholder="D&eacute;nomination*" required="Champ Obligatoire">
+                                                        <input type="text" name="denomination" class="form-control" placeholder="D&eacute;nomination**" required="Champ Obligatoire">
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -213,8 +213,8 @@
                                 <hr/>
                                                 <div class="col-xs-12 col-sm-4 col-md-10 col-lg-12 pull-left">
                                                     <div class="form-group">
-                                                        <select class="form-control" name="reconnaisance_juridique" id="demo-category" onchange="changementType( this.value);">
-                                                        <option value="" required="Champ Obligatoire">- Avez-vous une reconnaissance juridique ?* -</option>
+                                                        <select class="form-control" name="reconnaisance_juridique" id="demo-category" onchange="changementType( this.value);" required="Champ Obligatoire">
+                                                        <option value="">- Avez-vous une reconnaissance juridique** -</option>
                                                         <option value="oui">OUI</option>
                                                         <option value="non">NON</option>
                                                         </select>
@@ -223,27 +223,27 @@
                                             </fieldset>
                                             <fieldset>
                                 <hr/>
-                                <h3><center>O&ubreve; se trouve le si&eacute;ge social du Collectif ? </center></h3>  
+                                    <h3><center>O&ubreve; se trouve le si&eacute;ge social du Collectif ? </center></h3>  
                                 <hr/>
                                                 <br/>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="pays" class="form-control" placeholder="1- Dans quel pays se trouve le Collectif ?*" required="Champ Obligatoire">
+                                                        <input type="text" name="pays" class="form-control" placeholder="1- Dans quel pays se trouve le Collectif ?** " required="Champ Obligatoire">
                                                     </div>
                                                 </div>   
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="region" class="form-control" placeholder="2- Dans quelle r&eacute;gion se trouve le Collectif ?* " required="Champ Obligatoire">
+                                                        <input type="text" name="region" class="form-control" placeholder="2- Dans quelle r&eacute;gion se trouve le Collectif ?** " required="Champ Obligatoire">
                                                     </div>
                                                 </div>  
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="departement" class="form-control" placeholder="3- Dans quel d&eacute;partement se trouve le Collectif ?*" required="Champ Obligatoire">
+                                                        <input type="text" name="departement" class="form-control" placeholder="3- Dans quel d&eacute;partement se trouve le Collectif ?** " required="Champ Obligatoire">
                                                     </div>
                                                 </div>  
                                                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="commune" class="form-control" placeholder="4- Dans quelle commune se trouve le Collectif ?* " required="Champ Obligatoire">
+                                                        <input type="text" name="commune" class="form-control" placeholder="4- Dans quelle commune se trouve le Collectif ?** " required="Champ Obligatoire">
                                                     </div>
                                                 </div>   
                                                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
@@ -254,11 +254,11 @@
                                             </fieldset>
                                             <fieldset>
                                 <hr/>
-                                                <h3><center>Quelle est la date de création du Collectif ? </center></h3>  
+                                                <h3><center>Quelle est la date de cr&eacute;ation du Collectif ? </center></h3>  
                                 <hr/>   
                                                 <div class="col-xs-12 col-sm-4 col-md-10 col-lg-12 pull-left">
                                                     <div class="form-group">
-                                                        <input type="date" name="date_creation" class="form-control" placeholder="Date de cr&eacute;ation du Collectif.*" required="Champ Obligatoire">
+                                                        <input type="date" name="date_creation" class="form-control" placeholder="Date de cr&eacute;ation du Collectif. (JJ/MM/AAAA)**" required="Champ Obligatoire" pattern=(0[1-9]|1[0-9]|2[0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}>
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -268,7 +268,7 @@
                                 <hr/>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="total_membre" class="form-control" placeholder="1- Combien de membres compte le Collectif ?*" required="Champ Obligatoire">
+                                                        <input type="text" name="total_membre" class="form-control" placeholder="1- Combien de membres compte le Collectif ?**" required="Champ Obligatoire">
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
@@ -345,7 +345,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="at-fcolumn">
+                         <!--   <div class="at-fcolumn">
                                 <div class="at-widget">
                                     <div class="at-fwidgettitle">
                                         <h3>Recent News</h3>
@@ -353,20 +353,20 @@
                                     <div class="at-widgetcontent">
                                         <ul>
                                             <li>
-                                            <!--    <p>Product Design &amp; Branding Innovative Brand Design Concepts</p> -->
+                                                <p>Product Design &amp; Branding Innovative Brand Design Concepts</p> 
                                                 <time datetime="2018-01-12">January 28, 2018</time>
                                             </li>
                                             <li>
-                                            <!--    <p>Product Design &amp; Branding Innovative Brand Design Concepts</p> -->
+                                              <p>Product Design &amp; Branding Innovative Brand Design Concepts</p> 
                                                 <time datetime="2020-24-11">Novembre 24, 2020</time>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+                            </div>  -->
                         </div>
-                        <div class="at-copyright">
-                            <p>Adresse: ZAC MBAO villa Né3 4iéme Etage Cité Socidak 1 en face Brioche Dorée, Rufisque Ouvert de 08H é 18H</p>
+                       <div class="at-copyright">
+                            <p>Adresse: ZAC MBAO villa N?3 4i?me Etage Cit? Socidak 1 en face Brioche Dor?e, Rufisque Ouvert de 09H ? 17H</p>
                             <p>Copyright @ 2020. <a href="javascript:void(0);">Badel</a> All rights reserved.</p>
                         </div>
                     </div>
@@ -378,8 +378,6 @@
 		*************************************-->
                     <%
                     }
-                    con.close();
-                    System.out.println("Connection Closed");
                 } catch (SQLException ex) {%>
 
             <main id="at-main" class="at-main at-haslayout">

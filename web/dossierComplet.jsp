@@ -63,13 +63,7 @@
             if (idform == null) {
                 idform = formulaire_id;
             }
-            
-            String typex = (String) request.getAttribute("type");
             String type = request.getParameter("type");
-             if (type == null) {
-                type = typex;
-            }
-            
             String ix = request.getParameter("id");
             String idx = (String) request.getAttribute("id");
             String tpe = (String) request.getAttribute("tpe");
@@ -475,6 +469,7 @@
                                                         <th>N°_NINEA</th>
                                                         <th>Référence_Professionnel</th>
                                                         <th>N°_Réference_Professionnel</th>
+                                                        <th>Compte_Bancaire</th>
                                                         <th>Nom_Banque_ou_SFD</th>
                                                         <th>N°_Compte_Banque_ou_SFD</th>
                                                         <th>Soutien_d'un_Parent</th>
@@ -498,6 +493,7 @@
                                                         <td><%=form3In10%></td>
                                                         <td><%=form3In11%></td>
                                                         <td><%=form3In12%></td>
+                                                        <td><%=form3In13%></td>
                                                         <td><%=form3In14%></td>
                                                         <td><%=form3In15%></td>
                                                     </tr>
@@ -902,8 +898,6 @@
             </main>
             <%
                 }
-                 con.close();
-                 System.out.println("Connection Closed");
             %>
         </div>
         <!--************************************

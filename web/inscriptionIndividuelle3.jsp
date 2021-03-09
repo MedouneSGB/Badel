@@ -17,8 +17,8 @@
 <html class="no-js" lang="">
 
 
-<head>
-    <meta charset="ISO-8859-1">
+<head><meta charset="windows-1252">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Inscription Individuelle 3</title>
     <meta name="description" content="">
@@ -179,7 +179,7 @@
                                         <div class="at-sectiontitleborder">
                                             <br/>
                                         <hr/>
-                                            <h2><center>Veuillez remplir ce formulaire : <strong>&eacute;tape 3</strong> </center></h2>
+                                            <h2><center>Veuillez remplir ce formulaire : <strong>Étape 3</strong> </center></h2>
                                          <hr/>
                                         </div>
                                         <br/>
@@ -188,13 +188,13 @@
 
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
-                                                    <input type="text" name="soutien_immediat" class="form-control" placeholder=" Quel soutien d&eacute;sirez-vous disposer dans l'immédiat?*" required="Champ Obligatoire">
+                                                    <input type="text" name="soutien_immediat" class="form-control" placeholder=" Quel soutien désirez-vous disposer dans l'immédiat?**" required>
                                                 </div>
                                             </div>
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
-                                                    <select class="form-control" name="regi_commerce" id="demo-category">
-                                                        <option value="" required="Champ Obligatoire">- Avez-vous un R&eacute;gi de Commerce :* -</option>
+                                                    <select class="form-control" name="regi_commerce" id="demo-category" required>
+                                                        <option value="">- Avez-vous un Régi de Commerce ?** -</option>
                                                         <option value="oui">OUI</option>
                                                         <option value="non">NON</option>
                                                     </select> 
@@ -202,13 +202,13 @@
                                             </div>
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
-                                                    <input type="text" name="numero_regi_comm" class="form-control" placeholder=" Et quelle est le num&eacute;ro du REGI DE COMMERCE ?">
+                                                    <input type="text" name="numero_regi_comm" class="form-control" placeholder=" Et quelle est le numéro du REGI DE COMMERCE ?">
                                                 </div>
                                             </div>
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
-                                                    <select class="form-control" name="ninea" id="demo-category">
-                                                        <option value="" required="Champ Obligatoire">- Avez-vous votre NINEA :* -</option>
+                                                    <select class="form-control" name="ninea" id="demo-category" required>
+                                                        <option value="">- Avez-vous votre NINEA ?** -</option>
                                                         <option value="oui">OUI</option>
                                                         <option value="non">NON</option>
                                                     </select>   
@@ -216,31 +216,31 @@
                                             </div>
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
-                                                    <input type="text" name="numero_ninea" class="form-control" placeholder=" Et quelle est le num&eacute;ro du NINEA ?">
+                                                    <input type="text" name="numero_ninea" class="form-control" placeholder=" Et quelle est le numéro du NINEA ?">
                                                 </div>
                                             </div>
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
-                                                    <select class="form-control" name="reference_prof" id="demo-category">
-                                                        <option value="" required="Champ Obligatoire">- Avez-vous d'autres r&eacute;f&eacute;rences professionnelles ?* -</option>
+                                                    <select class="form-control" name="reference_prof" id="demo-category" required>
+                                                        <option value="">- Avez-vous d'autres références professionnelles ?** -</option>
                                                         <option value="carte_artisanat">Carte Artisanat</option>
-                                                        <option value="agrement">Agr&eacute;ment</option>
+                                                        <option value="agrement">Agrément</option>
                                                         <option value="licence">Licence</option>
                                                         <option value="autorisation">Autorisation</option>
-                                                        <option value="autre">Autres &aacute; pr&eacute;ciser</option>
+                                                        <option value="autre">Autres à préciser</option>
                                                         <option value="NON">NON</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
-                                                    <input type="text" name="numero_reference_prof" class="form-control" placeholder=" Et quelle est le num&eacute;ro du R&eacute;f&eacute;rence ?">
+                                                    <input type="text" name="numero_reference_prof" class="form-control" placeholder=" Et quelle est le numéro du Référence ?">
                                                 </div>
                                             </div>
                                         <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                                 <div class="form-group">
-                                                    <select class="form-control" name="compte_bancaire_sfd" id="demo-category">
-                                                        <option value="" required="Champ Obligatoire">- Disposez-vous d'un compte ?* -</option>
+                                                    <select class="form-control" name="compte_bancaire_sfd" id="demo-category" required>
+                                                        <option value="">- Disposez-vous d'un compte ?** -</option>
                                                         <option value="oui_banque">OUI dans une Banque</option>
                                                         <option value="oui_sfd">OUI dans une SFD</option>
                                                         <option value="non">NON</option>
@@ -260,7 +260,7 @@
                                        <div class="col-xs-12 col-sm-4 col-md-10 col-lg-10 pull-left">
                                         <div class="form-group">
                                             <select class="form-control" name="soutien_parent" id="demo-category">
-                                                <option value="" required="Champ Obligatoire">- Pour mener &abreve; bien votre projet avez-vous le soutien d'un parent ?* -</option>
+                                                <option value="">- Pour mener à bien votre projet avez-vous le soutien d'un parent ? -</option>
                                                 <option value="oui">OUI</option>
                                                 <option value="non">NON</option>
                                             </select>
@@ -373,8 +373,6 @@
 		*************************************-->
                     <%
                     }
-                    con.close();
-                    System.out.println("Connection Closed");
                 } catch (SQLException ex) {%>
 
             <main id="at-main" class="at-main at-haslayout">
