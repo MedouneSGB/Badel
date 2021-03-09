@@ -337,6 +337,8 @@
                             </main>
                             <%
                                 }
+                                con.close();
+                                System.out.println("Connection Closed");
                             %>
                         </div>
                         <!--************************************

@@ -63,7 +63,13 @@
             if (idform == null) {
                 idform = formulaire_id;
             }
+            
+            String typex = (String) request.getAttribute("type");
             String type = request.getParameter("type");
+             if (type == null) {
+                type = typex;
+            }
+            
             String ix = request.getParameter("id");
             String idx = (String) request.getAttribute("id");
             String tpe = (String) request.getAttribute("tpe");
@@ -898,6 +904,8 @@
             </main>
             <%
                 }
+                 con.close();
+                 System.out.println("Connection Closed");
             %>
         </div>
         <!--************************************
