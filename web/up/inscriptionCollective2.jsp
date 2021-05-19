@@ -1,6 +1,6 @@
 <%-- 
     Document   : inscriptionCollective2
-    Created on : 7 d?c. 2020, 02:58:53
+    Created on : 7 déc. 2020, 02:58:53
     Author     : MSGB
 --%>
 
@@ -117,7 +117,7 @@
                                             <a href="Principal.jsp?id=<%=ix%>">Menu Admin</a>
                                         </li>
                                     <li class="menu-item-has-children">
-                                        <a href="connection.html">Se d&eacute;onnecter</a>
+                                        <a href="connection.html">Se déconnecter</a>
                                     </li>
                                 </ul>
                             </div>
@@ -165,7 +165,7 @@
                                         <div class="at-sectiontitleborder">
                                             <br/>
                                         <hr/>
-                                            <h2><center>Veuillez remplir ce formulaire : <strong>&eacute;tape 2</strong> </center></h2>
+                                            <h2><center>Veuillez remplir ce formulaire : <strong>Etape 2</strong> </center></h2>
                                          <hr/>
                                         </div>
                                         <br/>
@@ -178,8 +178,8 @@
                                          
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                             <div class="form-group">
-                                                <select class="form-control" name="activ_equip" id="demo-category" onchange="changementType( this.value);" required="Champ Obligatoire">
-                                                <option value="">1- Avez-vous des activit&eacute;s ou &eacute;quipements dans la commune ?** -</option>
+                                                <select class="form-control" name="activ_equip" id="demo-category" onchange="changementType( this.value);">
+                                                <option value="">1- Avez-vous des activit&eacute;s ou &eacute;quipements dans la commune ? -</option>
                                                 <option value="OUI">OUI</option>
                                                 <option value="NON">NON</option>
                                                 </select>
@@ -187,12 +187,12 @@
                                         </div>
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                             <div class="form-group">
-                                                <input type="text" name="activ_equip_depart" class="form-control" placeholder="2- Dans quelle d&eacute;partement ?** " required="Champ Obligatoire">
+                                                <input type="text" name="activ_equip_depart" class="form-control" placeholder="2- Dans quelle d&eacute;partement ? ">
                                             </div>
                                         </div>  
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                             <div class="form-group">
-                                                <input type="text" name="activ_equip_region" class="form-control" placeholder="3- Dans quel r&eacute;gion ?** " required="Champ Obligatoire">
+                                                <input type="text" name="activ_equip_region" class="form-control" placeholder="3- Dans quel r&eacute;gion ? ">
                                             </div>
                                         </div>  
                                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
@@ -214,8 +214,8 @@
                                          </fieldset>
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-12 pull-left">
                                             <div class="form-group">
-                                                <select class="form-control" name="activ_economique" id="demo-category" onchange="changementType( this.value);" required="Champ Obligatoire">
-                                                <option value="">- Quelles activit&eacute;s &eacute;conomiques sont men&eacute;es par le Collectif ?** -</option>
+                                                <select class="form-control" name="activ_economique" id="demo-category" onchange="changementType( this.value);">
+                                                <option value="">- Quelles activit&eacute;s &eacute;conomiques sont men&eacute;es par le Collectif ? -</option>
                                                 <option value="Epargne">Epargne</option>
                                                 <option value="Production">Production</option>
                                                 <option value="Transformation">Transformation</option>
@@ -234,32 +234,32 @@
                                          
                                                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="mont_cap_social" class="form-control" placeholder=" 1- Quel est le montant Capital social ?**" required="Champ Obligatoire">
+                                                        <input type="text" name="mont_cap_social" class="form-control" placeholder=" 1- Quel est le montant Capital social ?">
                                                     </div>
                                                 </div>
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="nbre_empl_perman" class="form-control" placeholder=" 2- Quel est le nombre d'employ&eacute;s permanents actuellement ?** " required="Champ Obligatoire">
+                                                        <input type="text" name="nbre_empl_perman" class="form-control" placeholder=" 2- Quel est le nombre d'employ&eacute;s permanents actuellement ? ">
                                                     </div>
                                                 </div>
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="nbre_empl_tempor" class="form-control" placeholder=" 3-  Quel est le nombre d'employ&eacute;s temporaires actuellement ?** " required="Champ Obligatoire">
+                                                        <input type="text" name="nbre_empl_tempor" class="form-control" placeholder=" 3-  Quel est le nombre d'employ&eacute;s temporaires actuellement ? ">
                                                     </div>
                                                 </div>
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="mont_eparg_mob" class="form-control" placeholder=" 4- Quel est le montant &eacute;agn&eacute; mobilis&eacute; ces trois (3ans) derni&egrave;res ann&eacute;es ? ">
+                                                        <input type="text" name="mont_eparg_mob" class="form-control" placeholder=" 4- Quel est le montant épagn&eacute; mobilis&eacute; ces trois (3ans) dernières ann&eacute;es ? ">
                                                     </div>
                                                 </div>
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="mont_endettement" class="form-control" placeholder=" 5- Quel est le montant endettement ces trois (3ans) derni?res ann&eacute;es ? ">
+                                                        <input type="text" name="mont_endettement" class="form-control" placeholder=" 5- Quel est le montant endettement ces trois (3ans) dernières ann&eacute;es ? ">
                                                     </div>
                                                 </div>
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="mont_sub_recu" class="form-control" placeholder=" 6- Quel est le montant subvention re?u ces trois (3ans) derni?res ann&eacute;es ?">
+                                                        <input type="text" name="mont_sub_recu" class="form-control" placeholder=" 6- Quel est le montant subvention reçu ces trois (3ans) dernières ann&eacute;es ?">
                                                     </div>
                                                 </div>
                                         
@@ -272,14 +272,14 @@
                                          </fieldset>
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="fonctionnalite" class="form-control" placeholder="1- Fonctionnalit&eacute; des organes?**" required="Champ Obligatoire">
+                                                        <input type="text" name="fonctionnalite" class="form-control" placeholder="1- Fonctionnalit&eacute; des organes?">
                                                     </div>
                                                 </div>
                                                 
                                                 
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="prise_decision" class="form-control" placeholder="2- Mode prise de d&eacute;cision?**" required="Champ Obligatoire">
+                                                        <input type="text" name="prise_decision" class="form-control" placeholder="2- Mode prise de d&eacute;cision?">
                                                     </div>
                                                 </div>
                                                
@@ -291,8 +291,8 @@
                                         -->
                                                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <select class="form-control" name="charte_relationnelle" id="demo-category" onchange="changementType( this.value);" required="Champ Obligatoire">
-                                                        <option value=""> 3- Disponibilit&eacute; d'une charte des membres ?** -</option>
+                                                        <select class="form-control" name="charte_relationnelle" id="demo-category" onchange="changementType( this.value);">
+                                                        <option value=""> 3- Disponibilit&eacute; d'une charte des membres ? -</option>
                                                         <option value="OUI">OUI</option>
                                                         <option value="NON">NON</option>
                                                         </select>
@@ -306,8 +306,8 @@
                                            -->
                                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
                                                     <div class="form-group">
-                                                        <select class="form-control" name="plan_developpement" id="demo-category" onchange="changementType( this.value);" required="Champ Obligatoire">
-                                                        <option value=""> 4- Disponibilit&eacute; d'un plan de d&eacute;veloppement ?** -</option>
+                                                        <select class="form-control" name="plan_developpement" id="demo-category" onchange="changementType( this.value);">
+                                                        <option value=""> 4- Disponibilit&eacute; d'un plan de d&eacute;veloppement ? -</option>
                                                         <option value="OUI">OUI</option>
                                                         <option value="NON">NON</option>
                                                         </select>
@@ -321,8 +321,8 @@
                                               -->
                                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
                                                     <div class="form-group">
-                                                        <select class="form-control" name="manuel_procedure" id="demo-category" onchange="changementType( this.value);" required="Champ Obligatoire">
-                                                        <option value=""> 5- Disponibilit&eacute; d'un manuel de proc&eacute;dure ?** -</option>
+                                                        <select class="form-control" name="manuel_procedure" id="demo-category" onchange="changementType( this.value);">
+                                                        <option value=""> 5- Disponibilit&eacute; d'un manuel de proc&eacute;dure ? -</option>
                                                         <option value="OUI">OUI</option>
                                                         <option value="NON">NON</option>
                                                         </select>
@@ -342,19 +342,19 @@
                                         
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="part_princ_technique" class="form-control" placeholder="1- Principal Partenaire technique ?** -" required="Champ Obligatoire">
+                                                        <input type="text" name="part_princ_technique" class="form-control" placeholder="1- Principal Partenaire technique ? -">
                                                     </div>
                                                 </div>  
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="part_princ_financier" class="form-control" placeholder="2- Principal Partenaire financier ?** -" required="Champ Obligatoire">
+                                                        <input type="text" name="part_princ_financier" class="form-control" placeholder="2- Principal Partenaire financier ? -">
                                                     </div>
                                                 </div>     
                                                 
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <select class="form-control" name="app_reseau" id="demo-category" onchange="changementType( this.value);" required="Champ Obligatoire">
-                                                        <option value="">3 - Appartenance &agrave; un r&eacute;seau ?** -</option>
+                                                        <select class="form-control" name="app_reseau" id="demo-category" onchange="changementType( this.value);">
+                                                        <option value="">3 - Appartenance &agrave; un r&eacute;seau ? -</option>
                                                         <option value="OUI">OUI</option>
                                                         <option value="NON">NON</option>
                                                         </select>
@@ -363,7 +363,7 @@
                                                 <br />
                                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left">
                                                     <div class="form-group">
-                                                        <input type="text" name="nature_reseau" class="form-control" placeholder="4- Nature R&eacute;seau ?** -" required="Champ Obligatoire">
+                                                        <input type="text" name="nature_reseau" class="form-control" placeholder="4- Nature R&eacute;seau ? -">
                                                     </div>
                                                 </div>
                                                  
@@ -379,8 +379,8 @@
                                                 </div>
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
                                                     <div class="form-group">
-                                                        <select class="form-control" name="nat_intern_reseau" id="demo-category" onchange="changementType( this.value);" required="Champ Obligatoire">
-                                                        <option value="">7- National ou International ?** -</option>
+                                                        <select class="form-control" name="nat_intern_reseau" id="demo-category" onchange="changementType( this.value);">
+                                                        <option value="">7- National ou International ? -</option>
                                                         <option value="national">National</option>
                                                         <option value="international">International</option>
                                                         </select>

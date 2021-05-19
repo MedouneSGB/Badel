@@ -13,13 +13,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.ModInd3;
+import model.ModInd2;
 
 /**
  *
- * @author HP
+ * @author user
  */
-public class ServInd3 extends HttpServlet {
+public class UpdateInd2 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,33 +33,32 @@ public class ServInd3 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=ISO-8859-1");
-
-        String soutien_immediat = (String) request.getParameter("soutien_immediat");
-        String regi_commerce = (String) request.getParameter("regi_commerce");
-        String numero_regi_comm = (String) request.getParameter("numero_regi_comm");
-        String ninea = (String) request.getParameter("ninea");
-        String numero_ninea = (String) request.getParameter("numero_ninea");
-        String reference_prof = (String) request.getParameter("reference_prof");
-        String numero_reference_prof = (String) request.getParameter("numero_reference_prof");
-        String compte_bancaire_sfd = (String) request.getParameter("compte_bancaire_sfd");
-        String nom_banque_sfd = (String) request.getParameter("nom_banque_sfd");
-        String numero_compte_banque_sfd = (String) request.getParameter("numero_compte_banque_sfd");
-        String soutien_parent = (String) request.getParameter("soutien_parent");
-        String ville_parent = (String) request.getParameter("ville_parent");
-        String pays_parent = (String) request.getParameter("pays_parent");
-        String formulaire_id = (String) request.getParameter("formulaire_id");
-
-        ModInd3 mi3 = new ModInd3(formulaire_id, soutien_immediat, regi_commerce, numero_regi_comm, ninea, numero_ninea, reference_prof, numero_reference_prof, compte_bancaire_sfd, nom_banque_sfd, numero_compte_banque_sfd, soutien_parent, ville_parent, pays_parent);
-        dataAccess da = new dataAccess();
-        da.addModInd3(mi3);
-
         
-        request.setAttribute("formulaire_id", formulaire_id);
+        String typeAction = (String) request.getParameter("type1");
+        
+        String categories = (String) request.getParameter("categories");
+        String sous_categories = (String) request.getParameter("sous_categories");
+        String parcours = (String) request.getParameter("parcours");
+        String marqueurs = (String) request.getParameter("marqueurs");
+        String formulaire_id = (String) request.getParameter("formulaire_id");
+        
+            ModInd2 mi2 = new ModInd2(formulaire_id, categories, sous_categories, parcours, marqueurs);
+            dataAccess da = new dataAccess();
+            da.updateInd2(mi2);
+            
+        
+        String type = "ind";
+        request.setAttribute("type", type);
         String idx = (String) request.getParameter("id");
         request.setAttribute("idx", idx);
-        RequestDispatcher rd = request.getRequestDispatcher("Principal.jsp");
+        request.setAttribute("formulaire_id", formulaire_id);
+        if(typeAction != null){
+        RequestDispatcher rd = request.getRequestDispatcher("inscriptionIndividuelle3.jsp");
         rd.forward(request, response);
-        
+        }else{
+        RequestDispatcher rd = request.getRequestDispatcher("dossierComplet.jsp");
+        rd.forward(request, response);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -100,4 +99,5 @@ public class ServInd3 extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
 }

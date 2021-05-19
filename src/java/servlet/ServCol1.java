@@ -35,6 +35,9 @@ public class ServCol1 extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=ISO-8859-1");
 
+        
+        String typeAction = (String) request.getParameter("type1");
+        
         String titre = (String) request.getParameter("titre");
         String nat_juridique = (String) request.getParameter("nat_juridique");
         String denomination = (String) request.getParameter("denomination");
@@ -49,17 +52,28 @@ public class ServCol1 extends HttpServlet {
         String total_homme = (String) request.getParameter("total_homme");
         String total_femme = (String) request.getParameter("total_femme");
 
+        if("".equals(total_membre)){total_membre = "0";}
+        if("".equals(total_homme)){total_homme = "0";}
+        if("".equals(total_femme)){total_femme = "0";}
+        
+        String idx = (String) request.getParameter("id");
+        
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-
         String formulaire_id = "Form" + timestamp.getTime();
 
-        ModCol1 mc1 = new ModCol1(formulaire_id, titre, nat_juridique, denomination, reconnaisance_juridique, pays, region, departement, commune, hors_senegal, date_creation, total_membre, total_homme, total_femme);
+        ModCol1 mc1 = new ModCol1(formulaire_id, titre, nat_juridique, denomination, reconnaisance_juridique, pays, region, departement, commune, hors_senegal, date_creation, total_membre, total_homme, total_femme, idx);
         dataAccess da = new dataAccess();
         da.InsCol1(mc1);
 
-        request.setAttribute("id", formulaire_id);
+        request.setAttribute("idx", idx);
+        request.setAttribute("formulaire_id", formulaire_id);
+        if(typeAction != null){
         RequestDispatcher rd = request.getRequestDispatcher("inscriptionCollective2.jsp");
         rd.forward(request, response);
+        }else{
+        RequestDispatcher rd = request.getRequestDispatcher("Principal.jsp");
+        rd.forward(request, response);
+        }
 
     }
 

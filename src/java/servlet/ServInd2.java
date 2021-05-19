@@ -32,24 +32,32 @@ public class ServInd2 extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/html;charset=ISO-8859-1");
         
+        String typeAction = (String) request.getParameter("type1");
         
         String categories = (String) request.getParameter("categories");
         String sous_categories = (String) request.getParameter("sous_categories");
         String parcours = (String) request.getParameter("parcours");
         String marqueurs = (String) request.getParameter("marqueurs");
+        String formulaire_id = (String) request.getParameter("formulaire_id");
         
-            ModInd2 mi2 = new ModInd2(categories, sous_categories, parcours, marqueurs);
+            ModInd2 mi2 = new ModInd2(formulaire_id, categories, sous_categories, parcours, marqueurs);
             dataAccess da = new dataAccess();
             da.addModInd2(mi2);
             
         
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            RequestDispatcher rd = request.getRequestDispatcher("index.html");
-       rd.forward(request, response); 
+        String idx = (String) request.getParameter("id");
+        request.setAttribute("idx", idx);
+        request.setAttribute("formulaire_id", formulaire_id);
+        if(typeAction != null){
+        RequestDispatcher rd = request.getRequestDispatcher("inscriptionIndividuelle3.jsp");
+        rd.forward(request, response);
+        }else{
+        RequestDispatcher rd = request.getRequestDispatcher("Principal.jsp");
+        rd.forward(request, response);
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

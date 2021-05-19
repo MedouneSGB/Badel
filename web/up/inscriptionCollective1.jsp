@@ -1,4 +1,18 @@
-<!doctype html>
+<%-- 
+    Document   : inscriptionCollective1
+    Created on : 23 déc. 2020, 15:07:34
+    Author     : user
+--%>
+
+<%@page import="dao.dataAccess"%>
+<%@page import="java.util.logging.Logger"%>
+<%@page import="java.util.logging.Level"%>
+<%@page import="dbutil.JavaConnect"%>
+<%@page import="java.sql.*"%>
+<%@page import="java.util.LinkedList"%>
+<%@page import="java.util.List"%>
+<%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
 
 <html class="no-js" lang="">
 
@@ -25,6 +39,32 @@
 </head>
 
 <body>
+    <%
+        String formulaire_id = (String) request.getAttribute("formulaire_id");
+
+            String ix = request.getParameter("id");
+            String idx = (String) request.getAttribute("id");
+            String tpe = (String) request.getAttribute("tpe");
+            if (idx == null) {
+                idx = ix;
+            }
+            String sql = "SELECT * FROM loginadmin where Id=?";
+            try {
+                Connection con = new JavaConnect().createConnection();
+                PreparedStatement pst;
+
+                // String idx = "0";
+                pst = con.prepareStatement(sql);
+                pst.setString(1, ix);
+                ResultSet rs = pst.executeQuery();
+
+                while (rs.next()) {
+                    System.out.println("hello 4");
+                    String id = rs.getString(1);
+                    String Prenom = rs.getString(2);
+                    String nom = rs.getString(3);
+                    String Civilite = rs.getString(4);
+    %>
 
     <!--************************************
 			Loader Start
@@ -68,26 +108,11 @@
                                     <li class="menu-item-has-children">
                                         <a href="index.html">Accueil</a>
                                     </li>
-                     <!--            <li class="menu-item-has-children">
-                                        <a href="https://taataan.sn/qui-sommes-nous/">A Propos</a>
-                                    </li> 
+                                        <li class="menu-item-has-children">
+                                            <a href="Principal.jsp?id=<%=ix%>">Menu Admin</a>
+                                        </li>
                                     <li class="menu-item-has-children">
-                                        <a href="javascript:void(0);">S'inscrire</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="connection.html" target="blank">Individuellement</a></li>
-                                            <li><a href="connection.html" target="blank">Collectivement</a></li>
-                                        </ul>
-                                    </li>
-                     -->
-                                    <li class="menu-item-has-children">
-                                        <a href="connection.html">Se dÃ©connecter</a>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="javascript:void(0);">Partenaires</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="https://www.taataan.sn/" target="blank">TAATAAN</a></li>
-                                            <li><a href="https://www.adel-invest.com/" target="blank">ADEL-INVEST</a></li>
-                                        </ul>
+                                        <a href="connection.html">Se déconnecter</a>
                                     </li>
                                 </ul>
                             </div>
@@ -258,8 +283,9 @@
                                                 </div>
                                             </fieldset>
                                         <fieldset>  
+                                            <input type="hidden" value="<%=idx%>" name="id">  
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
-                                                    <center><button type="submit" class="at-btn">ENREGISTRER & RETOURNER...</button>&nbsp;<button type="submit" class="at-btn">ENREGISTRER & SUIVRE...</button></center>
+                                                    <center><button type="submit" name="type2" class="at-btn">ENREGISTRER & RETOURNER...</button>&nbsp;<button type="submit" name="type1" class="at-btn">ENREGISTRER & SUIVRE...</button></center>
                                                 </div>
                                             </div>
                                     </form>
@@ -350,6 +376,33 @@
         <!--************************************
 				Footer End
 		*************************************-->
+                    <%
+                    }
+                    con.close();
+                    System.out.println("Connection Closed");
+                } catch (SQLException ex) {%>
+
+            <main id="at-main" class="at-main at-haslayout">
+
+                <div class="clearfix"></div>
+                <section class="at-sectionspace at-haslayout">
+                    <div class="container">
+                        <h1 style="text-align: center;">Erreur id Conect1</h1>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="at-content">
+                                    <div class="at-contactusvone">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <%
+                }
+            %>
     </div>
     <!--************************************
 			Wrapper End

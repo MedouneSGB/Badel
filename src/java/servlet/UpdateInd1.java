@@ -18,9 +18,9 @@ import model.ModInd1;
 
 /**
  *
- * @author HP
+ * @author user
  */
-public class ServInd1 extends HttpServlet {
+public class UpdateInd1 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -68,25 +68,26 @@ public class ServInd1 extends HttpServlet {
         String situation_prof = (String) request.getParameter("situation_prof");
         String titre_accompagnement = (String) request.getParameter("titre_accompagnement");
 
+        //Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        String formulaire_id = (String) request.getParameter("formulaire_id");
+
         String idx = (String) request.getParameter("id");
         
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        String formulaire_id = "Form" + timestamp.getTime();
-
         ModInd1 mi1 = new ModInd1(formulaire_id, prenom, nom, tel1, tel2, commune_rattach, commune_actuelle, sexe, tranche_age, etude, niveau_etude, formation_prof, sejour, pays_sejourne, motif_sejour, experience_prof, domaine_exp_prof, duree_exp_prof, statut_exp_prof, commune_exp_prof, departement_exp_prof, region_exp_prof, autre_region_exp_prof, hors_senegal, situation_prof, titre_accompagnement, idx);
         dataAccess da = new dataAccess();
-        da.addModInd1(mi1);
+        da.updateInd1(mi1);
 
+        String type = "ind";
+        request.setAttribute("type", type);
         request.setAttribute("idx", idx);
         request.setAttribute("formulaire_id", formulaire_id);
         if(typeAction != null){
         RequestDispatcher rd = request.getRequestDispatcher("inscriptionIndividuelle2.jsp");
         rd.forward(request, response);
         }else{
-        RequestDispatcher rd = request.getRequestDispatcher("Principal.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("dossierComplet.jsp");
         rd.forward(request, response);
         }
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

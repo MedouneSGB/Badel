@@ -10,39 +10,42 @@ package model;
  * @author HP
  */
 public class ModInd1 {
-     
-    
+
+    private String formulaire_id;
+
     private String prenom;
     private String nom;
     private String tel1;
     private String tel2;
     private String commune_rattach;
-    
+
     private String commune_actuelle;
     private String sexe;
     private String tranche_age;
     private String etude;
     private String niveau_etude;
-    
+
     private String formation_prof;
     private String sejour;
     private String pays_sejourne;
     private String motif_sejour;
     private String experience_prof;
-    
+
     private String domaine_exp_prof;
-    private String duree_exp_prof;     
+    private String duree_exp_prof;
     private String statut_exp_prof;
     private String commune_exp_prof;
     private String departement_exp_prof;
-    
+
     private String region_exp_prof;
     private String autre_region_exp_prof;
     private String hors_senegal;
     private String situation_prof;
-    private String titre_accompagnement; 
-
-    public ModInd1(String prenom, String nom, String tel1, String tel2, String commune_rattach, String commune_actuelle, String sexe, String tranche_age, String etude, String niveau_etude, String formation_prof, String sejour, String pays_sejourne, String motif_sejour, String experience_prof, String domaine_exp_prof, String duree_exp_prof, String statut_exp_prof, String commune_exp_prof, String departement_exp_prof, String region_exp_prof, String autre_region_exp_prof, String hors_senegal, String situation_prof, String titre_accompagnement) {
+    private String titre_accompagnement;
+    private String inscritPar;
+    
+    public ModInd1(String formulaire_id, String prenom, String nom, String tel1, String tel2, String commune_rattach, String commune_actuelle, String sexe, String tranche_age, String etude, String niveau_etude, String formation_prof, String sejour, String pays_sejourne, String motif_sejour, String experience_prof, String domaine_exp_prof, String duree_exp_prof, String statut_exp_prof, String commune_exp_prof, String departement_exp_prof, String region_exp_prof, String autre_region_exp_prof, String hors_senegal, String situation_prof, String titre_accompagnement, String inscritPar) {
+        this.formulaire_id = formulaire_id;
         this.prenom = prenom;
         this.nom = nom;
         this.tel1 = tel1;
@@ -68,6 +71,15 @@ public class ModInd1 {
         this.hors_senegal = hors_senegal;
         this.situation_prof = situation_prof;
         this.titre_accompagnement = titre_accompagnement;
+        this.inscritPar = inscritPar;
+    }
+
+    public String getFormulaire_id() {
+        return formulaire_id;
+    }
+
+    public void setFormulaire_id(String formulaire_id) {
+        this.formulaire_id = formulaire_id;
     }
 
     public String getPrenom() {
@@ -269,6 +281,14 @@ public class ModInd1 {
     public void setTitre_accompagnement(String titre_accompagnement) {
         this.titre_accompagnement = titre_accompagnement;
     }
-  
-    
+
+    public String getInscritPar() {
+        return inscritPar;
+    }
+
+    public void setInscritPar(String inscritPar) {
+        this.inscritPar = inscritPar;
+    }
+
+
 }

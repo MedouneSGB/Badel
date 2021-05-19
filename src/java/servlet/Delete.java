@@ -13,13 +13,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.ModInd3;
+import model.delete;
 
 /**
  *
- * @author HP
+ * @author user
  */
-public class ServInd3 extends HttpServlet {
+public class Delete extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,34 +32,37 @@ public class ServInd3 extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=ISO-8859-1");
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
 
-        String soutien_immediat = (String) request.getParameter("soutien_immediat");
-        String regi_commerce = (String) request.getParameter("regi_commerce");
-        String numero_regi_comm = (String) request.getParameter("numero_regi_comm");
-        String ninea = (String) request.getParameter("ninea");
-        String numero_ninea = (String) request.getParameter("numero_ninea");
-        String reference_prof = (String) request.getParameter("reference_prof");
-        String numero_reference_prof = (String) request.getParameter("numero_reference_prof");
-        String compte_bancaire_sfd = (String) request.getParameter("compte_bancaire_sfd");
-        String nom_banque_sfd = (String) request.getParameter("nom_banque_sfd");
-        String numero_compte_banque_sfd = (String) request.getParameter("numero_compte_banque_sfd");
-        String soutien_parent = (String) request.getParameter("soutien_parent");
-        String ville_parent = (String) request.getParameter("ville_parent");
-        String pays_parent = (String) request.getParameter("pays_parent");
-        String formulaire_id = (String) request.getParameter("formulaire_id");
+            String formulaire_id = (String) request.getParameter("formulaire_id");
+            String idx = (String) request.getParameter("id");
+            String table = (String) request.getParameter("table");
 
-        ModInd3 mi3 = new ModInd3(formulaire_id, soutien_immediat, regi_commerce, numero_regi_comm, ninea, numero_ninea, reference_prof, numero_reference_prof, compte_bancaire_sfd, nom_banque_sfd, numero_compte_banque_sfd, soutien_parent, ville_parent, pays_parent);
-        dataAccess da = new dataAccess();
-        da.addModInd3(mi3);
+            delete del = new delete(formulaire_id, table);
+            dataAccess da = new dataAccess();
+            da.delete(del);
 
+            request.setAttribute("idx", idx);
+            if ("p1demandeurindividuel".equals(table)) {
+                RequestDispatcher rd = request.getRequestDispatcher("AfficherDemandeInd.jsp");
+                rd.forward(request, response);
+            } else {
+                RequestDispatcher rd = request.getRequestDispatcher("AfficherDemandeCol.jsp");
+                rd.forward(request, response);
+            }
+            /*
         
-        request.setAttribute("formulaire_id", formulaire_id);
-        String idx = (String) request.getParameter("id");
-        request.setAttribute("idx", idx);
-        RequestDispatcher rd = request.getRequestDispatcher("Principal.jsp");
-        rd.forward(request, response);
-        
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("formid = "+formulaire_id);
+            out.println("idx = "+idx);
+            out.println("table = "+table);
+            out.println("</body>");
+            out.println("</html>");
+             */
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -100,4 +103,5 @@ public class ServInd3 extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
 }

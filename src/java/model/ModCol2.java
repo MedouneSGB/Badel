@@ -12,15 +12,21 @@ package model;
 public class ModCol2 {
 
     //Déclaration des Variables
-    private int idDC;
+ //  private int idDC;
+    
     private String activ_equip;
     private String activ_equip_depart;
     private String activ_equip_region;
     private String activ_equip_autre_region;
     private String activ_equip_hors_senegal;
     private String activ_economique;
-    private String sit_economique;
-    private String fonctionnalité;
+    private String mont_cap_social;
+    private String nbre_empl_perman;
+    private String nbre_empl_tempor;
+    private String mont_eparg_mob;
+    private String mont_endettement;
+    private String mont_sub_recu;
+    private String fonctionnalite;
     private String prise_decision;
     private String charte_relationnelle;
     private String plan_developpement;
@@ -31,24 +37,26 @@ public class ModCol2 {
     private String nature_reseau;
     private String localite_reseau;
     private String departement_reseau;
-    private String international_reseau;
+    private String nat_intern_reseau;
+    private String formulaire_id;
 
     // Importation Constructeur avec Paramètres 
-    public ModCol2(int idDC, String activ_equip, String activ_equip_depart, String activ_equip_region,
-            String activ_equip_autre_region, String activ_equip_hors_senegal, String activ_economique,
-            String sit_economique, String fonctionnalité, String prise_decision, String charte_relationnelle,
-            String plan_developpement, String manuel_procedure, String part_princ_technique, String part_princ_financier,
-            String app_reseau, String nature_reseau, String localite_reseau, String departement_reseau, String international_reseau) {
-        
-        this.idDC = idDC;
+
+    public ModCol2( String activ_equip, String activ_equip_depart, String activ_equip_region, String activ_equip_autre_region, String activ_equip_hors_senegal, String activ_economique, String mont_cap_social, String nbre_empl_perman, String nbre_empl_tempor, String mont_eparg_mob, String mont_endettement, String mont_sub_recu, String fonctionnalite, String prise_decision, String charte_relationnelle, String plan_developpement, String manuel_procedure, String part_princ_technique, String part_princ_financier, String app_reseau, String nature_reseau, String localite_reseau, String departement_reseau, String nat_intern_reseau, String formulaire_id) {
+      
         this.activ_equip = activ_equip;
         this.activ_equip_depart = activ_equip_depart;
         this.activ_equip_region = activ_equip_region;
         this.activ_equip_autre_region = activ_equip_autre_region;
         this.activ_equip_hors_senegal = activ_equip_hors_senegal;
         this.activ_economique = activ_economique;
-        this.sit_economique = sit_economique;
-        this.fonctionnalité = fonctionnalité;
+        this.mont_cap_social = mont_cap_social;
+        this.nbre_empl_perman = nbre_empl_perman;
+        this.nbre_empl_tempor = nbre_empl_tempor;
+        this.mont_eparg_mob = mont_eparg_mob;
+        this.mont_endettement = mont_endettement;
+        this.mont_sub_recu = mont_sub_recu;
+        this.fonctionnalite = fonctionnalite;
         this.prise_decision = prise_decision;
         this.charte_relationnelle = charte_relationnelle;
         this.plan_developpement = plan_developpement;
@@ -59,18 +67,12 @@ public class ModCol2 {
         this.nature_reseau = nature_reseau;
         this.localite_reseau = localite_reseau;
         this.departement_reseau = departement_reseau;
-        this.international_reseau = international_reseau;
+        this.nat_intern_reseau = nat_intern_reseau;
+        this.formulaire_id = formulaire_id;
     }
 
-    // Importation des Getteurs et Setteurs
-    public int getIdDC() {
-        return idDC;
-    }
 
-    public void setIdDC(int idDC) {
-        this.idDC = idDC;
-    }
-
+    
     public String getActiv_equip() {
         return activ_equip;
     }
@@ -119,20 +121,60 @@ public class ModCol2 {
         this.activ_economique = activ_economique;
     }
 
-    public String getSit_economique() {
-        return sit_economique;
+    public String getMont_cap_social() {
+        return mont_cap_social;
     }
 
-    public void setSit_economique(String sit_economique) {
-        this.sit_economique = sit_economique;
+    public void setMont_cap_social(String mont_cap_social) {
+        this.mont_cap_social = mont_cap_social;
     }
 
-    public String getFonctionnalité() {
-        return fonctionnalité;
+    public String getNbre_empl_perman() {
+        return nbre_empl_perman;
     }
 
-    public void setFonctionnalité(String fonctionnalité) {
-        this.fonctionnalité = fonctionnalité;
+    public void setNbre_empl_perman(String nbre_empl_perman) {
+        this.nbre_empl_perman = nbre_empl_perman;
+    }
+
+    public String getNbre_empl_tempor() {
+        return nbre_empl_tempor;
+    }
+
+    public void setNbre_empl_tempor(String nbre_empl_tempor) {
+        this.nbre_empl_tempor = nbre_empl_tempor;
+    }
+
+    public String getMont_eparg_mob() {
+        return mont_eparg_mob;
+    }
+
+    public void setMont_eparg_mob(String mont_eparg_mob) {
+        this.mont_eparg_mob = mont_eparg_mob;
+    }
+
+    public String getMont_endettement() {
+        return mont_endettement;
+    }
+
+    public void setMont_endettement(String mont_endettement) {
+        this.mont_endettement = mont_endettement;
+    }
+
+    public String getMont_sub_recu() {
+        return mont_sub_recu;
+    }
+
+    public void setMont_sub_recu(String mont_sub_recu) {
+        this.mont_sub_recu = mont_sub_recu;
+    }
+
+    public String getFonctionnalite() {
+        return fonctionnalite;
+    }
+
+    public void setFonctionnalite(String fonctionnalite) {
+        this.fonctionnalite = fonctionnalite;
     }
 
     public String getPrise_decision() {
@@ -215,12 +257,22 @@ public class ModCol2 {
         this.departement_reseau = departement_reseau;
     }
 
-    public String getInternational_reseau() {
-        return international_reseau;
+    public String getNat_intern_reseau() {
+        return nat_intern_reseau;
     }
 
-    public void setInternational_reseau(String international_reseau) {
-        this.international_reseau = international_reseau;
+    public void setNat_intern_reseau(String nat_intern_reseau) {
+        this.nat_intern_reseau = nat_intern_reseau;
     }
+
+    public String getFormulaire_id() {
+        return formulaire_id;
+    }
+
+    public void setFormulaire_id(String formulaire_id) {
+        this.formulaire_id = formulaire_id;
+    }
+
+    
 
 }

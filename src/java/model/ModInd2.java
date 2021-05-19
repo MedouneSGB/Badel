@@ -11,6 +11,15 @@ package model;
  */
 public class ModInd2 {
     
+
+    public String getFormulaire_id() {
+        return formulaire_id;
+    }
+
+    public void setFormulaire_id(String formulaire_id) {
+        this.formulaire_id = formulaire_id;
+    }
+    
      public String getCategories() {
         return categories;
     }
@@ -44,12 +53,14 @@ public class ModInd2 {
     }
     
     
+    private String formulaire_id;
     private String categories;
     private String sous_categories;
     private String parcours;
     private String marqueurs;
 
-    public ModInd2(String categories, String sous_categories, String parcours, String marqueurs) {
+    public ModInd2(String formulaire_id, String categories, String sous_categories, String parcours, String marqueurs) {
+        this.formulaire_id = formulaire_id;
         this.categories = categories;
         this.sous_categories = sous_categories;
         this.parcours = parcours;
